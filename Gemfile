@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.2'
 
 gem 'rakismet'
+gem 'devise'
+gem 'haml'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

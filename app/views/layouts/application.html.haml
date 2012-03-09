@@ -1,0 +1,20 @@
+!!! 5
+%html{ :en => 'en' }
+  %head
+
+    %meta{ :charset => 'UTF-8' }
+    %title= Damian Galarza
+
+  %body
+
+    #page
+      = render 'header'
+
+      #page-wrapper.wrapper
+        %section.site-content
+          = yield
+
+      = render 'footer'
+
+      = yield :scripts
+

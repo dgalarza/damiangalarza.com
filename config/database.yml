@@ -14,9 +14,9 @@ development:
   reconnect: false
   database: damiangalarza.com_development
   pool: 5
-  username: root
-  password:
-  socket: /var/run/mysqld/mysqld.sock
+  username: dg_dev
+  password: er1nb3rmud3z
+  socke1: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
