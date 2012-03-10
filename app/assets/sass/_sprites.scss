@@ -1,0 +1,14 @@
+/**
+ * Sprites
+ */
+
+@import "compass/utilities/sprites/base";
+$social-sprite: sprite-map('social-icons/*.png', $sprite-spacing: 1px);
+
+.social-sprite {
+  background: transparent $social-sprite no-repeat;
+}
+
+@mixin social-sprite($network) {
+  background-position: sprite-position($social-sprite, 'social-' + $network);
+}

@@ -1,0 +1,67 @@
+@import 'base';
+
+#bio {
+  margin-bottom: 56px;
+}
+
+#bio .headline {
+  font-size: 20px;
+  line-height: 40px;
+}
+
+#bio p {
+  font-size: 14px;
+  line-height: 32px;
+}
+
+// Blog Feed
+#blog-feed {
+  width: 543px;
+  float: left;
+}
+
+#blog-feed time {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+#twitter-feed h2,
+#blog-feed h2 {
+  padding: 0 25px 15px 0;
+  width: 27%;
+  font-size: 20px;
+  border-bottom: 1px solid $red;
+}
+
+#blog-feed article {
+  margin: 20px 0;
+}
+
+#blog-feed article h3 {
+  font-size: 20px;
+}
+
+#blog-feed a {
+  color: #505050;
+}
+
+#blog-feed a:hover {
+  color: $red;
+}
+
+// Twitter Feed
+#twitter-feed {
+  margin: 0 20px 0 75px;
+  float: left;
+  width: 322px;
+  font-size: 20px;
+}
+
+#twitter-feed-content > article {
+  margin: 20px 0 30px;
+  line-height: 31px;
+}
+
+#twitter-feed-content time {
+  font-size: 14px;
+}

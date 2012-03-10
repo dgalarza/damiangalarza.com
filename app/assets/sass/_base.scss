@@ -1,0 +1,16 @@
+@import 'mixins';
+
+@import 'compass/css3/box-shadow';
+@import 'compass/css3/border-radius';
+@import 'compass/css3/font-face';
+@import 'compass/css3/transition';
+
+$red: #ce3927;
+$gray: #505050;
+
+$page-width: 1000px;
+$page-padding: 20px;
+
+$futura_name: 'futurastd_book-webfont';
+
+$post-content-spacing: 30px;

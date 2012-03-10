@@ -1,0 +1,180 @@
+/**
+ * Base CSS Style
+ * */
+
+@import 'base';
+@import 'reset200802';
+@import 'sprites';
+@import 'home';
+@import 'post';
+
+$futura_name: 'fonts/futurastd_book-webfont';
+@include font-face('FuturaStdBook', font-files($futura_name + '.woff', woff, $futura_name + '.ttf', ttf, $futura_name + '.svg', svg), $futura_name + '.eot');
+
+@font-face {
+  font-family: 'MemphisLTStdMedium';
+  src: url("fonts/memphisltstd_medium-webfont.eot");
+  src: url("fonts/memphisltstd_medium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/memphisltstd_medium-webfont.woff") format("woff"), url("fonts/memphisltstd_medium-webfont.ttf") format("truetype"), url("fonts/memphisltstd_medium-webfont.svg#MemphisLTStdMedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MemphisLTStdMedium';
+  src: url("fonts/memphisltstd_medium-webfont.eot");
+  src: url("fonts/memphisltstd_medium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/memphisltstd_medium-webfont.woff") format("woff"), url("fonts/memphisltstd_medium-webfont.ttf") format("truetype"), url("fonts/memphisltstd_medium-webfont.svg#MemphisLTStdMedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+aside, section, article, time, nav {
+ display: block; 
+}
+
+h1,h2,h3,h4,h5 {
+  font-weight: normal;
+}
+
+body, html {
+  font-family: 'MemphisLTStdMedium';
+  background: #fefefe;
+  color: #505050;
+  height: 100%;
+}
+
+#page {
+  min-height: 100%;
+  position: relative;
+}
+
+.wrapper {
+  width:  $page-width - ($page-padding * 2);
+  padding: 0 $page-padding;
+  margin: 0 auto;
+}
+
+a, a:visited {
+  color: $red;
+  text-decoration: none;
+  @include transition(color 0.35s linear 0s);
+}
+
+a:hover {
+  color: #505050;
+}
+
+// Header
+header {
+  border-top: 16px solid $red;
+}
+
+#page header hgroup {
+  padding: 56px $page-padding;
+  border-bottom: 1px solid $red;
+}
+
+header h1 {
+  font-family: 'MemphisLTStdMedium';
+  color: $red;
+  text-align: center;
+  font-size: 35px;
+}
+
+// Nav
+#site-nav {
+  margin: 50px auto;
+  padding: 0 20px;
+  line-height: 24px;
+  overflow: hidden;
+}
+
+#site-nav a {
+  font-family: 'FuturaStdBook', Arial;
+  color: #505050;
+  font-size: 24px;
+}
+
+#site-nav a:hover {
+  color: $red;
+}
+
+#site-nav ul {
+  float: left;
+}
+
+#site-nav li {
+  margin-right: 64px;
+  float: left;
+}
+
+#page-wrapper {
+  padding-bottom: 140px;
+}
+
+.site-content {
+  overflow: hidden;
+}
+
+// Social Nav
+#site-nav .social {
+  margin-right: 16px;
+  float: right;
+}
+
+#site-nav .social li {
+  margin: 0 8px;
+  padding: 2px;
+}
+
+#site-nav .social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  @extend .social-sprite;
+  @include hide-text;
+
+  &.social-github  { @include social-sprite('github');   }
+  &.social-twitter { @include social-sprite('twitter');  }
+  &.social-facebook { @include social-sprite('facebook'); }
+
+  @include transition(box-shadow 0.25s linear 0s);
+  @include border-radius(5px); 
+  &:hover { @include box-shadow(rgba(0,0,0,0.5) 1px 1px 5px -1px); }
+
+}
+
+// Footer
+.clear-footer {
+  height: 70px;
+  clear: both;
+}
+
+footer {
+  height: 70px;
+  color: #505050;
+  background: #eeeeee;
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer ul {
+  width: 642px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 28px;
+}
+
+footer li {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid #505050;
+  float: left;
+}
+
+footer li.last {
+  border-right: none;
+}
