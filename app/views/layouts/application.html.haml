@@ -3,18 +3,20 @@
   %head
 
     %meta{ :charset => 'UTF-8' }
-    %title= Damian Galarza
+    %title Damian Galarza
+
+    = stylesheet_link_tag 'style.css'
 
   %body
 
     #page
-      = render 'header'
+      = render 'layouts/header'
 
       #page-wrapper.wrapper
         %section.site-content
           = yield
 
-      = render 'footer'
+      = render 'layouts/footer'
 
       = yield :scripts
 
