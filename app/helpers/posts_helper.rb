@@ -12,7 +12,7 @@ module PostsHelper
     highlight_options = { :linenos => 'table', :tabwidth => 2 }
 
     doc = Nokogiri::HTML::DocumentFragment.parse(html)
-    doc.css("code.block").each do |code_block|
+    doc.css("code").each do |code_block|
       code_block.replace Pygments.highlight(code_block.inner_html.rstrip, :lexer => code_block[:lang], :options => highlight_options)
     end
 
@@ -25,6 +25,10 @@ module PostsHelper
     end
 
     doc.to_s
+  end
+
+  def publish_date
+    @post.created_at.strftime('%B %d, %Y')
   end
 
 end
