@@ -1,1 +1,19 @@
-%h1 Hello World
+%section#bio
+  %p.headline I'm a NY/NJ based, full stack web developer. I currently work at <a href="http://www.thrillist.com">Thrillist</a> as an Interface Developer, specializing in front end optimization including writing high performance JavaScript applications. My languages of choice are JavaScript and Ruby.
+  %p I am passionate about web development as a whole and believe in clean organized code. I aim to ensure that the user has the smoothest experience possible while on the web. In my spare time I enjoy working on various side projects, including my work on the <a href="http://gradients.glrzad.com">CSS3 Gradient Generator</a>.
+
+%section#blog-feed
+  %h2 Recent Posts
+  = render :partial => 'post', :collection => @posts
+
+%section#twitter-feed
+  %h2 Tweets
+  #twitter-feed-content
+  
+  :plain
+    <script type="text/x-handlebars-template" id="tweet-template">
+      <article>
+        <p>{{{text}}}</p>
+        <time>{{pretty_date}}</time>
+      </article>
+    </script>

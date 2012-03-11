@@ -4,7 +4,10 @@ gem 'rails', '3.2.2'
 
 gem 'rakismet'
 gem 'devise'
+gem 'cancan'
 gem 'haml'
+
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

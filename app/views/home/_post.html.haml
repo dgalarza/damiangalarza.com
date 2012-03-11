@@ -1,0 +1,6 @@
+%article
+  %time{ :datetime => post.created_at }
+    = post.created_at
+
+  %h3
+    = link_to post.title, post_path(post)
