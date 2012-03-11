@@ -246,12 +246,23 @@ table {
 /* line 75, ../sass/_post.scss */
 .code-block {
   margin: 20px 0;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 /* line 80, ../sass/_post.scss */
 .code-block + h4 {
   margin-top: 50px;
+}
+
+/* line 84, ../sass/_post.scss */
+.highlighttable {
+  width: 100%;
+  border: 1px solid #CCCCCC;
+}
+
+/* line 89, ../sass/_post.scss */
+.highlighttable td {
+  padding: 5px;
 }
 
 @font-face {

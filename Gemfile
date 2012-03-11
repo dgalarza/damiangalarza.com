@@ -6,6 +6,9 @@ gem 'rakismet'
 gem 'devise'
 gem 'cancan'
 gem 'haml'
+gem 'redcarpet'
+gem 'nokogiri'
+gem 'pygments.rb'
 
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 

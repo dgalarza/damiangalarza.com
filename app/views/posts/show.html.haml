@@ -29,4 +29,8 @@
 
   #post-content
     %h2= link_to @post.title, url_for(@post)
-    = @post.content
+    = post_markdown
+
+- content_for :pygments_css do
+  %style{ :type => 'text/css' }
+    = Pygments.css('.highlight', :style => 'vs')

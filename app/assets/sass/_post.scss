@@ -74,9 +74,18 @@
 
 .code-block {
   margin: 20px 0;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .code-block + h4 {
   margin-top: $post-content-spacing + 20px;
+}
+
+.highlighttable {
+  width: 100%;
+  border: 1px solid #CCCCCC;
+}
+
+.highlighttable td {
+  padding: 5px;
 }
