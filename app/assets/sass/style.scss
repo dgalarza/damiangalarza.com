@@ -65,7 +65,7 @@ a:hover {
 }
 
 // Header
-header {
+#page > header {
   border-top: 16px solid $red;
 }
 
@@ -75,10 +75,21 @@ header {
 }
 
 header h1 {
+  width: 126px;
+  height: 146px;
+  margin: 0 auto;
   font-family: 'MemphisLTStdMedium';
   color: $red;
   text-align: center;
   font-size: 35px;
+}
+
+header h1 a {
+  width: 126px;
+  height: 146px;
+  display: block;
+  background: url(/images/dg.png) 0 0 no-repeat;
+  @include hide-text;
 }
 
 // Nav
@@ -93,6 +104,10 @@ header h1 {
   font-family: 'FuturaStdBook', Arial;
   color: #505050;
   font-size: 24px;
+}
+
+.posts #site-nav #blog {
+  color: $red;
 }
 
 #site-nav a:hover {
@@ -118,7 +133,6 @@ header h1 {
 
 // Social Nav
 #site-nav .social {
-  margin-right: 16px;
   float: right;
 }
 
@@ -163,7 +177,7 @@ footer {
 }
 
 footer ul {
-  width: 642px;
+  width: 650px;
   margin: 0 auto;
   overflow: hidden;
   padding-top: 28px;

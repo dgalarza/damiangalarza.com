@@ -12,17 +12,35 @@
   margin-top: 50px;
 }
 
-#post-sidebar .social-media-wrapper {
+#post .social-media-wrapper {
   margin: 15px 0;
 }
 
-#post-sidebar time {
-  font-size: 20px;
-  margin-bottom: 25px;
+#post header {
+  margin-bottom: $post-content-spacing;
+}
+
+#post header h2 {
+  margin: 4px 0 7px;
+}
+
+#post .publish-meta {
+  overflow: hidden;
+}
+
+#post .publish-meta p {
+  margin-left: 5px;
+  line-height: 16px;
+  float: left;
+}
+
+#post time {
+  font-size: 16px;
+  float: left;
 }
 
 #post-sidebar .post-category {
-  text-align: right;
+  float: left;
 }
 
 #post-sidebar .post-category a {
@@ -30,46 +48,42 @@
   &:hover { color: $red; }
 }
 
-#post-content {
-  width: 694px;
-  float: right;
-}
-
-#post-content {
+#post {
   h2, h3, h4, h5 {
-    margin-bottom: $post-content-spacing;
+    margin: 45px 0 $post-content-spacing - 10px;
   }
 }
 
-#post-content h2 {
+#post h2 {
   font-family: 'MemphisLTStdMedium';
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 26px;
+  line-height: 34px;
 }
 
-#post-content h2 a,
-#post-content h2 a:visited {
+#post h2 a,
+#post h2 a:visited {
   color: #505050;
 }
 
-#post-content p {
+#post > p {
   font-family: 'FuturaStdBook';
   line-height: 22px;
-  font-size: 14px;
+  font-size: 16px;
+  width: 890px;
   margin-bottom: $post-content-spacing - 5;
 }
 
-#post-content .inline-code-sample {
+#post .inline-code-sample {
   margin-bottom: $post-content-spacing - 5;
   overflow-x: auto;
 }
 
-#post-content h3 {
-  font-size: 18px;
+#post h3 {
+  font-size: 20px;
 }
 
-#post-content h4 {
-  font-size: 16px;
+#post h4 {
+  font-size: 18px;
 }
 
 .code-block {
