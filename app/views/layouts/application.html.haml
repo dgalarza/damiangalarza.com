@@ -9,7 +9,7 @@
 
     = yield :pygments_css
 
-  %body
+  %body{ :class => controller_name }
 
     #page
       = render 'layouts/header'
