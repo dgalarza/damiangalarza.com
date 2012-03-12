@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120311193759) do
+ActiveRecord::Schema.define(:version => 20120312025738) do
 
   create_table "categories", :force => true do |t|
     t.string   "name",                           :null => false
@@ -33,6 +33,13 @@ ActiveRecord::Schema.define(:version => 20120311193759) do
   add_index "posts", ["category_id"], :name => "index_posts_on_category_id"
   add_index "posts", ["user_id"], :name => "index_posts_on_author_id"
 
+  create_table "posts_tags", :force => true do |t|
+    t.integer "post_id", :null => false
+    t.integer "tag_id",  :null => false
+  end
+
+  add_index "posts_tags", ["post_id", "tag_id"], :name => "index_posts_tags_on_post_id_and_tag_id", :unique => true
+
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
     t.string   "username"
@@ -45,6 +52,14 @@ ActiveRecord::Schema.define(:version => 20120311193759) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
+
+  create_table "tags", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "tags", ["name"], :name => "index_tags_on_name", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false
