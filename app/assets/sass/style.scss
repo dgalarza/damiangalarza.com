@@ -43,6 +43,52 @@ body, html {
   height: 100%;
 }
 
+input[type=text],
+input[type=url],
+input[type=email],
+textarea {
+  font-size: 14px;
+  font-family: 'MemphisLTStdMedium';
+  color: $gray;
+  resize: none;
+  outline: none;
+  border: 1px solid #b3b3b3;
+  padding: 15px 0 10px 13px;
+  @include box-shadow(0 0 5px 0 #e1e1e1 inset);
+  @include transition(box-shadow 0.25s linear 0s);
+  &:focus { 
+    outline: 0 none;
+  }
+}
+
+input[type=text] {
+  height: 11px;
+}
+
+::selection { background: $red; color: #FFFFFF; }
+::-moz-selection { background: $red; color: #FFFFFF; }
+
+.btn {
+  border: none;
+  font-family: 'MemphisLTStdMedium';
+  font-weight: normal;
+  font-size: 18px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    @include box-shadow(0 0 5px $gray);
+  }
+}
+
+.red-btn {
+  color: #FFFFFF;
+  $start: #ce3827;
+  $end: #b03022;
+  @include background(linear-gradient(top, $start, $end));
+}
+
 #page {
   min-height: 100%;
   position: relative;

@@ -67,7 +67,8 @@
 
 #post > p {
   font-family: 'FuturaStdBook';
-  line-height: 22px;
+  line-height: 27px;
+  letter-spacing: 0.6px;
   font-size: 16px;
   width: 890px;
   margin-bottom: $post-content-spacing - 5;
@@ -102,4 +103,36 @@
 
 .highlighttable td {
   padding: 5px;
+}
+
+#post-comments {
+  width: 615px;
+}
+
+#post-comments input[type=email],
+#post-comments input[type=url],
+#post-comments input[type=text],
+#post-comments textarea {
+  width: 600px;
+  margin: 10px 0;
+}
+
+#post-comments input[type=email],
+#post-comments input[type=url],
+#post-comments input[type=text] {
+  height: 18px;
+}
+
+#post-comments textarea {
+  height: 100px;
+}
+
+#post-comments input[type=submit] {
+  width: 175px;
+}
+
+#post-comments .hint {
+  float: right;
+  font-size: 12px;
+  color: $gray;
 }
