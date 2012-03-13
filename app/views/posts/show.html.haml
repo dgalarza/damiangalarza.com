@@ -14,3 +14,16 @@
       %a{:href => '#tag'}= tag.name
 
   =post_markdown
+
+  %section#post-comments
+    - if @post.comments.length > 1
+      = render :partial => 'post_comment', :collection => @post.comments
+
+    = form_for [@post, @comment] do |comment|
+      = comment.text_field :username, :placeholder => "Name"
+      = comment.text_field :email, :placeholder    => "Email"
+      = comment.url_field :website, :placeholder  => "Website"
+      = comment.text_area  :comment, :placeholder  => "Comment"
+      %p.hint Markdown enabled
+
+      = comment.submit 'Submit', :class => 'btn red-btn'
