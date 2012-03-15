@@ -6,6 +6,7 @@
 @import 'reset200802';
 @import 'sprites';
 @import 'pygments';
+@import 'devise';
 @import 'home';
 @import 'post';
 
@@ -44,6 +45,7 @@ body, html {
 }
 
 input[type=text],
+input[type=password],
 input[type=url],
 input[type=email],
 textarea {
@@ -77,6 +79,7 @@ input[type=text] {
   line-height: 38px;
   text-align: center;
   cursor: pointer;
+  @include transition(box-shadow 0.25s ease-out 0s);
   &:hover {
     @include box-shadow(0 0 5px $gray);
   }
