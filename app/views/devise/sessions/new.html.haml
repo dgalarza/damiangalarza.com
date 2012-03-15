@@ -1,0 +1,6 @@
+%section#sign-in
+  = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+    = f.email_field :email, :placeholder => 'Email'
+    = f.password_field :password, :placeholder => 'Password'
+
+    = f.submit 'Sign In', :class => 'btn red-btn'
