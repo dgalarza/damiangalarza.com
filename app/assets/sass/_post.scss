@@ -105,6 +105,7 @@
   padding: 5px;
 }
 
+// Post Comments
 #post-comments {
   width: 615px;
 }
@@ -135,4 +136,20 @@
   float: right;
   font-size: 12px;
   color: $gray;
+}
+
+#post-comments .comment {
+  overflow: hidden;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d6d6d6;
+  margin-bottom: 24px;
+}
+
+#post-comments .avatar {
+  float: left;
+}
+
+#post-comments .comment-wrapper {
+  margin-left: 20px;
+  float: left;
 }
