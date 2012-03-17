@@ -135,7 +135,7 @@
 #post-comments .hint {
   float: right;
   font-size: 12px;
-  color: $gray;
+  color: #acacac;
 }
 
 #post-comments .comment {
@@ -145,11 +145,26 @@
   margin-bottom: 24px;
 }
 
+#post-comments .comment:last-of-type {
+  border-bottom: none;
+}
+
 #post-comments .avatar {
   float: left;
 }
 
 #post-comments .comment-wrapper {
+  width: 533px;
   margin-left: 20px;
   float: left;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+#post-comments .comment-meta {
+  font-size: 12px;
+}
+
+#post-comments .meridian {
+  text-transform: lowercase;
 }
