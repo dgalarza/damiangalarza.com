@@ -16,9 +16,13 @@
   =post_markdown
 
   %section#post-comments
-    - if @post.comments.length > 1
-      = render :partial => 'post_comment', :collection => @post.comments
+    %h4 
+      Comments
+      - if @post.comments.length > 1
+        = "(#{@post.comments.length})"
+    = render :partial => 'post_comment', :collection => @post.comments
 
+    %h4 Write a Comment
     = form_for [@post, @comment] do |comment|
       = comment.text_field :username, :placeholder => "Name"
       = comment.text_field :email, :placeholder    => "Email"
