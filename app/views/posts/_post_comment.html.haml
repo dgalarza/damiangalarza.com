@@ -1,4 +1,10 @@
 %article.comment
   = image_tag gravatar(post_comment.email), :class => 'avatar'
   .comment-wrapper
-    = post_comment.comment
+    %p= post_comment.comment
+    .comment-meta
+      posted by:
+      = post_author(post_comment)
+      @
+      = comment_timestamp(post_comment.created_at)
+
