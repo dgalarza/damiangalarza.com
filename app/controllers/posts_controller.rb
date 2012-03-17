@@ -6,12 +6,12 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     if current_user
-      @comment = @post.comments.build({
+      @comment = Comment.new(
         :email => current_user.email,
         :username => current_user.username
-      })
+      )
     else
-      @comment = @post.comments.build
+      @comment = Comment.new
     end
   end
 end
