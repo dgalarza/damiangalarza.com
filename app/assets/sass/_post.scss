@@ -168,3 +168,38 @@
 #post-comments .meridian {
   text-transform: lowercase;
 }
+
+// Archives
+#post-archives .post {
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+#post-archives .post-meta {
+  width: 181px;
+  margin-right: 70px;
+  float: left;
+  text-align: right;
+  font-size: 20px;
+}
+
+#post-archives .post-meta .post-category {
+  margin-top: 25px;
+}
+
+#post-archives .post-content {
+  width: 616px;
+  float: left;
+  line-height: 22px;
+}
+
+#post-archives .post-content h3 {
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+#post-archives .post-content h3 a {
+  color: $gray;
+  &:hover { color: $red; }
+}

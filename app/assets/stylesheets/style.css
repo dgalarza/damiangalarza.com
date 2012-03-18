@@ -818,6 +818,49 @@ table .linenos {
   text-transform: lowercase;
 }
 
+/* line 173, ../sass/_post.scss */
+#post-archives .post {
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+/* line 178, ../sass/_post.scss */
+#post-archives .post-meta {
+  width: 181px;
+  margin-right: 70px;
+  float: left;
+  text-align: right;
+  font-size: 20px;
+}
+
+/* line 186, ../sass/_post.scss */
+#post-archives .post-meta .post-category {
+  margin-top: 25px;
+}
+
+/* line 190, ../sass/_post.scss */
+#post-archives .post-content {
+  width: 616px;
+  float: left;
+  line-height: 22px;
+}
+
+/* line 196, ../sass/_post.scss */
+#post-archives .post-content h3 {
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+/* line 202, ../sass/_post.scss */
+#post-archives .post-content h3 a {
+  color: #505050;
+}
+/* line 204, ../sass/_post.scss */
+#post-archives .post-content h3 a:hover {
+  color: #ce3927;
+}
+
 @font-face {
   font-family: "FuturaStdBook";
   src: url('/stylesheets/fonts/fonts/futurastd_book-webfont.eot');

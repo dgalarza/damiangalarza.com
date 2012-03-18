@@ -1,0 +1,9 @@
+%article.post
+
+  .post-meta
+    %time{ :datetime => nil, :pubdate => post.created_at }= format_date(post.created_at)
+    %p.post-category= post.category.name if post.category
+  
+  .post-content
+    %h3= link_to post.title, post
+    = post_markdown(post.excerpt)

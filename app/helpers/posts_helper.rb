@@ -8,9 +8,9 @@ module PostsHelper
   #
   # @see HTMLwithPygments
   # @return HTML String for commment
-  def post_markdown
+  def post_markdown(post)
     markdown = Redcarpet::Markdown.new(HTMLwithPygments, :autolink => true, :fenced_code_blocks => true)
-    markdown_html = markdown.render(@post.content)
+    markdown_html = markdown.render(post)
     format_code_samples(markdown_html).html_safe
   end
 
@@ -31,15 +31,6 @@ module PostsHelper
     nodes.wrap('<div class="code-block"></div>')
 
     doc.inner_html
-  end
-
-  # Format the publish date for display purposes
-  #
-  # @example 
-  #   August 6, 1986
-  #
-  def publish_date
-    @post.created_at.strftime('%B %d, %Y')
   end
 
 end

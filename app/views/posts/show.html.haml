@@ -2,10 +2,10 @@
 
   %header
     .publish-meta
-      %time{ :datetime => nil, :pubdate => @post.created_at }= publish_date
+      %time{ :datetime => nil, :pubdate => @post.created_at }= format_date(@post.created_at)
       %p.post-category
         &ndash;
-        = @post.category.name
+        = @post.category.name if @post.category
 
     %h2= link_to @post.title, url_for(@post)
     - @post.tags.each_with_index do |tag, i|
@@ -13,7 +13,7 @@
         |
       %a{:href => '#tag'}= tag.name
 
-  =post_markdown
+  =post_markdown(@post.content)
 
   %section#post-comments
     %h4 
