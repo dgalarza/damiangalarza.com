@@ -118,9 +118,11 @@ a:hover {
   border-top: 16px solid $red;
 }
 
-#page header hgroup {
-  padding: 56px $page-padding;
+#page header .main-head {
+  padding: 56px $page-padding 39px;
   border-bottom: 1px solid $red;
+  overflow: hidden;
+  position: relative;
 }
 
 header h1 {
@@ -131,6 +133,7 @@ header h1 {
   color: $red;
   text-align: center;
   font-size: 35px;
+  float: left;
 }
 
 header h1 a {
@@ -139,6 +142,32 @@ header h1 a {
   display: block;
   background: url(/images/dg.png) 0 0 no-repeat;
   @include hide-text;
+}
+
+#site-search {
+  position: absolute;
+  right: 28px;
+  bottom: 45px;
+  overflow: hidden;
+}
+
+#site-search input {
+  float: left;
+}
+
+#site-search input[type=text] {
+  height: 22px;
+}
+
+#search-submit {
+  width: 48px;
+  height: 49px;
+  overflow: hidden;
+  background: url(../images/icons/icon-search.png) 0 0 no-repeat;
+  border: none;
+  cursor: pointer;
+  text-indent: 49px;
+  white-space: nowrap;
 }
 
 // Nav
@@ -163,11 +192,11 @@ header h1 a {
   color: $red;
 }
 
-#site-nav ul {
+#site-header ul {
   float: left;
 }
 
-#site-nav li {
+#site-header li {
   margin-right: 64px;
   float: left;
 }
@@ -181,16 +210,16 @@ header h1 a {
 }
 
 // Social Nav
-#site-nav .social {
+#site-header .social {
   float: right;
 }
 
-#site-nav .social li {
+#site-header .social li {
   margin: 0 8px;
   padding: 2px;
 }
 
-#site-nav .social a {
+#site-header .social a {
   display: block;
   width: 40px;
   height: 40px;

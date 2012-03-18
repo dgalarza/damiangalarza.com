@@ -72,7 +72,7 @@ table {
  * Sprites
  */
 /* line 8, ../sass/_sprites.scss */
-.social-sprite, #site-nav .social a {
+.social-sprite, #site-header .social a {
   background: transparent url('/images/social-icons-s86c4929ee3.png') no-repeat;
 }
 
@@ -597,17 +597,18 @@ table .linenos {
 /* line 87, ../sass/_home.scss */
 #projects-pane .pane h3 {
   padding-top: 28px;
+  margin-bottom: 3px;
   font-size: 14px;
   font-family: Georgia;
   font-style: italic;
 }
 
-/* line 94, ../sass/_home.scss */
+/* line 95, ../sass/_home.scss */
 #gradient-generator.pane {
   background: url(http://assets.damiangalarza.com/images/icons/icon-gradient_generator.png) 0 0 no-repeat;
 }
 
-/* line 98, ../sass/_home.scss */
+/* line 99, ../sass/_home.scss */
 #github.pane {
   background: url(http://assets.damiangalarza.com/images/icons/icon-github_octocat.png) 0 0 no-repeat;
 }
@@ -974,12 +975,14 @@ a:hover {
 }
 
 /* line 121, ../sass/style.scss */
-#page header hgroup {
-  padding: 56px 20px;
+#page header .main-head {
+  padding: 56px 20px 39px;
   border-bottom: 1px solid #ce3927;
+  overflow: hidden;
+  position: relative;
 }
 
-/* line 126, ../sass/style.scss */
+/* line 128, ../sass/style.scss */
 header h1 {
   width: 126px;
   height: 146px;
@@ -988,9 +991,10 @@ header h1 {
   color: #ce3927;
   text-align: center;
   font-size: 35px;
+  float: left;
 }
 
-/* line 136, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 header h1 a {
   width: 126px;
   height: 146px;
@@ -1001,7 +1005,37 @@ header h1 a {
   overflow: hidden;
 }
 
-/* line 145, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
+#site-search {
+  position: absolute;
+  right: 28px;
+  bottom: 45px;
+  overflow: hidden;
+}
+
+/* line 154, ../sass/style.scss */
+#site-search input {
+  float: left;
+}
+
+/* line 158, ../sass/style.scss */
+#site-search input[type=text] {
+  height: 22px;
+}
+
+/* line 162, ../sass/style.scss */
+#search-submit {
+  width: 48px;
+  height: 49px;
+  overflow: hidden;
+  background: url(../images/icons/icon-search.png) 0 0 no-repeat;
+  border: none;
+  cursor: pointer;
+  text-indent: 49px;
+  white-space: nowrap;
+}
+
+/* line 174, ../sass/style.scss */
 #site-nav {
   margin: 50px auto;
   padding: 0 20px;
@@ -1009,57 +1043,57 @@ header h1 a {
   overflow: hidden;
 }
 
-/* line 152, ../sass/style.scss */
+/* line 181, ../sass/style.scss */
 #site-nav a {
   font-family: 'FuturaStdBook', Arial;
   color: #505050;
   font-size: 24px;
 }
 
-/* line 158, ../sass/style.scss */
+/* line 187, ../sass/style.scss */
 .posts #site-nav #blog {
   color: #ce3927;
 }
 
-/* line 162, ../sass/style.scss */
+/* line 191, ../sass/style.scss */
 #site-nav a:hover {
   color: #ce3927;
 }
 
-/* line 166, ../sass/style.scss */
-#site-nav ul {
+/* line 195, ../sass/style.scss */
+#site-header ul {
   float: left;
 }
 
-/* line 170, ../sass/style.scss */
-#site-nav li {
+/* line 199, ../sass/style.scss */
+#site-header li {
   margin-right: 64px;
   float: left;
 }
 
-/* line 175, ../sass/style.scss */
+/* line 204, ../sass/style.scss */
 #page-wrapper {
   padding-bottom: 140px;
 }
 
-/* line 179, ../sass/style.scss */
+/* line 208, ../sass/style.scss */
 .site-content {
   overflow: hidden;
 }
 
-/* line 184, ../sass/style.scss */
-#site-nav .social {
+/* line 213, ../sass/style.scss */
+#site-header .social {
   float: right;
 }
 
-/* line 188, ../sass/style.scss */
-#site-nav .social li {
+/* line 217, ../sass/style.scss */
+#site-header .social li {
   margin: 0 8px;
   padding: 2px;
 }
 
-/* line 193, ../sass/style.scss */
-#site-nav .social a {
+/* line 222, ../sass/style.scss */
+#site-header .social a {
   display: block;
   width: 40px;
   height: 40px;
@@ -1077,32 +1111,32 @@ header h1 a {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 200, ../sass/style.scss */
-#site-nav .social a.social-github {
+/* line 229, ../sass/style.scss */
+#site-header .social a.social-github {
   background-position: 0 0;
 }
-/* line 201, ../sass/style.scss */
-#site-nav .social a.social-twitter {
+/* line 230, ../sass/style.scss */
+#site-header .social a.social-twitter {
   background-position: 0 -40px;
 }
-/* line 202, ../sass/style.scss */
-#site-nav .social a.social-facebook {
+/* line 231, ../sass/style.scss */
+#site-header .social a.social-facebook {
   background-position: 0 -80px;
 }
-/* line 206, ../sass/style.scss */
-#site-nav .social a:hover {
+/* line 235, ../sass/style.scss */
+#site-header .social a:hover {
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 5px -1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 5px -1px;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 5px -1px;
 }
 
-/* line 211, ../sass/style.scss */
+/* line 240, ../sass/style.scss */
 .clear-footer {
   height: 70px;
   clear: both;
 }
 
-/* line 216, ../sass/style.scss */
+/* line 245, ../sass/style.scss */
 footer {
   height: 70px;
   color: #505050;
@@ -1115,7 +1149,7 @@ footer {
   right: 0;
 }
 
-/* line 228, ../sass/style.scss */
+/* line 257, ../sass/style.scss */
 footer ul {
   width: 650px;
   margin: 0 auto;
@@ -1123,7 +1157,7 @@ footer ul {
   padding-top: 28px;
 }
 
-/* line 235, ../sass/style.scss */
+/* line 264, ../sass/style.scss */
 footer li {
   padding-right: 10px;
   margin-right: 10px;
@@ -1131,7 +1165,7 @@ footer li {
   float: left;
 }
 
-/* line 242, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 footer li.last {
   border-right: none;
 }
