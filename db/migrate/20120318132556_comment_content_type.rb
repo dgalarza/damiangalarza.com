@@ -1,0 +1,9 @@
+class CommentContentType < ActiveRecord::Migration
+  def up
+    change_column :comments, :comment, :text
+  end
+
+  def down
+    change_column :comments, :comment, :text
+  end
+end
