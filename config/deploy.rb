@@ -1,4 +1,5 @@
 require "bundler/capistrano"
+load 'deploy/assets'
 
 set :application, "Damian Galarza.com"
 set :repository,  "git@github.com:dgalarza/damian_rails.git"
@@ -35,10 +36,10 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 
-  task :pipeline_precompile do
-    run "cd #{release_path}; RAILS_ENV=production bundle exec rake assets:precompile"
-  end
+  #task :pipeline_precompile do
+    #run "cd #{release_path}; RAILS_ENV=production bundle exec rake assets:precompile"
+  #end
 
 end
 
-after "deploy:update_code", "deploy:pipeline_precompile"
+#after "deploy:update_code", "deploy:pipeline_precompile"
