@@ -37,6 +37,6 @@ production:
   reconnect: false
   database: damiangalarza.com_production
   pool: 5
-  username: root
-  password:
+  username: dg_dev
+  password: p3bbl3s
   socket: /var/run/mysqld/mysqld.sock
