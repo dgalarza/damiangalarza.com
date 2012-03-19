@@ -11,5 +11,10 @@ require 'spec_helper'
 #   end
 # end
 describe HomeHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it "should format a post date properly" do
+    date = Time.parse("2010-12-23 03:26:19")
+    format_post_date(date).should == 'December 23, 2010 @ 03:26<span class="meridian">AM</span>'
+  end
+
 end

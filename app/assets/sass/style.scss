@@ -92,6 +92,10 @@ input[type=text] {
   @include background(linear-gradient(top, $start, $end));
 }
 
+.meridian {
+  text-transform: lowercase;
+}
+
 #page {
   min-height: 100%;
   position: relative;
