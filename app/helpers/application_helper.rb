@@ -9,4 +9,16 @@ module ApplicationHelper
     date.strftime('%B %d, %Y')
   end
 
+  # Generate the path for a post permalink
+  #
+  # @example
+  #   post = Post.new(:created_at => Date.parse("2009-07-26 18:03:12"), :slug => 'my-post')
+  #   post_permalink_path(post) # => /2009/7/26/my-post
+  #
+  # @param [<#Post>] post Post to generate permalink path for
+  def post_permalink_path(post)
+    date = post.created_at
+    "/posts/#{date.year}/#{date.month}/#{date.day}/#{post.slug}"
+  end
+
 end

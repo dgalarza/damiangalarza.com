@@ -27,8 +27,8 @@ test:
   reconnect: false
   database: damiangalarza.com_test
   pool: 5
-  username: root
-  password:
+  username: dg_dev
+  password: er1nb3rmud3z
   socket: /var/run/mysqld/mysqld.sock
 
 production:

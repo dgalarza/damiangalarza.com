@@ -5,5 +5,5 @@
     %p.post-category= post.category.name if post.category
   
   .post-content
-    %h3= link_to post.title, post
+    %h3= link_to post.title, post_permalink_path(post)
     = post_markdown(post.excerpt)

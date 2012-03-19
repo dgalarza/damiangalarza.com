@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120318133710) do
+ActiveRecord::Schema.define(:version => 20120319001306) do
 
   create_table "categories", :force => true do |t|
     t.string   "name",                           :null => false
@@ -46,9 +46,11 @@ ActiveRecord::Schema.define(:version => 20120318133710) do
     t.integer  "wp_id"
     t.text     "excerpt"
     t.string   "subtitle",    :limit => 50
+    t.string   "slug"
   end
 
   add_index "posts", ["category_id"], :name => "index_posts_on_category_id"
+  add_index "posts", ["slug"], :name => "index_posts_on_slug", :unique => true
   add_index "posts", ["user_id"], :name => "index_posts_on_author_id"
 
   create_table "posts_tags", :force => true do |t|

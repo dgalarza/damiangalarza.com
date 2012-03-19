@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.where(:slug => params[:slug]).first
     if current_user
       @comment = Comment.new(
         :email => current_user.email,
