@@ -10,5 +10,4 @@ namespace :db do
     @comments = Comment.all
     @comments.each { |comment| comment.format_markdown; comment.save }
   end
-
 end
