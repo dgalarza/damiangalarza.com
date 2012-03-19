@@ -154,7 +154,7 @@
 }
 
 #post-comments .comment-wrapper {
-  width: 533px;
+  width: 515px;
   margin-left: 20px;
   float: left;
   font-size: 14px;
@@ -163,6 +163,13 @@
 
 #post-comments .comment-meta {
   font-size: 12px;
+}
+
+#post-comments #comment-load-trigger {
+  width: 100%;
+  display: block;
+
+  &:hover { color: #FFFFFF; }
 }
 
 // Archives

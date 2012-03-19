@@ -6,11 +6,12 @@ class PostsController < ApplicationController
 
   def show
     post_query = Post.where(:slug => params[:slug])
-    post_query.select("slug, title, cached_markdown, category_id, created_at")
-    post_query.includes(:category)
-    post_query.includes(:comments)
-
+    post_query = post_query.select("id, slug, title, cached_markdown, category_id, created_at")
+    post_query = post_query.includes(:category)
     @post = post_query.first
+
+    @comment_count = @post.comments.count
+    @comments = @post.comments.order('created_at DESC').limit(10)
 
     if current_user
       @comment = Comment.new(

@@ -1,8 +1,7 @@
 module CommentsHelper
 
   # Generate gravatar image URL based on the email provided
-  def gravatar(email)
-    gravatar_id = Digest::MD5.hexdigest(email.downcase)
+  def gravatar(gravatar_id)
     "//gravatar.com/avatar/#{gravatar_id}.png?s=60r=pg"
   end
 
@@ -16,7 +15,7 @@ module CommentsHelper
   # @param [Comment] comment
   def comment_author(comment)
     if comment.website
-      link_to comment.username, comment.website
+      link_to comment.username, comment.website, :target => '_blank'
     else
       comment.username
     end
