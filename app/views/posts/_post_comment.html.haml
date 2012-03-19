@@ -1,5 +1,5 @@
 %article.comment
-  = image_tag gravatar(post_comment.email), :class => 'avatar'
+  = image_tag gravatar(post_comment.email_hash), :class => 'avatar'
   .comment-wrapper
     %p= post_comment.comment.html_safe
     .comment-meta

@@ -15,4 +15,8 @@ class Comment < ActiveRecord::Base
     self.comment = markdown.render(self.comment)
   end
 
+  def email_hash
+    Digest::MD5.hexdigest(self.email.downcase)
+  end
+
 end

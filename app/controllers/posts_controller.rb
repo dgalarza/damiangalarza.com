@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     @post = post_query.first
 
     @comment_count = @post.comments.count
-    @comments = @post.comments.limit(10)
+    @comments = @post.comments.order('created_at DESC').limit(10)
 
     if current_user
       @comment = Comment.new(

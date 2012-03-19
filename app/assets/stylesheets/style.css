@@ -801,7 +801,7 @@ table .linenos {
 
 /* line 156, ../sass/_post.scss */
 #post-comments .comment-wrapper {
-  width: 533px;
+  width: 515px;
   margin-left: 20px;
   float: left;
   font-size: 14px;
@@ -813,13 +813,23 @@ table .linenos {
   font-size: 12px;
 }
 
-/* line 169, ../sass/_post.scss */
+/* line 168, ../sass/_post.scss */
+#post-comments #comment-load-trigger {
+  width: 100%;
+  display: block;
+}
+/* line 172, ../sass/_post.scss */
+#post-comments #comment-load-trigger:hover {
+  color: #FFFFFF;
+}
+
+/* line 176, ../sass/_post.scss */
 #post-archives .post {
   overflow: hidden;
   margin-top: 60px;
 }
 
-/* line 174, ../sass/_post.scss */
+/* line 181, ../sass/_post.scss */
 #post-archives .post-meta {
   width: 181px;
   margin-right: 70px;
@@ -828,30 +838,30 @@ table .linenos {
   font-size: 20px;
 }
 
-/* line 182, ../sass/_post.scss */
+/* line 189, ../sass/_post.scss */
 #post-archives .post-meta .post-category {
   margin-top: 25px;
 }
 
-/* line 186, ../sass/_post.scss */
+/* line 193, ../sass/_post.scss */
 #post-archives .post-content {
   width: 616px;
   float: left;
   line-height: 22px;
 }
 
-/* line 192, ../sass/_post.scss */
+/* line 199, ../sass/_post.scss */
 #post-archives .post-content h3 {
   font-size: 20px;
   line-height: 26px;
   margin-bottom: 10px;
 }
 
-/* line 198, ../sass/_post.scss */
+/* line 205, ../sass/_post.scss */
 #post-archives .post-content h3 a {
   color: #505050;
 }
-/* line 200, ../sass/_post.scss */
+/* line 207, ../sass/_post.scss */
 #post-archives .post-content h3 a:hover {
   color: #ce3927;
 }

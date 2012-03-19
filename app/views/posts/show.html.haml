@@ -1,4 +1,4 @@
-%article#post
+%article#post{ "data-post-id" => @post.id }
 
   %header
     .publish-meta
@@ -15,12 +15,16 @@
 
   =post_markdown(@post.cached_markdown)
 
-  %section#post-comments
+  %section#post-comments{ 'data-comment-count' => @comment_count }
     %h4 
       Comments
       - if @comments.length > 1
         = "(#{@comment_count})"
-    = render :partial => 'post_comment', :collection => @comments
+    #comment-content
+      = render :partial => 'post_comment', :collection => @comments
+
+    - if @comments.length < @comment_count
+      = link_to 'Load More Comments', 'javascript:void(0);', :class => 'btn red-btn', :id => 'comment-load-trigger'
 
     %h4 Write a Comment
     = form_for [@post, @comment] do |comment|
@@ -31,3 +35,19 @@
       %p.hint Markdown enabled
 
       = comment.submit 'Submit', :class => 'btn red-btn'
+
+- content_for :scripts do
+  %script{ :type => "text/javascript", :src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" }
+  = javascript_include_tag 'posts'
+
+  :plain
+    <script type="text/x-handlebars-template" id="comment-template">
+      <article class="comment">
+        <img src="{{gravatar_url this}}" class="avatar" />
+        <div class="comment-wrapper">
+          <p>{{{comment}}}</p>
+          <div class="comment-meta">posted by: {{{comment_author this}}} @ {{created_at}}</div>
+        </div>
+      </article>
+    </script>
+
