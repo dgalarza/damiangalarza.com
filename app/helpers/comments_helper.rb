@@ -22,17 +22,4 @@ module CommentsHelper
     end
   end
 
-  # Run the comment through the Redcarpet Markdown interpretter to generate HTML from
-  # Markdown from using the custom HTMLwithPygments renderer to add syntax highlighting
-  #
-  # @see HTMLwithPygments
-  # @return HTML String for comment
-  def comment_markdown(comment_content)
-    options = { :autolink => true, :fenced_code_blocks => true }
-    renderer = HTMLwithPygments.new :filter_html => true
-
-    markdown = Redcarpet::Markdown::new(renderer, options)
-    markdown.render(comment_content).html_safe
-  end
-
 end
