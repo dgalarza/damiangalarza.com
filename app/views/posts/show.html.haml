@@ -7,7 +7,7 @@
         &ndash;
         = @post.category.name if @post.category
 
-    %h2= link_to @post.title, url_for(@post)
+    %h2= link_to @post.title, post_permalink_url(@post)
     - @post.tags.each_with_index do |tag, i|
       -if i > 0
         |
@@ -18,9 +18,9 @@
   %section#post-comments
     %h4 
       Comments
-      - if @post.comments.length > 1
-        = "(#{@post.comments.length})"
-    = render :partial => 'post_comment', :collection => @post.comments
+      - if @comments.length > 1
+        = "(#{@comment_count})"
+    = render :partial => 'post_comment', :collection => @comments
 
     %h4 Write a Comment
     = form_for [@post, @comment] do |comment|
