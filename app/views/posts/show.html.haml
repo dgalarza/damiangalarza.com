@@ -13,7 +13,7 @@
         |
       %a{:href => '#tag'}= tag.name
 
-  =post_markdown(@post.content)
+  =post_markdown(@post.cached_markdown)
 
   %section#post-comments
     %h4 

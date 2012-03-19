@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120319001306) do
+ActiveRecord::Schema.define(:version => 20120319210053) do
 
   create_table "categories", :force => true do |t|
     t.string   "name",                           :null => false
@@ -36,17 +36,18 @@ ActiveRecord::Schema.define(:version => 20120319001306) do
   add_index "comments", ["post_id"], :name => "index_comments_on_post_id"
 
   create_table "posts", :force => true do |t|
-    t.integer  "user_id",                           :null => false
+    t.integer  "user_id",                               :null => false
     t.integer  "category_id"
     t.boolean  "published"
     t.string   "title"
-    t.text     "content",     :limit => 2147483647
-    t.datetime "created_at",                        :null => false
-    t.datetime "updated_at",                        :null => false
+    t.text     "content",         :limit => 2147483647
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.integer  "wp_id"
     t.text     "excerpt"
-    t.string   "subtitle",    :limit => 50
+    t.string   "subtitle",        :limit => 50
     t.string   "slug"
+    t.text     "cached_markdown", :limit => 2147483647
   end
 
   add_index "posts", ["category_id"], :name => "index_posts_on_category_id"
