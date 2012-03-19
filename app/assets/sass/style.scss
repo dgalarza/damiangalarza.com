@@ -184,8 +184,9 @@ header h1 a {
   font-size: 24px;
 }
 
-.posts #site-nav #blog {
-  color: $red;
+.posts #site-nav #blog,
+.about #site-nav #about {
+  color: $red; 
 }
 
 #site-nav a:hover {

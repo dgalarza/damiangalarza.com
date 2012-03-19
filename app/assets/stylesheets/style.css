@@ -1093,49 +1093,50 @@ header h1 a {
   font-size: 24px;
 }
 
-/* line 187, ../sass/style.scss */
-.posts #site-nav #blog {
+/* line 188, ../sass/style.scss */
+.posts #site-nav #blog,
+.about #site-nav #about {
   color: #ce3927;
 }
 
-/* line 191, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 #site-nav a:hover {
   color: #ce3927;
 }
 
-/* line 195, ../sass/style.scss */
+/* line 196, ../sass/style.scss */
 #site-header ul {
   float: left;
 }
 
-/* line 199, ../sass/style.scss */
+/* line 200, ../sass/style.scss */
 #site-header li {
   margin-right: 64px;
   float: left;
 }
 
-/* line 204, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
 #page-wrapper {
   padding-bottom: 140px;
 }
 
-/* line 208, ../sass/style.scss */
+/* line 209, ../sass/style.scss */
 .site-content {
   overflow: hidden;
 }
 
-/* line 213, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 #site-header .social {
   float: right;
 }
 
-/* line 217, ../sass/style.scss */
+/* line 218, ../sass/style.scss */
 #site-header .social li {
   margin: 0 8px;
   padding: 2px;
 }
 
-/* line 222, ../sass/style.scss */
+/* line 223, ../sass/style.scss */
 #site-header .social a {
   display: block;
   width: 40px;
@@ -1154,32 +1155,32 @@ header h1 a {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 229, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 #site-header .social a.social-github {
   background-position: 0 0;
 }
-/* line 230, ../sass/style.scss */
+/* line 231, ../sass/style.scss */
 #site-header .social a.social-twitter {
   background-position: 0 -40px;
 }
-/* line 231, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 #site-header .social a.social-facebook {
   background-position: 0 -80px;
 }
-/* line 235, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 #site-header .social a:hover {
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 5px -1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 5px -1px;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 5px -1px;
 }
 
-/* line 240, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
 .clear-footer {
   height: 70px;
   clear: both;
 }
 
-/* line 245, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 footer {
   height: 70px;
   color: #505050;
@@ -1192,7 +1193,7 @@ footer {
   right: 0;
 }
 
-/* line 257, ../sass/style.scss */
+/* line 258, ../sass/style.scss */
 footer ul {
   width: 650px;
   margin: 0 auto;
@@ -1200,7 +1201,7 @@ footer ul {
   padding-top: 28px;
 }
 
-/* line 264, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 footer li {
   padding-right: 10px;
   margin-right: 10px;
@@ -1208,7 +1209,7 @@ footer li {
   float: left;
 }
 
-/* line 271, ../sass/style.scss */
+/* line 272, ../sass/style.scss */
 footer li.last {
   border-right: none;
 }

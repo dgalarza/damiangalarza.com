@@ -7,7 +7,8 @@
 
     = stylesheet_link_tag 'style.css'
 
-    = yield :pygments_css
+    = auto_discovery_link_tag(:rss, posts_url + '.rss')
+
 
   %body{ :class => controller_name }
 

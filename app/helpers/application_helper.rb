@@ -21,4 +21,8 @@ module ApplicationHelper
     "/posts/#{date.year}/#{date.month}/#{date.day}/#{post.slug}"
   end
 
+  def post_permalink_url(post)
+    url_for post_permalink_path(post)
+  end
+
 end
