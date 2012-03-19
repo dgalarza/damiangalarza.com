@@ -22,10 +22,15 @@
     %h2 Tweets
     #twitter-feed-content
     
-    :plain
-      <script type="text/x-handlebars-template" id="tweet-template">
-        <article>
-          <p>{{{text}}}</p>
-          <time>{{pretty_date}}</time>
-        </article>
-      </script>
+    
+- content_for :scripts do
+  %script{ :type => "text/javascript", :src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" }
+  = javascript_include_tag "home"
+  :plain
+    <script type="text/x-handlebars-template" id="tweet-template">
+      <article>
+        <p>{{{text}}}</p>
+        <time>{{pretty_date}}</time>
+      </article>
+    </script>
+
