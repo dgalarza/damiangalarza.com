@@ -1,7 +1,7 @@
 %article.comment
   = image_tag gravatar(post_comment.email), :class => 'avatar'
   .comment-wrapper
-    %p= comment_markdown(post_comment.comment)
+    %p= post_comment.comment.html_safe
     .comment-meta
       posted by:
       = comment_author(post_comment)
