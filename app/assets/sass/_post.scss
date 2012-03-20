@@ -206,3 +206,21 @@
   color: $gray;
   &:hover { color: $red; }
 }
+
+#post dl {
+  line-height: 24px;
+}
+
+#post dl dt {
+  font-weight: bold;
+}
+
+#post dd + dt {
+  margin-top: 20px;
+}
+
+#post dl dd { 
+  display: list-item;
+  list-style: disc outside none;
+  margin-left: 15px;
+}

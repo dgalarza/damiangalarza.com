@@ -14,8 +14,9 @@ class Post < ActiveRecord::Base
   end
 
   def markdown_cache
-    markdown = Redcarpet::Markdown.new(HTMLwithPygments, :autolink => true, :fenced_code_blocks => true)
+    markdown = Redcarpet::Markdown.new(HTMLwithPygments, :autolink => true, :fenced_code_blocks => true, :no_intra_emphasis => true)
     markdown_html = markdown.render(self.content)
+    p 'markdn'
 
     self.cached_markdown = markdown_html
   end

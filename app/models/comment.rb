@@ -8,7 +8,7 @@ class Comment < ActiveRecord::Base
 
   # Format the comment as markdown, caching markdown HTML in the database
   def format_markdown
-    options = { :autolink => true, :fenced_code_blocks => true }
+    options = { :autolink => true, :fenced_code_blocks => true, :no_intra_emphasis => true }
     renderer = HTMLwithPygments.new :filter_html => true
 
     markdown = Redcarpet::Markdown::new(renderer, options)
