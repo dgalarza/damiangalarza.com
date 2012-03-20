@@ -25,7 +25,7 @@ module PostsHelper
   # @param [String] html HTML to look inside
   def format_code_samples(html)
     doc = Nokogiri::HTML::DocumentFragment.parse(html)
-    nodes = doc.css '.highlighttable'
+    nodes = doc.css '.highlight'
     nodes.wrap('<div class="code-block"></div>')
 
     doc.inner_html
