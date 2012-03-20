@@ -29,17 +29,36 @@ role :db,  "stage.damiangalarza.com", :primary => true # This is where Rails mig
 
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
-
   task :start do ; end
   task :stop do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
-
-  #task :pipeline_precompile do
-    #run "cd #{release_path}; RAILS_ENV=production bundle exec rake assets:precompile"
-  #end
-
 end
 
-#after "deploy:update_code", "deploy:pipeline_precompile"
+def db_info
+  require 'yaml'
+  YAML::load_file('config/database.yml')
+end
+
+namespace :db do
+  task :pull, :roles => :db do
+    database = db_info
+
+    filename = "dump.#{Time.now.strftime('%Y-%m-%d_%H:%M:%S')}.sql"
+
+    run "mysqldump --no-create-db -u #{database['production']['username']} --password=#{database['production']['password']} #{database['production']['database']} > /tmp/#{filename}"
+    get "/tmp/#{filename}", filename
+    run_locally "mysql -u #{database['development']['username']} --password=#{database['development']['password']} #{database['development']['database']} < #{filename}; rm -f #{filename}"
+  end
+
+  task :push, :roles => :db do
+    database = db_info
+
+    filename = "dump.#{Time.now.strftime('%Y-%m-%d_%H:%M:%S')}.sql"
+
+    run_locally "mysqldump --no-create-db -u #{database['development']['username']} --password=#{database['development']['password']} #{database['development']['database']} > /tmp/#{filename}"
+    upload "/tmp/#{filename}", "/tmp/#{filename}"
+    run "mysql -u #{database['production']['username']} --password=#{database['production']['password']} #{database['production']['database']} < /tmp/#{filename}; rm -f /tmp/#{filename}"
+  end
+end
