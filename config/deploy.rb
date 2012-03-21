@@ -15,6 +15,8 @@ set :deploy_via, :remote_cache
 set :deploy_to, "/var/www/damiangalarza.com"
 set :use_sudo, false
 
+set :keep_releases, 4
+
 set :bundle_flags, "--deployment --quiet --binstubs --shebang ruby-local-exec"
 set :default_environment, { 'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH" }
 
