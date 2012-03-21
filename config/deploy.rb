@@ -1,4 +1,5 @@
 require "bundler/capistrano"
+load 'deploy/assets'
 
 set :application, "Damian Galarza.com"
 set :repository,  "git@github.com:dgalarza/damian_rails.git"
@@ -74,4 +75,3 @@ namespace :db do
 end
 
 after 'deploy:update_code', 'deploy:symlink_db'
-after 'deploy:update_code', 'deploy:s3_asset_compile'
