@@ -15,7 +15,7 @@ development:
   database: damiangalarza.com_development
   pool: 5
   username: dg_dev
-  password: er1nb3rmud3z
+  password: 
   socke1: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +28,7 @@ test:
   database: damiangalarza.com_test
   pool: 5
   username: dg_dev
-  password: er1nb3rmud3z
+  password: 
   socket: /var/run/mysqld/mysqld.sock
 
 production:
@@ -38,5 +38,5 @@ production:
   database: damiangalarza.com_production
   pool: 5
   username: dg_dev
-  password: p3bbl3s
+  password: 
   socket: /var/run/mysqld/mysqld.sock
