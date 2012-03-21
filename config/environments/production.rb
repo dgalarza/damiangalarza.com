@@ -45,7 +45,8 @@ DamiangalarzaCom::Application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
 
-  config.action_controller.asset_host = 'http://assets.damiangalarza.com'
+  #config.action_controller.asset_host = 'http://assets.damiangalarza.com'
+  config.action_controller.asset_host = 'http://c314654.r54.cf1.rackcdn.com'
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
