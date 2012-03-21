@@ -75,3 +75,4 @@ namespace :db do
 end
 
 after 'deploy:update_code', 'deploy:symlink_db'
+#after 'deploy:update_code', 'deploy:s3_asset_compile'
