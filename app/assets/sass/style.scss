@@ -10,21 +10,21 @@
 @import 'home';
 @import 'post';
 
-$futura_name: 'fonts/futurastd_book-webfont';
+$futura_name: '/fonts/futurastd_book-webfont';
 @include font-face('FuturaStdBook', font-files($futura_name + '.woff', woff, $futura_name + '.ttf', ttf, $futura_name + '.svg', svg), $futura_name + '.eot');
 
 @font-face {
   font-family: 'MemphisLTStdMedium';
-  src: url("fonts/memphisltstd_medium-webfont.eot");
-  src: url("fonts/memphisltstd_medium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/memphisltstd_medium-webfont.woff") format("woff"), url("fonts/memphisltstd_medium-webfont.ttf") format("truetype"), url("fonts/memphisltstd_medium-webfont.svg#MemphisLTStdMedium") format("svg");
+  src: url("/fonts/memphisltstd_medium-webfont.eot");
+  src: url("/fonts/memphisltstd_medium-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/memphisltstd_medium-webfont.woff") format("woff"), url("/fonts/memphisltstd_medium-webfont.ttf") format("truetype"), url("/fonts/memphisltstd_medium-webfont.svg#MemphisLTStdMedium") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'MemphisLTStdMedium';
-  src: url("fonts/memphisltstd_medium-webfont.eot");
-  src: url("fonts/memphisltstd_medium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/memphisltstd_medium-webfont.woff") format("woff"), url("fonts/memphisltstd_medium-webfont.ttf") format("truetype"), url("fonts/memphisltstd_medium-webfont.svg#MemphisLTStdMedium") format("svg");
+  src: url("/fonts/memphisltstd_medium-webfont.eot");
+  src: url("/fonts/memphisltstd_medium-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/memphisltstd_medium-webfont.woff") format("woff"), url("/fonts/memphisltstd_medium-webfont.ttf") format("truetype"), url("/fonts/memphisltstd_medium-webfont.svg#MemphisLTStdMedium") format("svg");
   font-weight: normal;
   font-style: normal;
 }
