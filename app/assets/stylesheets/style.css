@@ -78,12 +78,12 @@ table {
 
 /* line 1, ../sass/_pygments.scss */
 .highlight .hll {
-  background-color: #fff !important;
+  background-color: #f3f2f2 !important;
 }
 
 /* line 2, ../sass/_pygments.scss */
 .highlight {
-  background: #fff !important;
+  background: #f3f2f2 !important;
 }
 
 /* line 4, ../sass/_pygments.scss */
@@ -724,32 +724,34 @@ table .linenos {
 
 /* line 90, ../sass/_post.scss */
 .code-block {
+  padding: 15px;
+  background: #F3F2F2;
   margin: 20px 0;
   overflow-x: auto;
 }
 
-/* line 95, ../sass/_post.scss */
+/* line 97, ../sass/_post.scss */
 .code-block + h4 {
   margin-top: 50px;
 }
 
-/* line 99, ../sass/_post.scss */
+/* line 101, ../sass/_post.scss */
 .highlighttable {
   width: 100%;
   border: 1px solid #CCCCCC;
 }
 
-/* line 104, ../sass/_post.scss */
+/* line 106, ../sass/_post.scss */
 .highlighttable td {
   padding: 5px;
 }
 
-/* line 109, ../sass/_post.scss */
+/* line 111, ../sass/_post.scss */
 #post-comments {
   width: 615px;
 }
 
-/* line 116, ../sass/_post.scss */
+/* line 118, ../sass/_post.scss */
 #post-comments input[type=email],
 #post-comments input[type=url],
 #post-comments input[type=text],
@@ -758,31 +760,31 @@ table .linenos {
   margin: 10px 0;
 }
 
-/* line 123, ../sass/_post.scss */
+/* line 125, ../sass/_post.scss */
 #post-comments input[type=email],
 #post-comments input[type=url],
 #post-comments input[type=text] {
   height: 18px;
 }
 
-/* line 127, ../sass/_post.scss */
+/* line 129, ../sass/_post.scss */
 #post-comments textarea {
   height: 100px;
 }
 
-/* line 131, ../sass/_post.scss */
+/* line 133, ../sass/_post.scss */
 #post-comments input[type=submit] {
   width: 175px;
 }
 
-/* line 135, ../sass/_post.scss */
+/* line 137, ../sass/_post.scss */
 #post-comments .hint {
   float: right;
   font-size: 12px;
   color: #acacac;
 }
 
-/* line 141, ../sass/_post.scss */
+/* line 143, ../sass/_post.scss */
 #post-comments .comment {
   overflow: hidden;
   padding-bottom: 24px;
@@ -790,17 +792,17 @@ table .linenos {
   margin-bottom: 24px;
 }
 
-/* line 148, ../sass/_post.scss */
+/* line 150, ../sass/_post.scss */
 #post-comments .comment:last-of-type {
   border-bottom: none;
 }
 
-/* line 152, ../sass/_post.scss */
+/* line 154, ../sass/_post.scss */
 #post-comments .avatar {
   float: left;
 }
 
-/* line 156, ../sass/_post.scss */
+/* line 158, ../sass/_post.scss */
 #post-comments .comment-wrapper {
   width: 515px;
   margin-left: 20px;
@@ -809,28 +811,28 @@ table .linenos {
   line-height: 22px;
 }
 
-/* line 164, ../sass/_post.scss */
+/* line 166, ../sass/_post.scss */
 #post-comments .comment-meta {
   font-size: 12px;
 }
 
-/* line 168, ../sass/_post.scss */
+/* line 170, ../sass/_post.scss */
 #post-comments #comment-load-trigger {
   width: 100%;
   display: block;
 }
-/* line 172, ../sass/_post.scss */
+/* line 174, ../sass/_post.scss */
 #post-comments #comment-load-trigger:hover {
   color: #FFFFFF;
 }
 
-/* line 176, ../sass/_post.scss */
+/* line 178, ../sass/_post.scss */
 #post-archives .post {
   overflow: hidden;
   margin-top: 60px;
 }
 
-/* line 181, ../sass/_post.scss */
+/* line 183, ../sass/_post.scss */
 #post-archives .post-meta {
   width: 181px;
   margin-right: 70px;
@@ -839,50 +841,50 @@ table .linenos {
   font-size: 20px;
 }
 
-/* line 189, ../sass/_post.scss */
+/* line 191, ../sass/_post.scss */
 #post-archives .post-meta .post-category {
   margin-top: 25px;
 }
 
-/* line 193, ../sass/_post.scss */
+/* line 195, ../sass/_post.scss */
 #post-archives .post-content {
   width: 616px;
   float: left;
   line-height: 22px;
 }
 
-/* line 199, ../sass/_post.scss */
+/* line 201, ../sass/_post.scss */
 #post-archives .post-content h3 {
   font-size: 20px;
   line-height: 26px;
   margin-bottom: 10px;
 }
 
-/* line 205, ../sass/_post.scss */
+/* line 207, ../sass/_post.scss */
 #post-archives .post-content h3 a {
   color: #505050;
 }
-/* line 207, ../sass/_post.scss */
+/* line 209, ../sass/_post.scss */
 #post-archives .post-content h3 a:hover {
   color: #ce3927;
 }
 
-/* line 210, ../sass/_post.scss */
+/* line 212, ../sass/_post.scss */
 #post dl {
   line-height: 24px;
 }
 
-/* line 214, ../sass/_post.scss */
+/* line 216, ../sass/_post.scss */
 #post dl dt {
   font-weight: bold;
 }
 
-/* line 218, ../sass/_post.scss */
+/* line 220, ../sass/_post.scss */
 #post dd + dt {
   margin-top: 20px;
 }
 
-/* line 222, ../sass/_post.scss */
+/* line 224, ../sass/_post.scss */
 #post dl dd {
   display: list-item;
   list-style: disc outside none;
