@@ -29,6 +29,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   gem 'compass-rails'
+  gem 'asset_sync'
 end
 
 gem 'jquery-rails'
