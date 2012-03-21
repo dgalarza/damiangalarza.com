@@ -36,6 +36,11 @@ namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
+
+  task :symlink_db do
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+  end
+
 end
 
 def db_info
@@ -64,3 +69,5 @@ namespace :db do
     run "mysql -u #{database['production']['username']} --password=#{database['production']['password']} #{database['production']['database']} < /tmp/#{filename}; rm -f /tmp/#{filename}"
   end
 end
+
+after 'deploy:update_code', 'deploy:symlink_db'
