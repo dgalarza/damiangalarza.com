@@ -5,13 +5,13 @@
       %time{ :datetime => nil, :pubdate => @post.created_at }= format_date(@post.created_at)
       %p.post-category
         &ndash;
-        = @post.category.name if @post.category
+        = link_to(@post.category.name, "/posts?category=#{@post.category.id}", :class => 'alt-anchor') if @post.category
 
     %h2= link_to @post.title, post_permalink_url(@post)
     - @post.tags.each_with_index do |tag, i|
       -if i > 0
         |
-      %a{:href => '#tag'}= tag.name
+      = link_to tag.name, "/posts?tag=#{tag.id}"
 
   =post_markdown(@post.cached_markdown)
 

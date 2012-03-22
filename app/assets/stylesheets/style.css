@@ -73,7 +73,7 @@ table {
  */
 /* line 8, ../sass/_sprites.scss */
 .social-sprite, #site-header .social a {
-  background: transparent url('/images/social-icons-sb7f3bb81ec.png') no-repeat;
+  background: transparent url('/images/social-icons-s86c4929ee3.png') no-repeat;
 }
 
 /* line 1, ../sass/_pygments.scss */
@@ -894,7 +894,7 @@ table .linenos {
 @font-face {
   font-family: "FuturaStdBook";
   src: url(/fonts/futurastd_book-webfont.eot);
-  src: url(/fonts/futurastd_book-webfont.eot?iefix) format('eot'), url(/fonts/futurastd_book-webfont.woff) format('woff'), url(/fonts/futurastd_book-webfont.ttf) format('ttf'), url(/fonts/futurastd_book-webfont.svg) format('svg');
+  src: url(/fonts/futurastd_book-webfont.eot?#iefix) format('eot'), url(/fonts/futurastd_book-webfont.woff) format('woff'), url(/fonts/futurastd_book-webfont.ttf) format('truetype'), url(/fonts/futurastd_book-webfont.svg) format('svg');
 }
 
 @font-face {
@@ -944,12 +944,12 @@ textarea {
   outline: none;
   border: 1px solid #b3b3b3;
   padding: 15px 0 10px 13px;
-  -moz-box-shadow: 0 0 5px 0 #e1e1e1 inset;
   -webkit-box-shadow: 0 0 5px 0 #e1e1e1 inset;
-  -o-box-shadow: 0 0 5px 0 #e1e1e1 inset;
+  -moz-box-shadow: 0 0 5px 0 #e1e1e1 inset;
   box-shadow: 0 0 5px 0 #e1e1e1 inset;
-  -moz-transition: box-shadow 0.25s linear 0s;
   -webkit-transition: box-shadow 0.25s linear 0s;
+  -moz-transition: box-shadow 0.25s linear 0s;
+  -ms-transition: box-shadow 0.25s linear 0s;
   -o-transition: box-shadow 0.25s linear 0s;
   transition: box-shadow 0.25s linear 0s;
 }
@@ -979,7 +979,18 @@ input[type=text] {
   color: #FFFFFF;
 }
 
-/* line 73, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
+.alt-anchor,
+.alt-anchor:visited {
+  color: #505050;
+}
+/* line 76, ../sass/style.scss */
+.alt-anchor:hover,
+.alt-anchor:visited:hover {
+  color: #ce3927;
+}
+
+/* line 79, ../sass/style.scss */
 .btn {
   border: none;
   font-family: 'MemphisLTStdMedium';
@@ -989,20 +1000,20 @@ input[type=text] {
   line-height: 38px;
   text-align: center;
   cursor: pointer;
-  -moz-transition: box-shadow 0.25s ease-out 0s;
   -webkit-transition: box-shadow 0.25s ease-out 0s;
+  -moz-transition: box-shadow 0.25s ease-out 0s;
+  -ms-transition: box-shadow 0.25s ease-out 0s;
   -o-transition: box-shadow 0.25s ease-out 0s;
   transition: box-shadow 0.25s ease-out 0s;
 }
-/* line 83, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 .btn:hover {
-  -moz-box-shadow: 0 0 5px #505050;
   -webkit-box-shadow: 0 0 5px #505050;
-  -o-box-shadow: 0 0 5px #505050;
+  -moz-box-shadow: 0 0 5px #505050;
   box-shadow: 0 0 5px #505050;
 }
 
-/* line 88, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 .red-btn {
   color: #FFFFFF;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ce3827), color-stop(100%, #b03022));
@@ -1013,45 +1024,46 @@ input[type=text] {
   background: linear-gradient(top, #ce3827, #b03022);
 }
 
-/* line 95, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
 .meridian {
   text-transform: lowercase;
 }
 
-/* line 99, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 #page {
   min-height: 100%;
   position: relative;
 }
 
-/* line 104, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .wrapper {
   width: 960px;
   padding: 0 20px;
   margin: 0 auto;
 }
 
-/* line 110, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 a, a:visited {
   color: #ce3927;
   text-decoration: none;
-  -moz-transition: color 0.35s linear 0s;
   -webkit-transition: color 0.35s linear 0s;
+  -moz-transition: color 0.35s linear 0s;
+  -ms-transition: color 0.35s linear 0s;
   -o-transition: color 0.35s linear 0s;
   transition: color 0.35s linear 0s;
 }
 
-/* line 116, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 a:hover {
   color: #505050;
 }
 
-/* line 121, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 #page > header {
   border-top: 16px solid #ce3927;
 }
 
-/* line 125, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 #page header .main-head {
   padding: 56px 20px 39px;
   border-bottom: 1px solid #ce3927;
@@ -1059,7 +1071,7 @@ a:hover {
   position: relative;
 }
 
-/* line 132, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 header h1 {
   width: 126px;
   height: 146px;
@@ -1071,7 +1083,7 @@ header h1 {
   float: left;
 }
 
-/* line 143, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 header h1 a {
   width: 126px;
   height: 146px;
@@ -1082,7 +1094,7 @@ header h1 a {
   overflow: hidden;
 }
 
-/* line 151, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 #site-search {
   position: absolute;
   right: 28px;
@@ -1090,17 +1102,17 @@ header h1 a {
   overflow: hidden;
 }
 
-/* line 158, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 #site-search input {
   float: left;
 }
 
-/* line 162, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 #site-search input[type=text] {
   height: 22px;
 }
 
-/* line 166, ../sass/style.scss */
+/* line 172, ../sass/style.scss */
 #search-submit {
   width: 48px;
   height: 49px;
@@ -1112,7 +1124,7 @@ header h1 a {
   white-space: nowrap;
 }
 
-/* line 178, ../sass/style.scss */
+/* line 184, ../sass/style.scss */
 #site-nav {
   margin: 50px auto;
   padding: 0 20px;
@@ -1120,57 +1132,57 @@ header h1 a {
   overflow: hidden;
 }
 
-/* line 185, ../sass/style.scss */
+/* line 191, ../sass/style.scss */
 #site-nav a {
   font-family: 'FuturaStdBook', Arial;
   color: #505050;
   font-size: 24px;
 }
 
-/* line 192, ../sass/style.scss */
+/* line 198, ../sass/style.scss */
 .posts #site-nav #blog,
 .about #site-nav #about {
   color: #ce3927;
 }
 
-/* line 196, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 #site-nav a:hover {
   color: #ce3927;
 }
 
-/* line 200, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 #site-header ul {
   float: left;
 }
 
-/* line 204, ../sass/style.scss */
+/* line 210, ../sass/style.scss */
 #site-header li {
   margin-right: 64px;
   float: left;
 }
 
-/* line 209, ../sass/style.scss */
+/* line 215, ../sass/style.scss */
 #page-wrapper {
   padding-bottom: 140px;
 }
 
-/* line 213, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 .site-content {
   overflow: hidden;
 }
 
-/* line 218, ../sass/style.scss */
+/* line 224, ../sass/style.scss */
 #site-header .social {
   float: right;
 }
 
-/* line 222, ../sass/style.scss */
+/* line 228, ../sass/style.scss */
 #site-header .social li {
   margin: 0 8px;
   padding: 2px;
 }
 
-/* line 227, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 #site-header .social a {
   display: block;
   width: 40px;
@@ -1178,44 +1190,43 @@ header h1 a {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  -moz-transition: box-shadow 0.25s linear 0s;
   -webkit-transition: box-shadow 0.25s linear 0s;
+  -moz-transition: box-shadow 0.25s linear 0s;
+  -ms-transition: box-shadow 0.25s linear 0s;
   -o-transition: box-shadow 0.25s linear 0s;
   transition: box-shadow 0.25s linear 0s;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
   -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 234, ../sass/style.scss */
+/* line 240, ../sass/style.scss */
 #site-header .social a.social-github {
-  background-position: 0 -40px;
-}
-/* line 235, ../sass/style.scss */
-#site-header .social a.social-twitter {
-  background-position: 0 -80px;
-}
-/* line 236, ../sass/style.scss */
-#site-header .social a.social-facebook {
   background-position: 0 0;
 }
-/* line 240, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
+#site-header .social a.social-twitter {
+  background-position: 0 -40px;
+}
+/* line 242, ../sass/style.scss */
+#site-header .social a.social-facebook {
+  background-position: 0 -80px;
+}
+/* line 246, ../sass/style.scss */
 #site-header .social a:hover {
-  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 5px -1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 5px -1px;
-  -o-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 5px -1px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 5px -1px;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 5px -1px;
 }
 
-/* line 245, ../sass/style.scss */
+/* line 251, ../sass/style.scss */
 .clear-footer {
   height: 70px;
   clear: both;
 }
 
-/* line 250, ../sass/style.scss */
+/* line 256, ../sass/style.scss */
 footer {
   height: 70px;
   color: #505050;
@@ -1228,7 +1239,7 @@ footer {
   right: 0;
 }
 
-/* line 262, ../sass/style.scss */
+/* line 268, ../sass/style.scss */
 footer ul {
   width: 650px;
   margin: 0 auto;
@@ -1236,7 +1247,7 @@ footer ul {
   padding-top: 28px;
 }
 
-/* line 269, ../sass/style.scss */
+/* line 275, ../sass/style.scss */
 footer li {
   padding-right: 10px;
   margin-right: 10px;
@@ -1244,7 +1255,7 @@ footer li {
   float: left;
 }
 
-/* line 276, ../sass/style.scss */
+/* line 282, ../sass/style.scss */
 footer li.last {
   border-right: none;
 }

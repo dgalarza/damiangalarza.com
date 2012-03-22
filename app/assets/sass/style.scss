@@ -70,6 +70,12 @@ input[type=text] {
 ::selection { background: $red; color: #FFFFFF; }
 ::-moz-selection { background: $red; color: #FFFFFF; }
 
+.alt-anchor,
+.alt-anchor:visited {
+  color: $gray;
+  &:hover { color: $red; }
+}
+
 .btn {
   border: none;
   font-family: 'MemphisLTStdMedium';
