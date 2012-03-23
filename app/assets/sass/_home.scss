@@ -12,18 +12,24 @@
   float: left;
 }
 
+#info-bar h2 {
+  width: 182px;
+}
+
 #bio {
-  margin-bottom: 56px;
+  padding-right: 48px;
+  margin-bottom: 41px;
 }
 
 #bio .headline {
   font-size: 18px;
-  line-height: 40px;
+  line-height: 31px;
+  margin-bottom: 8px;
 }
 
 #bio p {
   font-size: 14px;
-  line-height: 32px;
+  line-height: 20px;
 }
 
 // Blog Feed
@@ -38,10 +44,12 @@
 }
 
 .home .site-content h2 {
+  width: 244px;
   padding: 0 25px 15px 0;
-  width: 33%;
   font-size: 20px;
+  line-height: 32px;
   border-bottom: 1px solid $red;
+  text-transform: capitalize;
 }
 
 #blog-feed article {

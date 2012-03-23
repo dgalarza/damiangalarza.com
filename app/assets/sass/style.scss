@@ -16,7 +16,7 @@ aside, section, article, time, nav {
 
 h1,h2,h3,h4,h5 {
   font-weight: normal;
-  font-family: 'ff-tisa-web';
+  font-family: "kulturista-web";
 }
 
 body, html {
@@ -24,7 +24,7 @@ body, html {
   background: #fefefe;
   color: #505050;
   height: 100%;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 code, pre {
@@ -41,7 +41,7 @@ input[type=url],
 input[type=email],
 textarea {
   font-size: 14px;
-  font-family: 'ff-tisa-web';
+  font-family: "kulturista-web";
   color: $gray;
   resize: none;
   outline: none;
@@ -69,7 +69,7 @@ input[type=text] {
 
 .btn {
   border: none;
-  font-family: 'ff-tisa-web';
+  font-family: "kulturista-web";
   font-weight: normal;
   font-size: 18px;
   height: 38px;
@@ -116,6 +116,7 @@ a:hover {
 
 // Header
 #page > header {
+  margin-bottom: 35px;
   border-top: 16px solid $red;
 }
 
@@ -174,14 +175,14 @@ header h1 a {
 
 // Nav
 #site-nav {
-  margin: 50px auto;
+  margin: 50px auto 0;
   padding: 0 20px;
   line-height: 24px;
   overflow: hidden;
 }
 
 #site-nav a {
-  font-family: 'ff-tisa-web', Arial;
+  font-family: "kulturista-web";
   color: #505050;
   font-size: 24px;
 }

@@ -6,4 +6,4 @@
   
   .post-content
     %h3= link_to post.title, post_permalink_path(post)
-    = post_markdown(post.excerpt)
+    %p= post_markdown(post.excerpt)
