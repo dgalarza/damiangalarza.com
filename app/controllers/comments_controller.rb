@@ -9,19 +9,17 @@ class CommentsController < ApplicationController
     render :json => @comments.as_json(:except => [:email], :methods => [:email_hash])
   end
 
-  def new
-  end
-
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(params[:comment])
+    @comment.request = request
     if @comment.save
       flash[:notice] = "Thanks for your comment!"
     else
       flash[:error] = "An error occurred while trying to save your comment."
     end
 
-    redirect_to @post
+    redirect_to blog_permalink_path(:year => @post.created_at.year, :month => @post.created_at.month, :day => @post.created_at.day, :slug => @post.slug)
   end
 
 end
