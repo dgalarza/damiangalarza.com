@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @posts = Post.where(:published => true).order('created_at DESC').select("title, created_at, slug").limit(5)
+    @posts = Post.where(:published => true).select("title, created_at, slug, category.name").includes(:category).limit(5)
   end
 end
