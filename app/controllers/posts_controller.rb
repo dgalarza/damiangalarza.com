@@ -16,7 +16,8 @@ class PostsController < ApplicationController
 
   def show
     post_query = Post.where(:slug => params[:slug])
-    post_query = post_query.select("id, slug, title, cached_markdown, category_id, created_at")
+    post_query = post_query.select("posts.id, slug, title, cached_markdown, categories.id, categories.name, posts.created_at")
+    post_query = post_query.joins(:category)
     post_query = post_query.includes(:category)
     @post = post_query.first
 
