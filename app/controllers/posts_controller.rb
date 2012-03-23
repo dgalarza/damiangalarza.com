@@ -1,15 +1,14 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.select("title, post.created_at, excerpt, slug, category_id").order("posts.created_at DESC").includes(:category)
+    @posts = Post.select("title, post.created_at, excerpt, slug, category_id").includes(:category)
 
     if params[:search]
-      search = "%#{params[:search]}%"
-      @posts = @posts.where('title LIKE ? OR content LIKE ?', search, search)
+      @posts = @posts.search "%#{params[:search]}%"
     elsif params[:tag]
-      @posts = @posts.joins('INNER JOIN posts_tags ON posts_tags.post_id = posts.id').where("posts_tags.tag_id" =>  params[:tag])
+      @posts = @posts.tagged params[:tag]
     elsif params[:category]
-      @posts = @posts.where(:category_id => params[:category])
+      @posts = @posts.in_category params[:category]
     end
 
     @posts.all
