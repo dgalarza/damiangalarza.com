@@ -8,7 +8,8 @@ DamiangalarzaCom::Application.routes.draw do
     resources :comments
   end
 
-  match '/posts/:year/:month/:day/:slug', :controller => 'posts', :action => 'show', :constraints => { :year => /\d{4}/, :month => /\d{1,2}/, :day => /\d{1,2}/ }, :as => :blog_permalink, :method => :get
+  match '/posts/:category/:slug', :controller => 'posts', :action => 'show', :as => :blog_permalink, :method => :get
+  #match '/posts/:year/:month/:day/:slug', :controller => 'posts', :action => 'show', :constraints => { :year => /\d{4}/, :month => /\d{1,2}/, :day => /\d{1,2}/ }, :as => :blog_permalink, :method => :get
   match '/about', :controller => 'about', :action => 'index'
 
   root :to => "home#index"

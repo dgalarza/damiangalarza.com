@@ -17,11 +17,11 @@ module ApplicationHelper
   #
   # @param [<#Post>] post Post to generate permalink path for
   def post_permalink_path(post)
-    blog_permalink_path post_date_url_options(post)
+    blog_permalink_path post.category.name.downcase, post.slug
   end
 
   def post_permalink_url(post)
-    blog_permalink_url post_date_url_options(post)
+    blog_permalink_url post.category.name.downcase, post.slug
   end
 
   def post_date_url_options(post)
