@@ -11,6 +11,9 @@ class Comment < ActiveRecord::Base
   before_create :format_markdown
   before_create :check_for_spam
 
+  # Map rakismet attributes to the model
+  rakismet_attrs :author => :username, :author_email => :email, :author_url => :website, :content => :comment, :user_ip => :ip
+
   def request=(request)
     self.ip = request.remote_ip
     self.user_agent = request.env['HTTP_USER_AGENT']
