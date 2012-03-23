@@ -1,0 +1,5 @@
+RedirectMatch 301 ^/(css)/(.*)            http://192.168.104.129:3000/posts/$1/$2
+RedirectMatch 301 ^/(ruby-on-rails)/(.*)  http://192.168.104.129:3000/posts/$1/$2
+RedirectMatch 301 ^/(javascript)/(.*)     http://192.168.104.129:3000/posts/$1/$2
+RedirectMatch 301 ^/(css3)/(.*)           http://192.168.104.129:3000/posts/$1/$2
+RedirectMatch 301 ^/(mobile)/(.*)         http://192.168.104.129:3000/posts/$1/$2
