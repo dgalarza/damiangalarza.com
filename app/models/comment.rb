@@ -1,10 +1,26 @@
 require 'HTMLwithPygments'
 
 class Comment < ActiveRecord::Base
+  include Rakismet::Model
+
+  default_scope :conditions => ["approved", true], :order => 'created_at DESC'
+
   belongs_to :post
   attr_protected :post_id
 
-  before_save :format_markdown
+  before_create :format_markdown
+  before_create :check_for_spam
+
+  def request=(request)
+    self.ip = request.remote_ip
+    self.user_agent = request.env['HTTP_USER_AGENT']
+    self.referrer = request.env['HTTP_REFERER']
+  end
+
+  def check_for_spam
+    self.approved = !self.spam?
+    true
+  end
 
   # Format the comment as markdown, caching markdown HTML in the database
   def format_markdown
