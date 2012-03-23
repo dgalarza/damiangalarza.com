@@ -17,12 +17,16 @@ module ApplicationHelper
   #
   # @param [<#Post>] post Post to generate permalink path for
   def post_permalink_path(post)
-    date = post.created_at
-    "/posts/#{date.year}/#{date.month}/#{date.day}/#{post.slug}"
+    blog_permalink_path post_date_url_options(post)
   end
 
   def post_permalink_url(post)
-    url_for post_permalink_path(post)
+    blog_permalink_url post_date_url_options(post)
+  end
+
+  def post_date_url_options(post)
+    date = post.created_at
+    { :year => date.year, :month => date.month, :day => date.day, :slug => post.slug }
   end
 
 end
