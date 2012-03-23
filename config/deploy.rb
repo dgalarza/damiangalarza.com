@@ -47,14 +47,22 @@ namespace :deploy do
 
 end
 
-def db_info
+# Open the remote database config to parse credentials for pull
+# since we do not store the database config in the repo
+def remote_db_info
   require 'yaml'
-  YAML::load_file('config/database.yml')
+  file = capture "cat #{shared_path}/config/database.yml"
+  YAML::load file
+end
+
+def local_db_info
+  require 'yaml'
+  YAML::load_file 'config/database.yml'
 end
 
 namespace :db do
   task :pull, :roles => :db do
-    database = db_info
+    database = remote_db_info
 
     filename = "dump.#{Time.now.strftime('%Y-%m-%d_%H:%M:%S')}.sql"
 
@@ -64,7 +72,7 @@ namespace :db do
   end
 
   task :push, :roles => :db do
-    database = db_info
+    database = local_db_info
 
     filename = "dump.#{Time.now.strftime('%Y-%m-%d_%H:%M:%S')}.sql"
 
@@ -75,4 +83,3 @@ namespace :db do
 end
 
 after 'deploy:update_code', 'deploy:symlink_db'
-#after 'deploy:update_code', 'deploy:s3_asset_compile'
