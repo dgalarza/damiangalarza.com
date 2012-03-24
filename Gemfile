@@ -10,6 +10,8 @@ gem 'redcarpet'
 gem 'nokogiri'
 gem 'pygments.rb'
 
+gem 'aws-sdk'
+
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 # Bundle edge Rails instead:
