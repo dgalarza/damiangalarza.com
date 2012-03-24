@@ -58,7 +58,7 @@ class CommentsController
       return comment.username
 
   gravatar_url: (comment) ->
-    "//gravatar.com/avatar/" + comment.email_hash + ".png?=60r=pg"
+    "//gravatar.com/avatar/" + comment.email_hash + ".png?=60r=pg&d=http://assets.damiangalarza.com/images/icons/avatar-default.png"
     
 
 controller = new CommentsController

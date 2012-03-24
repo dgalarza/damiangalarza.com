@@ -2,7 +2,7 @@ module CommentsHelper
 
   # Generate gravatar image URL based on the email provided
   def gravatar(gravatar_id)
-    "//gravatar.com/avatar/#{gravatar_id}.png?s=60r=pg"
+    "//gravatar.com/avatar/#{gravatar_id}.png?s=60r=pg&d=http://assets.damiangalarza.com/images/icons/avatar-default.png"
   end
 
   def comment_timestamp(timestamp)
