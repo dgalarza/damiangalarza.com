@@ -8,6 +8,8 @@
         = link_to(@post.category.name, "/posts?category=#{@post.category.id}", :class => 'alt-anchor') if @post.category
 
     %h2= link_to @post.title, post_permalink_url(@post)
+    -if @post.subtitle
+      %h3= @post.subtitle
     - @post.tags.each_with_index do |tag, i|
       -if i > 0
         |

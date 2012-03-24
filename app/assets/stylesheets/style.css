@@ -646,82 +646,87 @@ table {
 
 /* line 23, ../sass/_post.scss */
 #post header h2 {
-  margin: 4px 0 7px;
+  margin: 4px 0 0;
 }
 
 /* line 27, ../sass/_post.scss */
+#post header h3 {
+  margin: 0 0 7px 0;
+}
+
+/* line 31, ../sass/_post.scss */
 #post .publish-meta {
   overflow: hidden;
 }
 
-/* line 31, ../sass/_post.scss */
+/* line 35, ../sass/_post.scss */
 #post .publish-meta p {
   margin-left: 5px;
   line-height: 16px;
   float: left;
 }
 
-/* line 37, ../sass/_post.scss */
+/* line 41, ../sass/_post.scss */
 #post time {
   font-size: 16px;
   float: left;
 }
 
-/* line 42, ../sass/_post.scss */
+/* line 46, ../sass/_post.scss */
 #post-sidebar .post-category {
   float: left;
 }
 
-/* line 46, ../sass/_post.scss */
+/* line 50, ../sass/_post.scss */
 #post-sidebar .post-category a {
   color: #505050;
 }
-/* line 48, ../sass/_post.scss */
+/* line 52, ../sass/_post.scss */
 #post-sidebar .post-category a:hover {
   color: #ce3927;
 }
 
-/* line 52, ../sass/_post.scss */
+/* line 56, ../sass/_post.scss */
 #post h2, #post h3, #post h4, #post h5 {
   margin: 45px 0 20px;
 }
 
-/* line 57, ../sass/_post.scss */
+/* line 61, ../sass/_post.scss */
 #post h2 {
   font-size: 26px;
   line-height: 34px;
 }
 
-/* line 63, ../sass/_post.scss */
+/* line 67, ../sass/_post.scss */
 #post h2 a,
 #post h2 a:visited {
   color: #505050;
 }
 
-/* line 67, ../sass/_post.scss */
+/* line 71, ../sass/_post.scss */
 #post > p {
   line-height: 27px;
   width: 890px;
   margin-bottom: 25px;
 }
 
-/* line 73, ../sass/_post.scss */
+/* line 77, ../sass/_post.scss */
 #post .inline-code-sample {
   margin-bottom: 25px;
   overflow-x: auto;
 }
 
-/* line 78, ../sass/_post.scss */
+/* line 82, ../sass/_post.scss */
 #post h3 {
   font-size: 20px;
 }
 
-/* line 82, ../sass/_post.scss */
+/* line 86, ../sass/_post.scss */
 #post h4 {
   font-size: 18px;
 }
 
-/* line 86, ../sass/_post.scss */
+/* line 90, ../sass/_post.scss */
 .code-block {
   padding: 15px;
   background: #f5f5f5;
@@ -729,28 +734,28 @@ table {
   overflow-x: auto;
 }
 
-/* line 93, ../sass/_post.scss */
+/* line 97, ../sass/_post.scss */
 .code-block + h4 {
   margin-top: 50px;
 }
 
-/* line 97, ../sass/_post.scss */
+/* line 101, ../sass/_post.scss */
 .highlighttable {
   width: 100%;
   border: 1px solid #CCCCCC;
 }
 
-/* line 102, ../sass/_post.scss */
+/* line 106, ../sass/_post.scss */
 .highlighttable td {
   padding: 5px;
 }
 
-/* line 107, ../sass/_post.scss */
+/* line 111, ../sass/_post.scss */
 #post-comments {
   width: 615px;
 }
 
-/* line 114, ../sass/_post.scss */
+/* line 118, ../sass/_post.scss */
 #post-comments input[type=email],
 #post-comments input[type=url],
 #post-comments input[type=text],
@@ -759,31 +764,31 @@ table {
   margin: 10px 0;
 }
 
-/* line 121, ../sass/_post.scss */
+/* line 125, ../sass/_post.scss */
 #post-comments input[type=email],
 #post-comments input[type=url],
 #post-comments input[type=text] {
   height: 18px;
 }
 
-/* line 125, ../sass/_post.scss */
+/* line 129, ../sass/_post.scss */
 #post-comments textarea {
   height: 100px;
 }
 
-/* line 129, ../sass/_post.scss */
+/* line 133, ../sass/_post.scss */
 #post-comments input[type=submit] {
   width: 175px;
 }
 
-/* line 133, ../sass/_post.scss */
+/* line 137, ../sass/_post.scss */
 #post-comments .hint {
   float: right;
   font-size: 12px;
   color: #acacac;
 }
 
-/* line 139, ../sass/_post.scss */
+/* line 143, ../sass/_post.scss */
 #post-comments .comment {
   overflow: hidden;
   padding-bottom: 24px;
@@ -791,17 +796,17 @@ table {
   margin-bottom: 24px;
 }
 
-/* line 146, ../sass/_post.scss */
+/* line 150, ../sass/_post.scss */
 #post-comments .comment:last-of-type {
   border-bottom: none;
 }
 
-/* line 150, ../sass/_post.scss */
+/* line 154, ../sass/_post.scss */
 #post-comments .avatar {
   float: left;
 }
 
-/* line 154, ../sass/_post.scss */
+/* line 158, ../sass/_post.scss */
 #post-comments .comment-wrapper {
   width: 515px;
   margin-left: 20px;
@@ -810,28 +815,28 @@ table {
   line-height: 22px;
 }
 
-/* line 162, ../sass/_post.scss */
+/* line 166, ../sass/_post.scss */
 #post-comments .comment-meta {
   font-size: 12px;
 }
 
-/* line 166, ../sass/_post.scss */
+/* line 170, ../sass/_post.scss */
 #post-comments #comment-load-trigger {
   width: 100%;
   display: block;
 }
-/* line 170, ../sass/_post.scss */
+/* line 174, ../sass/_post.scss */
 #post-comments #comment-load-trigger:hover {
   color: #FFFFFF;
 }
 
-/* line 174, ../sass/_post.scss */
+/* line 178, ../sass/_post.scss */
 #post-archives .post {
   overflow: hidden;
   margin-bottom: 60px;
 }
 
-/* line 179, ../sass/_post.scss */
+/* line 183, ../sass/_post.scss */
 #post-archives .post-meta {
   width: 181px;
   margin-right: 70px;
@@ -839,60 +844,60 @@ table {
   text-align: right;
 }
 
-/* line 186, ../sass/_post.scss */
+/* line 190, ../sass/_post.scss */
 #post-archives time {
   font-size: 18px;
 }
 
-/* line 190, ../sass/_post.scss */
+/* line 194, ../sass/_post.scss */
 #post-archives .post-meta .post-category {
   margin-top: 20px;
 }
 
-/* line 194, ../sass/_post.scss */
+/* line 198, ../sass/_post.scss */
 #post-archives .post-content {
   width: 616px;
   float: left;
   line-height: 22px;
 }
 
-/* line 200, ../sass/_post.scss */
+/* line 204, ../sass/_post.scss */
 #post-archives .post-content p {
   line-height: 25px;
 }
 
-/* line 204, ../sass/_post.scss */
+/* line 208, ../sass/_post.scss */
 #post-archives .post-content h3 {
   font-size: 22px;
   line-height: 26px;
   margin-bottom: 10px;
 }
 
-/* line 210, ../sass/_post.scss */
+/* line 214, ../sass/_post.scss */
 #post-archives .post-content h3 a {
   color: #505050;
 }
-/* line 212, ../sass/_post.scss */
+/* line 216, ../sass/_post.scss */
 #post-archives .post-content h3 a:hover {
   color: #ce3927;
 }
 
-/* line 215, ../sass/_post.scss */
+/* line 219, ../sass/_post.scss */
 #post dl {
   line-height: 24px;
 }
 
-/* line 219, ../sass/_post.scss */
+/* line 223, ../sass/_post.scss */
 #post dl dt {
   font-weight: bold;
 }
 
-/* line 223, ../sass/_post.scss */
+/* line 227, ../sass/_post.scss */
 #post dd + dt {
   margin-top: 20px;
 }
 
-/* line 227, ../sass/_post.scss */
+/* line 231, ../sass/_post.scss */
 #post dl dd {
   display: list-item;
   list-style: disc outside none;
