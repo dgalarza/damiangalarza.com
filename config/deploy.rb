@@ -62,23 +62,25 @@ end
 
 namespace :db do
   task :pull, :roles => :db do
-    database = remote_db_info
+    remote_database = remote_db_info
+    local_database = local_db_info
 
     filename = "dump.#{Time.now.strftime('%Y-%m-%d_%H:%M:%S')}.sql"
 
-    run "mysqldump --no-create-db -u #{database['production']['username']} --password=#{database['production']['password']} #{database['production']['database']} > /tmp/#{filename}"
+    run "mysqldump --no-create-db -u #{remote_database['production']['username']} --password=#{remote_database['production']['password']} #{remote_database['production']['database']} > /tmp/#{filename}"
     get "/tmp/#{filename}", filename
-    run_locally "mysql -u #{database['development']['username']} --password=#{database['development']['password']} #{database['development']['database']} < #{filename}; rm -f #{filename}"
+    run_locally "mysql -u #{local_database['development']['username']} --password=#{local_database['development']['password']} #{local_database['development']['database']} < #{filename}; rm -f #{filename}"
   end
 
   task :push, :roles => :db do
-    database = local_db_info
+    remote_database = remote_db_info
+    local_database = local_db_info
 
     filename = "dump.#{Time.now.strftime('%Y-%m-%d_%H:%M:%S')}.sql"
 
-    run_locally "mysqldump --no-create-db -u #{database['development']['username']} --password=#{database['development']['password']} #{database['development']['database']} > /tmp/#{filename}"
+    run_locally "mysqldump --no-create-db -u #{local_database['development']['username']} --password=#{local_database['development']['password']} #{local_database['development']['database']} > /tmp/#{filename}"
     upload "/tmp/#{filename}", "/tmp/#{filename}"
-    run "mysql -u #{database['production']['username']} --password=#{database['production']['password']} #{database['production']['database']} < /tmp/#{filename}; rm -f /tmp/#{filename}"
+    run "mysql -u #{remote_database['production']['username']} --password=#{remote_database['production']['password']} #{remote_database['production']['database']} < /tmp/#{filename}; rm -f /tmp/#{filename}"
   end
 end
 
