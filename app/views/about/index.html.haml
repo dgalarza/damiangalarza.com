@@ -22,7 +22,7 @@
           = image_tag 'http://assets.damiangalarza.com/images/icons/icon-css3_factory.png'
 
         .project-description
-          %h4= link_to "CSS3 Factory", "http://www.css3factory.com", :class => "alt-link"
+          %h4= link_to "CSS3 Factory", "http://www.css3factory.com", :class => "alt-anchor"
           %p A concept spun off from the popularity of the <a href="http://gradients.glrzad.com">CSS3 Gradient Generator</a>, the CSS3 Factory is a work in progress. It expands on the concept of the CSS3 Gradient Generator providing an interface for more CSS3 features.
 
       .project
@@ -31,7 +31,7 @@
         
 
         .project-description
-          %h4= link_to "CSS3 Gradient Generator", "http://gradients.css3factory.net", :class => "alt-link"
+          %h4= link_to "CSS3 Gradient Generator", "http://gradients.css3factory.net", :class => "alt-anchor"
           %p The CSS3 Gradient Generator was built as a showcase and tool for generating CSS based gradients. The tool aims to streamline the somewhat obtrusive syntax for building gradients in CSS code.
 
     %section.sub-section
@@ -45,3 +45,15 @@
 
 #info-bar
   %h2 My Projects on GitHub
+  #github-feed-content
+
+  %script{ :type => 'text/x-handlebars-template', :id => 'github-project-template' } 
+    :plain
+      <article class="github-project">
+        <h3><a class="alt-anchor" href="{{html_url}}" target="_blank">{{name}}</a></h3>
+        <p><strong>Language:</strong> {{language}}</p>
+      </article>
+
+- content_for :scripts do
+  %script{ :type => "text/javascript", :src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" }
+  = javascript_include_tag 'about'

@@ -122,6 +122,9 @@
 
 #bio .sub-section h3 {
   margin: 0 0 20px 0;
+  border-bottom: 1px solid #CE3927;
+  padding-bottom: 15px;
+  width: 209px;
 }
 
 .sub-section#featured-projects h3 {
@@ -154,4 +157,16 @@
   width: 233px;
   border-bottom: 1px solid #CE3927;
   padding: 0 25px 15px 0;
+}
+
+.github-project {
+  margin: 20px 0;
+}
+
+.github-project h3 {
+  font-family: 'pt-sans';
+}
+
+.github-project p {
+  font-size: 14px;
 }
