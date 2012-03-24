@@ -1,8 +1,11 @@
 require "bundler/capistrano"
+require "whenever/capistrano"
 load 'deploy/assets'
 
 set :application, "Damian Galarza.com"
 set :repository,  "git@github.com:dgalarza/damian_rails.git"
+
+set :whenever_command, "bundle exec whenever"
 
 default_run_options[:pty] = true
 

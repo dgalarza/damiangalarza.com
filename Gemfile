@@ -10,7 +10,8 @@ gem 'redcarpet'
 gem 'nokogiri'
 gem 'pygments.rb'
 
-gem 'aws-sdk'
+gem 'aws-sdk', :require => false
+gem 'whenever', :require => false
 
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
