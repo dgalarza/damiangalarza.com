@@ -12,3 +12,17 @@ $social-sprite: sprite-map('social-icons/*.png', $sprite-spacing: 1px);
 @mixin social-sprite($network) {
   background-position: sprite-position($social-sprite, 'social-' + $network);
 }
+
+$article-share-sprite: sprite-map('article-share-icons/*.png', $sprite-spacing: 1px);
+
+.article-share-sprite {
+  width: 60px;
+  height: 65px;
+  background-image: $article-share-sprite;
+  background-repeat: no-repeat;
+}
+
+@mixin article-share-sprite($icon) {
+  background-position: sprite-position($article-share-sprite, $icon);
+}
+

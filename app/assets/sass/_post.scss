@@ -235,3 +235,56 @@
   list-style: disc outside none;
   margin-left: 15px;
 }
+
+.article-share-tools {
+  width: 60px;
+  height: 134px;
+  position: absolute;
+  left: 0;
+  @include box-shadow(0 2px 5px 3px #c7c7c7);
+}
+
+.article-share-tools .share-option {
+  cursor: pointer;
+  display: block;
+  background-color: #ce3927;
+  z-index: 10;
+  position: relative;
+  @extend .article-share-sprite;
+}
+
+#facebook-article-share { 
+  @include article-share-sprite(facebook); 
+  z-index: 20;
+  border-bottom: 2px solid #d53c29;
+}
+
+#twitter-article-share {
+  border-top: 2px solid #b83222;
+  @include article-share-sprite(twitter);
+}
+
+.article-share-tools .share-container {
+  height: 45px;
+  position: absolute;
+  background-color: #ce3927;
+  top: 0;
+  left: -300px;
+  padding: 22px 0 0 20px;
+  @include transition(left 0.35s linear 0s);
+  @include box-shadow(0 2px 5px 3px #c7c7c7);
+}
+
+#twitter-article-share .share-container {
+  height: 43px;
+  padding-top: 24px;
+}
+
+.share-tool {
+  position: relative;
+}
+
+.share-tool:hover .share-container {
+  left: 60px;
+  z-index: 5;
+}
