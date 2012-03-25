@@ -29,22 +29,31 @@
 }
 
 #admin-nav li {
+  float: left;
+  margin-right: 20px;
+}
+
+#admin-nav li a {
+  display: block;
+  color: $gray;
   font-family: "kulturista-web";
   height: 75px;
   line-height: 75px;
   padding: 0 60px;
   @include background(linear-gradient(top, #f9fcfd, #d8dadb));
   font-size: 18px;
-  float: left;
-  margin-right: 20px;
   border: 1px solid #e1e1e1;
   border-bottom: none;
   @include box-shadow(0 0 1px 0 #a9a4a4 inset);
   @include border-radius(5px 5px 0 0);
 }
 
-#admin-nav li a {
-  color: $gray;
+.comments #comments-tab,
+.posts #posts-tab {
+  border: 1px solid rgba(206, 57, 39, 0.35);
+  border-bottom: none;
+  @include background(linear-gradient(top, #cd3a28, #ae2f1f));
+  color: #FFFFFF;
 }
 
 h2 {
