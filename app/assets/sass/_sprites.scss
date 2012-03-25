@@ -8,6 +8,11 @@
   height: image-height($sprite-file);
 }
 
+@mixin sprite-height($map, $sprite) {
+  $sprite-file: sprite-file($map, $sprite);
+  height: image-height($sprite-file);
+}
+
 @import "compass/utilities/sprites/base";
 $social-sprite: sprite-map('social-icons/*.png', $sprite-spacing: 1px);
 

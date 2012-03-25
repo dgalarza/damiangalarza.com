@@ -20,6 +20,8 @@ class Post < ActiveRecord::Base
     where(:category_id => category)
   }
 
+  scope :admin_table_fields, select('posts.id, title, published, posts.category_id, slug')
+
   before_save :generate_slug
   before_save :markdown_cache
 

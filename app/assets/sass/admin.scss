@@ -59,6 +59,7 @@ h2 + .admin-table {
 .admin-table {
   table-layout: fixed;
   width: 100%;
+  clear: left;
   @include box-shadow(0 2px 13px 0 rgba(0,0,0, 0.15));
 }
 
@@ -93,11 +94,12 @@ h2 + .admin-table {
 
 // Posts tables
 .posts-table colgroup {
-  .id-col { width: 200px; }
-  .category-col { width: 280px; }
-  .status-col { width: 225px; }
+  .id-col { width: 100px; }
+  .category-col { width: 240px; }
+  .status-col { width: 192px; }
   .view-col { width: 37px; }
   .edit-col { width: 44px; }
+  .delete-col { width: 65px; }
 }
 
 .is-published .sprite-container {
@@ -105,6 +107,10 @@ h2 + .admin-table {
   @extend .admin-icon;
   @include admin-icon('icon-published');
   vertical-align: middle;
+}
+
+.posts-table .post-title {
+  padding-right: 58px;
 }
 
 .posts-table .admin-action-icon {
@@ -117,7 +123,18 @@ h2 + .admin-table {
 .posts-table .edit-icon { @include admin-icon('icon-edit'); }
 .posts-table .delete-icon { @include admin-icon('icon-delete'); }
 
-// Comments
+.add-post-trigger {
+  float: right;
+  @extend .admin-icon;
+  background-position: sprite-position($admin-icon-sprite, 'icon-add');
+  padding-left: 40px;
+  $height: image-height( sprite-file($admin-icon-sprite, 'icon-add') );
+  height: $height;
+  line-height: $height;
+  margin-bottom: 20px;
+}
+
+// Comments Table
 input[type=radio] {
   position: absolute;
   visibility: hidden;
