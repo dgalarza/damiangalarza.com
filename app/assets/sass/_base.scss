@@ -121,10 +121,13 @@ footer {
   right: 0;
 }
 
-footer ul {
-  width: 650px;
-  margin: 0 auto;
+footer .wrapper {
+  height: 70px;
   overflow: hidden;
+}
+
+footer ul {
+  float: left;
   padding-top: 28px;
 }
 
@@ -137,4 +140,9 @@ footer li {
 
 footer li.last {
   border-right: none;
+}
+
+footer .design-label {
+  padding-top: 28px;
+  float: right;
 }
