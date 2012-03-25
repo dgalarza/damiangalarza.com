@@ -1,12 +1,12 @@
 #main-content
   %section#bio
-    %p.headline I'm a NY/NJ based, full stack web developer. I currently work at <a href="http://www.rga.com" target="_blank">R/GA</a> as Senior Open Standards Developer, specializing in front end optimization including writing high performance JavaScript applications. My languages of choice are JavaScript and Ruby.
+    %p.headline I'm a NY/NJ based, full stack web developer.  I currently work at <a href="http://www.rga.com" target="_blank">R/GA</a>, as Senior Open Standards Developer.  I specialize in front end optimization including writing high performance JavaScript applications. My languages of choice are JavaScript and Ruby.
 
-    %p I am passionate about web development as a whole and believe in clean organized code. I aim to ensure that the user has the smoothest experience possible while on the web and work on pushing the boundaries on web development. In my spare time I enjoy working on various side projects, including my work on the <a href="http://gradients.glrzad.com">CSS3 Gradient Generator</a>. I've also begun learning iOS development and Objective C.
+    %p I am passionate about web development as a whole and believe in clean organized code. I aim to ensure that the user has the smoothest experience possible while on the web, as well as pushing the boundaries on web development. In my spare time I enjoy working on various side projects, including my work on the <a href="http://gradients.glrzad.com">CSS3 Gradient Generator</a>. I've also begun learning iOS development and Objective C.
 
     %p I have worked in both in-house startup environments such as <a href="http://www.thrillist.com" target="_blank">Thrillist</a> as well as for high-profile clients including <a href="http://www.discovercard.com" target="_blank">Discover Card</a>, <a href="http://www.verizon.com">Verizon</a>, and <a href="http://www.att.com" target="_blank">AT&amp;T</a>. My passions lie in building applications from either end of the development spectrum.
 
-    %p I have also participated in different events such as giving a talk at <a href="http://msw-fe.eventbrite.com/" target="_blank">Making Startups Work - Optimizing the Front End</a> at <a href="http://www.refinery29.com/" target="_blank">Refinery29</a> discussing techniques for providing a responsive UI. Slides are <a href="http://www.damiangalarza.com/presentations/responsive_uis">available online for viewing.</a>
+    %p I have also participated in different events such as giving a talk at <a href="http://msw-fe.eventbrite.com/" target="_blank">Making Startups Work - Optimizing the Front End</a> at <a href="http://www.refinery29.com/" target="_blank">Refinery29</a>. I discussed techniques for providing a responsive UI. Slides are <a href="http://www.damiangalarza.com/presentations/responsive_uis">available online for viewing.</a>
 
     %section.sub-section
       %h3 Skills
@@ -45,14 +45,14 @@
 
 #info-bar
   %h2 My Projects on GitHub
-  #github-feed-content
+  %ul#github-feed-content
 
   %script{ :type => 'text/x-handlebars-template', :id => 'github-project-template' } 
     :plain
-      <article class="github-project">
+      <li class="github-project">
         <h3><a class="alt-anchor" href="{{html_url}}" target="_blank">{{name}}</a></h3>
-        <p><strong>Language:</strong> {{language}}</p>
-      </article>
+        <p><em>Language:</em> {{language}}</p>
+      </li>
 
 - content_for :scripts do
   %script{ :type => "text/javascript", :src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" }

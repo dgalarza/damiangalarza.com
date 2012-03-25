@@ -159,8 +159,13 @@
   padding: 0 25px 15px 0;
 }
 
+#github-feed-content {
+  margin-left: 20px;
+}
+
 .github-project {
   margin: 20px 0;
+  list-style: disc;
 }
 
 .github-project h3 {
@@ -168,5 +173,6 @@
 }
 
 .github-project p {
+  margin-top: 3px;
   font-size: 14px;
 }
