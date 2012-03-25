@@ -58,6 +58,6 @@ module DamiangalarzaCom
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.assets.precompile += ['style.css', 'home.js', 'posts.js']
+    config.assets.precompile += ['style.css', 'home.js', 'posts.js', 'about.js', 'admin.css']
   end
 end
