@@ -2,6 +2,10 @@
 @import 'reset200802';
 @import 'sprites';
 
+@import 'uniform.default';
+
+//@import 'formtastic';
+
 #site-header {
   padding-top: 25px;
   margin-bottom: 48px;
@@ -48,6 +52,7 @@ h2 {
 }
 
 // Admin Tables
+h2 + form,
 h2 + .admin-table {
   margin-top: 20px;
 }
@@ -155,4 +160,56 @@ input[type=radio]:checked + .radio-label {
 
 .radio-label + input + .radio-label {
   margin-left: 20px;
+}
+
+// Forms
+form {
+  padding: 43px 0 43px 24px;
+  border-top: 8px solid $red;
+  @include box-shadow(0 2px 13px 0 rgba(0,0,0, 0.15));
+}
+
+form li {
+  margin-bottom: 40px;
+  list-style: none;
+  overflow: hidden;
+}
+
+form label {
+  float: left;
+  width: 162px;
+  font-family: "kulturista-web";
+  font-size: 24px;
+  color: #666666;
+}
+
+form input[type=text] {
+  padding-top: 9px;
+  height: 25px;
+}
+
+form .text textarea,
+form .string input {
+  border: 1px solid #d4d4d4;
+  @include border-radius(4px);
+}
+
+form .selector {
+  width: 467px;
+  span { width: 442px; }
+}
+
+form textarea,
+form input,
+form select {
+  width: 467px;
+  float: left;
+  &:focus {
+    border: 1px solid #ce3927;
+    @include box-shadow(0 0 3px 0 #ce3927);
+  }
+}
+
+form .actions {
+  padding-left: 162px;
 }

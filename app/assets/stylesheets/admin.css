@@ -1,1 +1,76 @@
-aside,section,article,time,nav{display:block}h1,h2,h3,h4,h5{font-weight:normal;font-family:"kulturista-web"}body,html{font-family:'pt-sans';background:#fefefe;color:#505050;height:100%;font-size:18px}code,pre{font-family:'inconsolata'}.code-block{font-size:14px}input[type=text],input[type=password],input[type=url],input[type=email],textarea{font-size:14px;font-family:"kulturista-web";color:#505050;resize:none;outline:none;border:1px solid #b3b3b3;padding:15px 0 10px 13px;-webkit-box-shadow:0 0 5px 0 #e1e1e1 inset;-moz-box-shadow:0 0 5px 0 #e1e1e1 inset;box-shadow:0 0 5px 0 #e1e1e1 inset;-webkit-transition:box-shadow 0.25s linear 0s;-moz-transition:box-shadow 0.25s linear 0s;-ms-transition:box-shadow 0.25s linear 0s;-o-transition:box-shadow 0.25s linear 0s;transition:box-shadow 0.25s linear 0s}input[type=text]:focus,input[type=password]:focus,input[type=url]:focus,input[type=email]:focus,textarea:focus{outline:0 none}input[type=text]{height:11px}::selection{background:#ce3927;color:#FFFFFF}::-moz-selection{background:#ce3927;color:#FFFFFF}.alt-anchor,.alt-anchor:visited{color:#505050}.alt-anchor:hover,.alt-anchor:visited:hover{color:#ce3927}#page{min-height:100%;position:relative}.wrapper{width:960px;padding:0 20px;margin:0 auto}a,a:visited{color:#ce3927;text-decoration:none;-webkit-transition:color 0.35s linear 0s;-moz-transition:color 0.35s linear 0s;-ms-transition:color 0.35s linear 0s;-o-transition:color 0.35s linear 0s;transition:color 0.35s linear 0s}a:hover{color:#505050}.meridian{text-transform:lowercase}#page-wrapper{padding-bottom:140px}.clear-footer{height:70px;clear:both}footer{height:70px;color:#505050;background:#eeeeee;text-align:center;font-size:14px;position:absolute;bottom:0;left:0;right:0}footer ul{width:650px;margin:0 auto;overflow:hidden;padding-top:28px}footer li{padding-right:10px;margin-right:10px;border-right:1px solid #505050;float:left}footer li.last{border-right:none}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}.social-sprite{background:transparent url('/images/social-icons-s86c4929ee3.png') no-repeat}.article-share-sprite{width:60px;height:65px;background-image:url('/images/article-share-icons-s91ec3ed54b.png');background-repeat:no-repeat}.admin-icon,.is-published .sprite-container,.posts-table .admin-action-icon,.add-post-trigger{background:url('/images/admin/admin-sprite-sa34fdee8f8.png') no-repeat}#site-header{padding-top:25px;margin-bottom:48px}#site-header h1 a{background:url(/images/dg.png) 0 0 no-repeat;width:126px;height:146px;display:block;text-indent:100%;white-space:nowrap;overflow:hidden}#nav-wrapper{margin-top:35px;-webkit-box-shadow:0 -14px 9px -10px #e8e8e8 inset;-moz-box-shadow:0 -14px 9px -10px #e8e8e8 inset;box-shadow:0 -14px 9px -10px #e8e8e8 inset}#admin-nav{overflow:hidden}#admin-nav li{font-family:"kulturista-web";height:75px;line-height:75px;padding:0 60px;background:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f9fcfd), color-stop(100%, #d8dadb));background:-webkit-linear-gradient(top, #f9fcfd,#d8dadb);background:-moz-linear-gradient(top, #f9fcfd,#d8dadb);background:-o-linear-gradient(top, #f9fcfd,#d8dadb);background:-ms-linear-gradient(top, #f9fcfd,#d8dadb);background:linear-gradient(top, #f9fcfd,#d8dadb);font-size:18px;float:left;margin-right:20px;border:1px solid #e1e1e1;border-bottom:none;-webkit-box-shadow:0 0 1px 0 #a9a4a4 inset;-moz-box-shadow:0 0 1px 0 #a9a4a4 inset;box-shadow:0 0 1px 0 #a9a4a4 inset;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;-ms-border-radius:5px 5px 0 0;-o-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0}#admin-nav li a{color:#505050}h2{font-size:25px}h2+.admin-table{margin-top:20px}.admin-table+h2{margin-top:55px}.admin-table{table-layout:fixed;width:100%;clear:left;-webkit-box-shadow:0 2px 13px 0 rgba(0,0,0,0.15);-moz-box-shadow:0 2px 13px 0 rgba(0,0,0,0.15);box-shadow:0 2px 13px 0 rgba(0,0,0,0.15)}.admin-table thead{border-top:8px solid #ce3927;border-bottom:1px solid #ce3927}.admin-table thead th{height:62px;vertical-align:middle;text-align:left;font-size:16px;color:#666666;font-weight:normal;font-family:"kulturista-web"}.admin-table tbody td{vertical-align:middle;text-align:left;height:70px}.admin-table .id-col{padding-left:40px}.admin-table tbody tr:nth-child(even) td{background:#f2f2f2}.posts-table colgroup .id-col{width:100px}.posts-table colgroup .category-col{width:240px}.posts-table colgroup .status-col{width:192px}.posts-table colgroup .view-col{width:37px}.posts-table colgroup .edit-col{width:44px}.posts-table colgroup .delete-col{width:65px}.is-published .sprite-container{margin-right:7px;background-position:0 -87px;height:20px;width:18px;vertical-align:middle}.posts-table .post-title{padding-right:58px}.posts-table .admin-action-icon{display:block;text-indent:100%;white-space:nowrap;overflow:hidden}.posts-table .view-icon{background-position:0 -159px;height:26px;width:20px}.posts-table .edit-icon{background-position:0 -37px;height:26px;width:26px}.posts-table .delete-icon{background-position:0 -107px;height:28px;width:23px}.add-post-trigger{float:right;background-position:0 0;padding-left:40px;height:37px;line-height:37px;margin-bottom:20px}input[type=radio]{position:absolute;visibility:hidden;margin:0;padding:0}input[type=radio]+.radio-label{float:left;background:url('/images/admin/admin-sprite-sa34fdee8f8.png') no-repeat;padding-left:25px;background-position:0 -135px;height:24px;line-height:24px}input[type=radio]:checked+.radio-label{background-position:0 -63px;height:24px;line-height:24px}.radio-label+input+.radio-label{margin-left:20px}
+/*
+Syntax error: File to import not found or unreadable: formtastic.
+              Load paths:
+                /var/www/damiangalarza.com/app/assets/sass
+                /home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/frameworks/blueprint/stylesheets
+                /home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/frameworks/compass/stylesheets
+                Compass::SpriteImporter
+        on line 5 of /var/www/damiangalarza.com/app/assets/sass/admin.scss
+
+1: /var/www/damiangalarza.com/app/assets/sass/admin.scss
+
+Backtrace:
+/var/www/damiangalarza.com/app/assets/sass/admin.scss:5
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/import_node.rb:64:in `rescue in import'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/import_node.rb:42:in `import'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/import_node.rb:25:in `imported_file'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:149:in `rescue in visit_import'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:154:in `visit_import'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:47:in `visit_root'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/tree/root_node.rb:20:in `render'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/engine.rb:299:in `_render'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/sass-3.1.15/lib/sass/engine.rb:246:in `render'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/compiler.rb:126:in `timed'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/compiler.rb:139:in `block in compile'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/logger.rb:45:in `red'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/compiler.rb:138:in `compile'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/compiler.rb:118:in `compile_if_required'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/compiler.rb:101:in `each'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/compiler.rb:101:in `block in run'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/compiler.rb:126:in `timed'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/compiler.rb:100:in `run'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/commands/watch_project.rb:147:in `recompile'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/path.rb:73:in `call'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/path.rb:73:in `run_callback'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/path.rb:55:in `callback_action'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/path.rb:35:in `update'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/state/directory.rb:39:in `block in modified'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/state/directory.rb:37:in `each'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/state/directory.rb:37:in `modified'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/state/directory.rb:18:in `refresh'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/backends/polling.rb:17:in `each'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/backends/polling.rb:17:in `block in run'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/backends/polling.rb:15:in `loop'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/backends/polling.rb:15:in `run'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm/monitor.rb:26:in `run'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/fssm-0.2.8.1/lib/fssm.rb:70:in `monitor'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/commands/watch_project.rb:87:in `perform'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/commands/base.rb:18:in `execute'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/commands/project_base.rb:19:in `execute'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/bin/compass:29:in `block in <top (required)>'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/bin/compass:43:in `call'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/bin/compass:43:in `<top (required)>'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/bin/compass:19:in `load'
+/home/dgalarza/.rvm/gems/ruby-1.9.2-p318/bin/compass:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: formtastic.\A               Load paths:\A                 /var/www/damiangalarza.com/app/assets/sass\A                 /home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/frameworks/blueprint/stylesheets\A                 /home/dgalarza/.rvm/gems/ruby-1.9.2-p318/gems/compass-0.12.rc.1/frameworks/compass/stylesheets\A                 Compass::SpriteImporter\A         on line 5 of /var/www/damiangalarza.com/app/assets/sass/admin.scss\A \A 1: /var/www/damiangalarza.com/app/assets/sass/admin.scss"; }

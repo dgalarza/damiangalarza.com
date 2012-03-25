@@ -1,0 +1,22 @@
+= semantic_form_for @post do |post|
+  = post.inputs do
+    = post.input :title
+    = post.input :subtitle
+
+    = post.input :category
+
+    = post.input :content
+
+    = post.input :excerpt
+
+    = post.input :tags
+    #tags-container
+
+  = post.actions do
+    = post.action :submit
+  
+= content_for :scripts do
+  %script{ :type => "text/javascript", :src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" }
+  = javascript_include_tag 'jquery.uniform.min.js'
+  :javascript
+    $(function(){ $("select").uniform(); });

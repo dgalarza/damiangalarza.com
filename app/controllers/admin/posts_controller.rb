@@ -4,6 +4,10 @@ class Admin::PostsController < Admin::AdminController
   end
 
   def edit
-    @post = Post.find(params[:post_id])
+    @post = Post.find(params[:id])
+  end
+
+  def new
+    @post = current_user.posts.build
   end
 end
