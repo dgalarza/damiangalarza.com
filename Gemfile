@@ -10,6 +10,8 @@ gem 'redcarpet'
 gem 'nokogiri'
 gem 'pygments.rb'
 
+gem 'formtastic'
+
 gem 'aws-sdk', :require => false
 gem 'whenever', :require => false
 
