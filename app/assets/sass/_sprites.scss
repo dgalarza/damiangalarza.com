@@ -2,6 +2,12 @@
  * Sprites
  */
 
+@mixin sprite-dimensions($map, $sprite) {
+  $sprite-file: sprite-file($map, $sprite);
+  width: image-width($sprite-file);
+  height: image-height($sprite-file);
+}
+
 @import "compass/utilities/sprites/base";
 $social-sprite: sprite-map('social-icons/*.png', $sprite-spacing: 1px);
 
@@ -26,3 +32,19 @@ $article-share-sprite: sprite-map('article-share-icons/*.png', $sprite-spacing: 
   background-position: sprite-position($article-share-sprite, $icon);
 }
 
+// Admin Sprites
+$admin-icon-sprite: sprite-map('admin/admin-sprite/*.png', $sprite-spacing: 1px);
+
+.admin-icon { background: $admin-icon-sprite no-repeat; }
+@mixin admin-icon($icon) {
+  background-position: sprite-position($admin-icon-sprite, $icon);
+  @include sprite-dimensions($admin-icon-sprite, $icon);
+}
+
+@mixin admin-radio($type) {
+  $sprite-file: sprite-file($admin-icon-sprite, "radio-#{$type}");
+  background-position: sprite-position($admin-icon-sprite, "radio-#{$type}");
+  $height: image-height($sprite-file);
+  height: $height;
+  line-height: $height;
+}

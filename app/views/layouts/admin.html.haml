@@ -1,0 +1,27 @@
+!!! 5
+%html{ :en => 'en' }
+  %head
+
+    %meta{ :charset => 'UTF-8' }
+    %title Damian Galarza
+
+    = stylesheet_link_tag 'admin'
+
+    :plain
+      <script type="text/javascript" src="http://use.typekit.com/hyh0moi.js"></script>
+      <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
+  %body{ :class => controller_name }
+
+    #page
+      = render 'layouts/admin_header'
+
+      #page-wrapper.wrapper
+        %section.site-content
+          = yield
+
+      = render 'layouts/footer'
+
+      = yield :scripts
+

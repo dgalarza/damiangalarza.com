@@ -13,8 +13,6 @@ gem 'pygments.rb'
 gem 'aws-sdk', :require => false
 gem 'whenever', :require => false
 
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

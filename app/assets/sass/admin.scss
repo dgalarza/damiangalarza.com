@@ -1,0 +1,141 @@
+@import 'base';
+@import 'reset200802';
+@import 'sprites';
+
+#site-header {
+  padding-top: 25px;
+  margin-bottom: 48px;
+}
+
+#site-header h1 a {
+  background: url(/images/dg.png) 0 0 no-repeat;
+  width: 126px;
+  height: 146px;
+  display: block;
+  @include hide-text;
+}
+
+#nav-wrapper {
+  margin-top: 35px;
+  @include box-shadow(0 -14px 9px -10px #E8E8E8 inset);
+}
+
+#admin-nav {
+  overflow: hidden;
+}
+
+#admin-nav li {
+  font-family: "kulturista-web";
+  height: 75px;
+  line-height: 75px;
+  padding: 0 60px;
+  @include background(linear-gradient(top, #f9fcfd, #d8dadb));
+  font-size: 18px;
+  float: left;
+  margin-right: 20px;
+  border: 1px solid #e1e1e1;
+  border-bottom: none;
+  @include box-shadow(0 0 1px 0 #a9a4a4 inset);
+  @include border-radius(5px 5px 0 0);
+}
+
+#admin-nav li a {
+  color: $gray;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+// Admin Tables
+h2 + .admin-table {
+  margin-top: 20px;
+}
+
+.admin-table + h2 {
+  margin-top: 55px;
+}
+
+.admin-table {
+  table-layout: fixed;
+  width: 100%;
+  @include box-shadow(0 2px 13px 0 rgba(0,0,0, 0.15));
+}
+
+.admin-table thead {
+  border-top: 8px solid $red;
+  border-bottom: 1px solid $red;
+}
+
+.admin-table thead th {
+  height: 62px;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 16px;
+  color: #666666;
+  font-weight: normal;
+  font-family: "kulturista-web";
+}
+
+.admin-table tbody td {
+  vertical-align: middle;
+  text-align: left;
+  height: 70px;
+}
+
+.admin-table .id-col {
+  padding-left: 40px;
+}
+
+.admin-table tbody tr:nth-child(even) td {
+  background: #f2f2f2;
+}
+
+// Posts tables
+.posts-table colgroup {
+  .id-col { width: 200px; }
+  .category-col { width: 280px; }
+  .status-col { width: 225px; }
+  .view-col { width: 37px; }
+  .edit-col { width: 44px; }
+}
+
+.is-published .sprite-container {
+  margin-right: 7px;
+  @extend .admin-icon;
+  @include admin-icon('icon-published');
+  vertical-align: middle;
+}
+
+.posts-table .admin-action-icon {
+  display: block;
+  @include hide-text;
+  @extend .admin-icon;
+}
+
+.posts-table .view-icon { @include admin-icon('icon-article'); }
+.posts-table .edit-icon { @include admin-icon('icon-edit'); }
+.posts-table .delete-icon { @include admin-icon('icon-delete'); }
+
+// Comments
+input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+input[type=radio] + .radio-label {
+  float: left;
+  background: $admin-icon-sprite no-repeat;
+  padding-left: 25px;
+  @include admin-radio('unchecked');
+}
+
+input[type=radio]:checked + .radio-label {
+  @include admin-radio('checked');
+}
+
+.radio-label + input + .radio-label {
+  margin-left: 20px;
+}

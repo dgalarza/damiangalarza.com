@@ -1,15 +1,22 @@
 DamiangalarzaCom::Application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
   devise_for :users
 
   resources :posts do
     resources :comments
   end
 
+  namespace :admin do
+      resources :posts do
+        resources :comments
+      end
+
+      resources :comments
+  end
+
+  match '/admin', :controller => 'admin/dashboard', :action => 'index', :as => :admin_dashboard, :method => :get
+
   match '/posts/:category/:slug', :controller => 'posts', :action => 'show', :as => :blog_permalink, :method => :get
-  #match '/posts/:year/:month/:day/:slug', :controller => 'posts', :action => 'show', :constraints => { :year => /\d{4}/, :month => /\d{1,2}/, :day => /\d{1,2}/ }, :as => :blog_permalink, :method => :get
   match '/about', :controller => 'about', :action => 'index'
 
   root :to => "home#index"

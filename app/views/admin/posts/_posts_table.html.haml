@@ -1,0 +1,18 @@
+%table.admin-table.posts-table
+  %colgroup
+    %col.id-col
+    %col.category-col/
+    %col.status-col/
+    %col.view-col/
+    %col.edit-col/
+    %col.delete-col/
+
+  %thead
+    %tr
+      %th.id-col ID
+      %th Category
+      %th Status
+      %th{ :colspan => 3 } Actions
+
+  %tbody
+    = render @posts
