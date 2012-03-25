@@ -59,5 +59,9 @@ module DamiangalarzaCom
     config.assets.version = '1.0'
 
     config.assets.precompile += ['style.css', 'home.js', 'posts.js', 'about.js', 'admin.css']
+
+    config.generators.stylesheets = false
+    config.generators.javascripts = false
+
   end
 end
