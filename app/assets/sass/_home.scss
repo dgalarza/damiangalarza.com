@@ -37,6 +37,7 @@
 }
 
 #bio h3 {
+  font-size: 20px;
   margin: 20px 0;
 }
 
@@ -101,6 +102,7 @@
 }
 
 #projects-pane .pane h3 {
+  font-size: 20px;
   padding-top: 28px;
   margin-bottom: 3px;
   font-size: 14px;
@@ -125,6 +127,11 @@
   border-bottom: 1px solid #CE3927;
   padding-bottom: 15px;
   width: 209px;
+  font-size: 20px;
+}
+
+#specialties p + p {
+  margin-top: 10px;
 }
 
 .sub-section#featured-projects h3 {
@@ -154,6 +161,7 @@
 }
 
 .about #info-bar h2 {
+  font-size: 20px;
   width: 233px;
   border-bottom: 1px solid #CE3927;
   padding: 0 25px 15px 0;

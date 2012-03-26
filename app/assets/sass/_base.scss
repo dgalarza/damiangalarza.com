@@ -23,11 +23,11 @@ aside, section, article, time, nav {
 
 h1,h2,h3,h4,h5 {
   font-weight: normal;
-  font-family: "kulturista-web";
+  font-family: "minion-pro",sans-serif;
 }
 
 body, html {
-  font-family: 'pt-sans';
+  font-family: "freight-sans-pro",sans-serif;
   background: #fefefe;
   color: #505050;
   height: 100%;
@@ -48,7 +48,7 @@ input[type=url],
 input[type=email],
 textarea {
   font-size: 14px;
-  font-family: "kulturista-web";
+  font-family: "minion-pro",sans-serif;
   color: $gray;
   resize: none;
   outline: none;
