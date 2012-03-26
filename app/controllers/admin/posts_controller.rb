@@ -10,4 +10,9 @@ class Admin::PostsController < Admin::AdminController
   def new
     @post = current_user.posts.build
   end
+
+  def create
+    @post = current_user.posts.build params[:post]
+    @post.save
+  end
 end

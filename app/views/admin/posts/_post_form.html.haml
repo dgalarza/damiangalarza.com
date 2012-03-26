@@ -1,4 +1,4 @@
-= semantic_form_for @post do |post|
+= semantic_form_for @post, :url => admin_posts_path do |post|
   = post.inputs do
     = post.input :title
     = post.input :subtitle
