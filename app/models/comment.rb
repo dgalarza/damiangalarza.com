@@ -5,6 +5,8 @@ class Comment < ActiveRecord::Base
 
   default_scope :conditions => ["approved", true], :order => 'created_at DESC'
 
+  scope :admin_table_fields, select('comments.id, approved, username')
+
   belongs_to :post
   attr_protected :post_id
 

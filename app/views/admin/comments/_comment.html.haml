@@ -8,4 +8,4 @@
     = radio_button_tag "#{comment.id}-approved", false, !comment.approved
     = label_tag "#{comment.id}-approved_false", 'Spam', :class => 'radio-label'
 
-  %td= link_to 'View', '', :class => 'view-icon admin-action-icon'
+  %td= link_to 'Edit', edit_admin_comment_path(comment), :class => 'edit-icon admin-action-icon'
