@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.select("title, post.created_at, excerpt, slug, category_id").includes(:category)
+    @posts = Post.published.select("title, post.created_at, excerpt, slug, category_id").includes(:category)
 
     if params[:search]
       @posts = @posts.search "%#{params[:search]}%"
@@ -20,6 +20,8 @@ class PostsController < ApplicationController
     post_query = post_query.joins(:category)
     post_query = post_query.includes(:category)
     @post = post_query.first
+
+    raise ActiveRecord::RecordNotFound unless @post
 
     @comment_count = @post.comments.count
     @comments = @post.comments.order('created_at DESC').limit(10)

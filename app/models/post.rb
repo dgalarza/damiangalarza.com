@@ -8,6 +8,8 @@ class Post < ActiveRecord::Base
 
   default_scope :order => 'posts.created_at DESC'
 
+  scope :published, where(:published => true)
+
   scope :search, lambda { |query|
     where('title LIKE ? OR content LIKE ?', query, query)
   }
