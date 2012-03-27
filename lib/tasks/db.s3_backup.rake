@@ -1,3 +1,5 @@
+require 'aws'
+
 namespace :db do
 
   desc "Backup database to Amazon S3"
