@@ -15,4 +15,13 @@ class Admin::PostsController < Admin::AdminController
     @post = current_user.posts.build params[:post]
     @post.save
   end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.update_attributes(params[:post])
+
+    @post.save
+
+    redirect_to :admin_posts
+  end
 end

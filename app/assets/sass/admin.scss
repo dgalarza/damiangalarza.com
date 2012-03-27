@@ -209,14 +209,22 @@ form .selector {
 }
 
 form textarea,
-form input,
+form .string input,
 form select {
-  width: 467px;
   float: left;
+  width: 467px;
   &:focus {
     border: 1px solid #ce3927;
     @include box-shadow(0 0 3px 0 #ce3927);
   }
+}
+
+form .boolean label {
+  width: 177px;
+}
+
+form input[type=checkbox] {
+  float: right;
 }
 
 form .actions {
