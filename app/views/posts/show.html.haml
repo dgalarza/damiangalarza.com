@@ -31,7 +31,7 @@
   =post_markdown(@post.cached_markdown)
 
   %section#post-comments{ 'data-comment-count' => @comment_count }
-    - if @comments.length > 1
+    - if @comments.length > 0
       %h4 
         Comments
         = "(#{@comment_count})"
