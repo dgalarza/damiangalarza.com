@@ -9,7 +9,7 @@ class Ability
       can :access, :rails_admin
       can :manage, :all
     else
-      cannot :read, Post, :published => false
+      can :read, Post, :published => true
     end
 
     # Define abilities for the passed in user here. For example:
