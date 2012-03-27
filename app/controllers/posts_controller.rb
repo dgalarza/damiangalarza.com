@@ -21,6 +21,8 @@ class PostsController < ApplicationController
     post_query = post_query.includes(:category)
     @post = post_query.first
 
+    authorize! :read, @post
+
     raise ActiveRecord::RecordNotFound unless @post
 
     @comment_count = @post.comments.count
