@@ -63,5 +63,9 @@ module DamiangalarzaCom
     config.generators.stylesheets = false
     config.generators.javascripts = false
 
+    config.after_initialize do
+        Sass::Plugin.options[:never_update] = true
+    end
+
   end
 end

@@ -1,5 +1,6 @@
 #post {
   overflow: hidden;
+  line-height: 1.4;
 }
 
 #post-sidebar {
@@ -25,8 +26,12 @@
 }
 
 #post header h3 {
-  margin: 0 0 7px 0;
-  font-size: 22px;
+  margin: 0;
+  font-size: 20px;
+}
+
+#post header .post-tags {
+  color: #CCCCCC;
 }
 
 #post .publish-meta {
@@ -34,8 +39,8 @@
 }
 
 #post .publish-meta p {
+  font-size: 16px;
   margin-left: 5px;
-  line-height: 16px;
   float: left;
 }
 
@@ -45,6 +50,7 @@
 }
 
 #post-sidebar .post-category {
+  font-size: 16px;
   float: left;
 }
 
@@ -54,8 +60,8 @@
 }
 
 #post {
-  h2, h3, h4, h5 {
-    margin: 45px 0 $post-content-spacing - 10px;
+  h2, h3, h4, h5, h6 {
+    margin: 45px 0 $post-content-spacing - 15px;
   }
 }
 
@@ -134,6 +140,7 @@
 
 #post-comments input[type=submit] {
   width: 175px;
+  margin-top: 15px;
 }
 
 #post-comments .hint {
@@ -218,27 +225,9 @@
   &:hover { color: $red; }
 }
 
-#post dl {
-  line-height: 24px;
-}
-
-#post dl dt {
-  font-weight: bold;
-}
-
-#post dd + dt {
-  margin-top: 20px;
-}
-
-#post dl dd { 
-  display: list-item;
-  list-style: disc outside none;
-  margin-left: 15px;
-}
-
 .article-share-tools {
-  width: 60px;
-  height: 134px;
+  width: 45px;
+  height: 98px;
   position: absolute;
   left: 0;
   @include box-shadow(0 2px 5px 3px #c7c7c7);
@@ -265,19 +254,14 @@
 }
 
 .article-share-tools .share-container {
-  height: 45px;
+  height: 39px;
   position: absolute;
   background-color: #ce3927;
   top: 0;
   left: -300px;
-  padding: 22px 0 0 20px;
+  padding: 12px 0 0 20px;
   @include transition(left 0.35s linear 0s);
   @include box-shadow(0 2px 5px 3px #c7c7c7);
-}
-
-#twitter-article-share .share-container {
-  height: 43px;
-  padding-top: 24px;
 }
 
 .share-tool {
@@ -285,6 +269,32 @@
 }
 
 .share-tool:hover .share-container {
-  left: 60px;
+  left: 45px;
   z-index: 5;
+}
+
+// Post inline styles
+#post dl {
+  line-height: 24px;
+}
+
+#post dl dt {
+  font-style: italic;
+}
+
+#post dd + dt {
+  margin-top: 20px;
+}
+
+#post ul,
+#post ol {
+  margin-left: 20px;
+}
+
+#post ul li {
+  list-style: disc;
+}
+
+#post ol li {
+  list-style: decimal;
 }

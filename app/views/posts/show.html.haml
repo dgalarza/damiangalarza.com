@@ -22,17 +22,18 @@
     %h2= link_to @post.title, post_permalink_url(@post)
     -if @post.subtitle
       %h3= @post.subtitle
-    - @post.tags.each_with_index do |tag, i|
-      -if i > 0
-        |
-      = link_to tag.name, "/posts?tag=#{tag.id}"
+    %p.post-tags
+      - @post.tags.each_with_index do |tag, i|
+        -if i > 0
+          |
+        = link_to tag.name, "/posts?tag=#{tag.id}"
 
   =post_markdown(@post.cached_markdown)
 
   %section#post-comments{ 'data-comment-count' => @comment_count }
-    %h4 
-      Comments
-      - if @comments.length > 1
+    - if @comments.length > 1
+      %h4 
+        Comments
         = "(#{@comment_count})"
     #comment-content
       = render :partial => 'post_comment', :collection => @comments

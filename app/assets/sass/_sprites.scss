@@ -27,8 +27,8 @@ $social-sprite: sprite-map('social-icons/*.png', $sprite-spacing: 1px);
 $article-share-sprite: sprite-map('article-share-icons/*.png', $sprite-spacing: 1px);
 
 .article-share-sprite {
-  width: 60px;
-  height: 65px;
+  width: 45px;
+  height: 49px;;
   background-image: $article-share-sprite;
   background-repeat: no-repeat;
 }
