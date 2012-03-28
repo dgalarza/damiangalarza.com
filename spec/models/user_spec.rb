@@ -1,5 +1,21 @@
 require 'spec_helper'
+require 'cancan/matchers'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  describe 'Abilities' do
+
+    before(:each) do
+      @user = FactoryGirl.create(:user, :admin => false)
+    end
+
+    subject { ability }
+    let(:ability) { Ability.new(@user) }
+
+    context "Guests should not be able to view unpublished posts"  do
+      it { should_not be_able_to(:read, Post.new(:published => false)) }
+    end
+    
+  end
+  
 end
