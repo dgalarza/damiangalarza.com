@@ -4,7 +4,6 @@ class TwitterFeed
 
   @options =
     screen_name: 'dgalarza'
-    count: 3
     include_rts: true
 
   constructor: (@username) ->
@@ -18,6 +17,9 @@ class TwitterFeed
   parse_feed: (feed) ->
     context = this
     html_fragment = ''
+
+    feed = @filter_feed feed
+
     for tweet in feed
       do (tweet) ->
         tweet.text = context._parse_urls tweet.text
@@ -27,6 +29,17 @@ class TwitterFeed
         html_fragment = html_fragment + context.template(tweet)
 
     document.getElementById('twitter-feed-content').innerHTML = html_fragment
+
+  # Filter out certain tweets from making their way on the feed
+  filter_feed: (feed) ->
+    filtered_set = []
+
+    for tweet in feed
+      if tweet.source.indexOf('foursquare') < 0
+        filtered_set.push tweet
+        break if filtered_set.length == 3
+
+    return filtered_set
 
   fetch_feed: ->
     context = this
