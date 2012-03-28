@@ -2,16 +2,16 @@ DamiangalarzaCom::Application.routes.draw do
 
   devise_for :users
 
-  resources :posts do
-    resources :comments
+  resources :posts, :only => [:index, :show] do
+    resources :comments, :only => [:index]
   end
 
   namespace :admin do
-      resources :posts do
-        resources :comments
+      resources :posts, :only => [:index, :edit, :create, :new] do
+        resources :comments, :only => [:index, :edit, :create]
       end
 
-      resources :comments
+      resources :comments, :only => [:index, :edit, :create]
   end
 
   match '/admin', :controller => 'admin/dashboard', :action => 'index', :as => :admin_dashboard, :method => :get
