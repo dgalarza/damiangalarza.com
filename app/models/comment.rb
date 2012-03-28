@@ -13,6 +13,10 @@ class Comment < ActiveRecord::Base
   before_create :format_markdown
   before_create :check_for_spam
 
+  validates :email,    :presence => true
+  validates :comment,  :presence => true
+  validates :username, :presence => true
+
   # Map rakismet attributes to the model
   rakismet_attrs :author => :username, :author_email => :email, :author_url => :website, :content => :comment, :user_ip => :ip
 
