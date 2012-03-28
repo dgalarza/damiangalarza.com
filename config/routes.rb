@@ -7,7 +7,7 @@ DamiangalarzaCom::Application.routes.draw do
   end
 
   namespace :admin do
-      resources :posts, :only => [:index, :edit, :create, :new] do
+      resources :posts do
         resources :comments, :only => [:index, :edit, :create]
       end
 
