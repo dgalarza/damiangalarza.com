@@ -26,7 +26,7 @@ class PostsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @post
 
     @comment_count = @post.comments.count
-    @comments = @post.comments.order('created_at DESC').limit(10)
+    @comments = @post.comments.all
 
     if current_user
       @comment = Comment.new(

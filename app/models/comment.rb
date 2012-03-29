@@ -3,7 +3,7 @@ require 'HTMLwithPygments'
 class Comment < ActiveRecord::Base
   include Rakismet::Model
 
-  default_scope :conditions => ["approved", true], :order => 'created_at DESC'
+  default_scope :conditions => ["approved", true], :order => 'created_at ASC'
 
   scope :admin_table_fields, select('comments.id, approved, username')
 

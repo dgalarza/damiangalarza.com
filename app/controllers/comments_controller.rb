@@ -16,11 +16,13 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:notice] = "Thanks for your comment!"
+      redirect_to blog_permalink_path(:category => @post.category.name.downcase, :slug => @post.slug)
     else
+      #@comments = @post.comments.order('created_at DESC').limit(10)
       flash[:error] = "An error occurred while trying to save your comment."
+      render 'posts/show'
     end
 
-    redirect_to blog_permalink_path(:category => @post.category.name.downcase, :slug => @post.slug)
   end
 
 end
