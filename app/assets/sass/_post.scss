@@ -94,12 +94,14 @@
   font-size: 18px;
 }
 
+.comment .highlight,
 .code-block {
   padding: 15px;
   background: #f5f5f5;
   background: rgba(211,211,211, 0.15);
   margin: 20px 0;
   overflow-x: auto;
+  line-height: 1;
 }
 
 .code-block + h4 {
@@ -138,9 +140,23 @@
   height: 100px;
 }
 
+#post-comments .field_with_errors input,
+#post-comments .field_with_errors textarea {
+  border: 1px solid #ce3927;
+  @include box-shadow(0 0 3px 0 #ce3927);
+}
+
 #post-comments input[type=submit] {
   width: 175px;
   margin-top: 15px;
+  clear: both;
+  float: left;
+}
+
+#post-comments .error-message {
+  font-size: 14px;
+  color: $red;
+  float: left;
 }
 
 #post-comments .hint {

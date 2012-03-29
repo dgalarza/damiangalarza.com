@@ -28,7 +28,9 @@ class PostsController < ApplicationController
     @comment_count = @post.comments.count
     @comments = @post.comments.all
 
-    if current_user
+    if session[:invalid_comment]
+      @comment = session[:invalid_comment]
+    elsif current_user
       @comment = Comment.new(
         :email => current_user.email,
         :username => current_user.username

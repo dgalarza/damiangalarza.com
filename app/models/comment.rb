@@ -1,4 +1,5 @@
 require 'HTMLwithPygments'
+require 'email_validator'
 
 class Comment < ActiveRecord::Base
   include Rakismet::Model
@@ -13,9 +14,10 @@ class Comment < ActiveRecord::Base
   before_create :format_markdown
   before_create :check_for_spam
 
-  validates :email,    :presence => true
-  validates :comment,  :presence => true
-  validates :username, :presence => true
+
+  validates :email,    :presence => { :message => 'is required' }, :email => { :message => 'is not a valid email address' }
+  validates :comment,  :presence => { :message => 'is required' }
+  validates :username, :presence => { :message => 'is required' }
 
   # Map rakismet attributes to the model
   rakismet_attrs :author => :username, :author_email => :email, :author_url => :website, :content => :comment, :user_ip => :ip
