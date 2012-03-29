@@ -5,7 +5,7 @@ import MySQLdb
 import html2text
 
 h = html2text.HTML2Text()
-db = MySQLdb.connect(host="localhost", user="dg_dev", passwd="er1nb3rmud3z", db="damiangalarza.com_development")
+db = MySQLdb.connect(host="localhost", user="dg_dev", passwd="er1nb3rmud3z", db="damiangalarza_development")
 
 cursor = db.cursor()
 cursor.execute("SELECT id, comment FROM comments")

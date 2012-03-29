@@ -1,6 +1,7 @@
-%table.admin-table.posts-table
+%table.admin-table.comments-table
   %colgroup
     %col.id-col
+    %col.preview-col
     %col.username-col
     %col.marked-as-col
     %col.view-col
@@ -8,8 +9,10 @@
   %thead
     %tr
       %th.id-col ID
+      %th Preview
       %th Username
       %th Marked As
+      %th Actions
 
   %tbody
     = render @comments

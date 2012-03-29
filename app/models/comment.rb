@@ -6,7 +6,7 @@ class Comment < ActiveRecord::Base
 
   default_scope :conditions => ["approved", true], :order => 'created_at ASC'
 
-  scope :admin_table_fields, select('comments.id, approved, username')
+  scope :admin_table_fields, select('comments.id, approved, username, comment')
 
   belongs_to :post
   attr_protected :post_id
@@ -39,7 +39,7 @@ class Comment < ActiveRecord::Base
     renderer = HTMLwithPygments.new :filter_html => true
 
     markdown = Redcarpet::Markdown::new(renderer, options)
-    self.comment = markdown.render(self.comment)
+    self.markdown_cache = markdown.render(self.comment)
   end
 
   def email_hash

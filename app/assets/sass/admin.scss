@@ -127,15 +127,15 @@ h2 + .admin-table {
   padding-right: 58px;
 }
 
-.posts-table .admin-action-icon {
+.admin-table .admin-action-icon {
   display: block;
   @include hide-text;
   @extend .admin-icon;
 }
 
-.posts-table .view-icon { @include admin-icon('icon-article'); }
-.posts-table .edit-icon { @include admin-icon('icon-edit'); }
-.posts-table .delete-icon { @include admin-icon('icon-delete'); }
+.admin-table .view-icon { @include admin-icon('icon-article'); }
+.admin-table .edit-icon { @include admin-icon('icon-edit'); }
+.admin-table .delete-icon { @include admin-icon('icon-delete'); }
 
 .add-post-trigger {
   float: right;
@@ -149,6 +149,12 @@ h2 + .admin-table {
 }
 
 // Comments Table
+.comments-table colgroup {
+  .id-col { width: 100px; }
+  .preview-col { width: 282px; }
+  .username-col { width: 239px; }
+}
+
 input[type=radio] {
   position: absolute;
   visibility: hidden;
