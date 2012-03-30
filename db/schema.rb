@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20120329015706) do
     t.string   "subtitle",        :limit => 50
     t.string   "slug"
     t.text     "cached_markdown", :limit => 2147483647
+    t.datetime "publish_date"
   end
 
   add_index "posts", ["category_id"], :name => "index_posts_on_category_id"
@@ -64,6 +65,19 @@ ActiveRecord::Schema.define(:version => 20120329015706) do
   end
 
   add_index "posts_tags", ["post_id", "tag_id"], :name => "index_posts_tags_on_post_id_and_tag_id", :unique => true
+
+  create_table "rails_admin_histories", :force => true do |t|
+    t.text     "message"
+    t.string   "username"
+    t.integer  "item"
+    t.string   "table"
+    t.integer  "month",      :limit => 2
+    t.integer  "year",       :limit => 8
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
+
+  add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
 
   create_table "tags", :force => true do |t|
     t.string   "name",       :null => false

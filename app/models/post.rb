@@ -6,8 +6,6 @@ class Post < ActiveRecord::Base
   has_many :comments
   has_and_belongs_to_many :tags
 
-  default_scope :order => 'posts.created_at DESC'
-
   scope :published, where(:published => true)
 
   scope :search, lambda { |query|
