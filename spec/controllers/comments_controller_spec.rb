@@ -9,7 +9,7 @@ describe CommentsController do
 
   it "should redirect back to blog post" do
     do_create
-    response.should redirect_to( blog_permalink_path(:category => @post.category.name.downcase, :slug => @post.slug) )
+    response.should redirect_to( blog_permalink_path(:category => @post.category.name.downcase, :slug => @post.slug, :anchor => 'comments') )
   end
 
 end
