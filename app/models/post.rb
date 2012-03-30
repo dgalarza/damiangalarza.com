@@ -22,11 +22,20 @@ class Post < ActiveRecord::Base
 
   scope :admin_table_fields, select('posts.id, title, published, posts.category_id, slug')
 
+  before_save :set_publish_date
   before_save :generate_slug
   before_save :markdown_cache
 
   def generate_slug
-    self.slug = self.title.downcase.gsub(' - ', '-').gsub(' ', '-')
+    unless self.slug
+      self.slug = self.title.downcase.gsub(' - ', '-').gsub(' ', '-').gsub('!', '')
+    end
+  end
+
+  def set_publish_date
+    unless publish_date
+      publish_date = Time.now if published
+    end
   end
 
   def markdown_cache
