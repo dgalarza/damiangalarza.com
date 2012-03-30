@@ -24,4 +24,8 @@ module ApplicationHelper
     blog_permalink_url post.category.name.gsub(' ', '-').downcase, post.slug
   end
 
+  def title(page_title)
+    content_for(:title) { "#{page_title} | " }
+  end
+
 end
