@@ -1,18 +1,23 @@
 require 'spec_helper'
 
 describe Post do
-  pending "add some examples to (or delete) #{__FILE__}"
 
   describe "Post slugs" do
+    it "should only generate a slug when the post is published" do
+      post = FactoryGirl.create(:post, :published => false, :slug => nil)
+      post.generate_slug.should == nil
+    end
+
     it "should generate a post slug" do
-      post = Post.new(:title => 'My Post')
+      post = FactoryGirl.create(:post, :title => 'My Post', :slug => nil)
       post.generate_slug.should == 'my-post'
     end
 
     it "should remove any dashes that exist in title" do
-      post = Post.new(:title => 'My - Awesome - Post')
+      post = FactoryGirl.create(:post, :title => 'My - Awesome - Post', :slug => nil) 
       post.generate_slug.should == 'my-awesome-post'
     end
+
   end
 
 end

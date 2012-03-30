@@ -27,7 +27,7 @@ class Post < ActiveRecord::Base
   before_save :markdown_cache
 
   def generate_slug
-    unless self.slug
+    unless self.slug and not published?
       self.slug = self.title.downcase.gsub(' - ', '-').gsub(' ', '-').gsub('!', '')
     end
   end

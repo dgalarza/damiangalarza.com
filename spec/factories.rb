@@ -16,6 +16,7 @@ FactoryGirl.define do
     title 'My Post'
     slug 'my-post'
     content 'lorem ipsum'
+    published true
     user
     category
   end
