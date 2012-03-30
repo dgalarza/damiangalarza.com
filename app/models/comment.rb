@@ -33,6 +33,18 @@ class Comment < ActiveRecord::Base
     true
   end
 
+  def mark_as_spam
+    spam!
+    self.approved = false;
+    self.save
+  end
+
+  def unmark_as_spam
+    ham!
+    self.approved = true
+    self.save
+  end
+
   # Format the comment as markdown, caching markdown HTML in the database
   def format_markdown
     options = { :autolink => true, :fenced_code_blocks => true, :no_intra_emphasis => true }

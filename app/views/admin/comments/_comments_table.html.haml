@@ -16,3 +16,25 @@
 
   %tbody
     = render @comments
+
+- content_for :scripts do
+  %script{ :type => "text/javascript", :src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" }
+  :javascript
+    $(function() {
+
+      $.ajaxSetup({
+        beforeSend: function(xhr) {
+          xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+         }
+      });
+
+      $('.comments-table').delegate('input[type=radio]', 'change', function() {
+        var method = this.value === 'false' ? 'spam' : 'unspam';
+        var comment_id = $(this).parents('tr').attr('data-comment-id');
+        $.ajax({
+          url: '/admin/comments/' + comment_id + '/' + method,
+          type: 'put'
+        });
+      });
+
+    });

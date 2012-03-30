@@ -1,4 +1,4 @@
-%tr
+%tr{ 'data-comment-id' => comment.id }
   %td.id-col= comment.id
   %td= truncate comment.comment, :length => 30
   %td= comment.username

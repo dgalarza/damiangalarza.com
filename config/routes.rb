@@ -11,7 +11,10 @@ DamiangalarzaCom::Application.routes.draw do
         resources :comments, :only => [:index, :edit, :create]
       end
 
-      resources :comments, :only => [:index, :edit, :create]
+      resources :comments, :only => [:index, :edit, :create] do
+        put :spam
+        put :unspam
+      end
   end
 
   match '/admin', :controller => 'admin/dashboard', :action => 'index', :as => :admin_dashboard, :method => :get
