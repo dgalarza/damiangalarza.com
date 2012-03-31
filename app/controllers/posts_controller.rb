@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.published..order('publish_date DESC').select("title, post.created_at, excerpt, slug, category_id").includes(:category)
+    @posts = Post.published.order('publish_date DESC').select("title, post.created_at, excerpt, slug, category_id").includes(:category)
 
     if params[:search]
       @posts = @posts.search "%#{params[:search]}%"
