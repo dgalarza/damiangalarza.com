@@ -2,4 +2,5 @@ RedirectMatch 301 ^/(css)/(.*)            /posts/$1/$2
 RedirectMatch 301 ^/(ruby-on-rails)/(.*)  /posts/$1/$2
 RedirectMatch 301 ^/(javascript)/(.*)     /posts/$1/$2
 RedirectMatch 301 ^/(css3)/(.*)           /posts/$1/$2
-RedirectMatch 301 ^/(mobile)/(.*)         /posts/$1/$2
+RedirectMatch 301 ^/(iphone)/(.*)         /posts/$1/$2
+RedirectMatch 301 ^/(blog)/(.*)           /posts/news/$2
