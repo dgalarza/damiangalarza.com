@@ -28,7 +28,7 @@ class Post < ActiveRecord::Base
 
   def generate_slug
     unless self.slug and not published?
-      self.slug = self.title.downcase.gsub(' - ', '-').gsub(' ', '-').gsub('!', '')
+      self.slug = self.title.downcase.gsub(' - ', '-').gsub(' ', '-').gsub('!', '').gsub('.', '-')
     end
   end
 

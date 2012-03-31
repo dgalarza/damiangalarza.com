@@ -18,6 +18,10 @@ describe Post do
       post.generate_slug.should == 'my-awesome-post'
     end
 
+    it "should replace any periods with dashes" do
+      post = FactoryGirl.create(:post, :title => 'My Site.com', :slug => nil)
+      post.generate_slug.should == 'my-site-com'
+    end
   end
 
 end
