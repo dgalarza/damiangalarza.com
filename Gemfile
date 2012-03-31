@@ -19,6 +19,7 @@ gem 'whenever', :require => false
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
+gem 'newrelic_rpm', :group => :production
 
 
 # Gems used only for assets and not required
