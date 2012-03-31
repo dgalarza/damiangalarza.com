@@ -25,7 +25,6 @@ set :use_sudo, false
 set :keep_releases, 4
 
 set :bundle_flags, "--deployment --quiet --binstubs --shebang ruby-local-exec"
-set :default_environment, { 'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH" }
 
 ssh_options[:forward_agent] = true
 
