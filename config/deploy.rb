@@ -44,7 +44,7 @@ namespace :deploy do
   end
 
   task :symlink_public_share do
-    run "ln -nfs #{shared_path}/shared #{release_path}/public/shared"
+    run "ln -nfs #{shared_path}/public #{release_path}/public/shared"
   end
 
   task :s3_asset_compile do
