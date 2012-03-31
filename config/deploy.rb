@@ -54,7 +54,7 @@ namespace :deploy do
 end
 
 task :refresh_sitemaps do
-  run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake sitemap:refresh"
+  run "cd #{latest_release} && RAILS_ENV=#{rails_env} bundle exec rake sitemap:refresh"
 end
 
 # Open the remote database config to parse credentials for pull
