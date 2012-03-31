@@ -43,10 +43,18 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
   end
 
+  task :symlink_public_share do
+    run "ln -nfs #{shared_path}/shared #{release_path}/public/shared"
+  end
+
   task :s3_asset_compile do
     run_locally "bundle exec rake assets:precompile"
   end
 
+end
+
+task :refresh_sitemaps do
+  run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake sitemap:refresh"
 end
 
 # Open the remote database config to parse credentials for pull
@@ -87,3 +95,5 @@ namespace :db do
 end
 
 after 'deploy:update_code', 'deploy:symlink_db'
+after 'deploy:update_code', 'deploy:symlink_public_share'
+after 'deploy', 'refresh_sitemaps'
