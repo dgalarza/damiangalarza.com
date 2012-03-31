@@ -15,6 +15,8 @@ gem 'formtastic'
 gem 'aws-sdk', :require => false
 gem 'whenever', :require => false
 
+gem 'sitemap_generator'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
