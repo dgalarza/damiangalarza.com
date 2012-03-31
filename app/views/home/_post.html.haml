@@ -1,6 +1,6 @@
 %article
-  %time{ :datetime => post.created_at }
-    = format_post_date(post.created_at)
+  %time{ :datetime => post.publish_date }
+    = format_post_date(post.publish_date)
 
   %h3
     = link_to post.title, post_permalink_path(post)
