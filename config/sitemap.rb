@@ -1,6 +1,6 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "http://www.damiangalarza.com"
-SitemapGenerator::Sitemap.sitemaps_path = 'shared/'
+SitemapGenerator::Sitemap.sitemaps_path = 'system/'
 
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
