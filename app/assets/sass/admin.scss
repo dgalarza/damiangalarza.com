@@ -236,3 +236,13 @@ form input[type=checkbox] {
 form .actions {
   padding-left: 162px;
 }
+
+form .actions ol {
+  overflow: hidden;
+}
+
+form .actions li {
+  padding: 5px;
+  margin-right: 10px;
+  float: left;
+}

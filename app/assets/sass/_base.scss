@@ -16,7 +16,6 @@ $futura_name: 'futurastd_book-webfont';
 
 $post-content-spacing: 30px;
 
-
 aside, section, article, time, nav {
  display: block; 
 }
@@ -65,6 +64,31 @@ input[type=text] {
   height: 11px;
 }
 
+.btn {
+  display: block;
+  border: none;
+  font-family: "minion-pro",sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+  padding: 0 10px;
+  color: #FFFFFF;
+  @include transition(box-shadow 0.25s ease-out 0s);
+  &:hover {
+    color: #FFFFFF;
+    @include box-shadow(0 0 5px $gray);
+  }
+}
+
+.red-btn {
+  color: #FFFFFF;
+  $start: #ce3827;
+  $end: #b03022;
+  @include background(linear-gradient(top, $start, $end));
+}
 ::selection { background: $red; color: #FFFFFF; }
 ::-moz-selection { background: $red; color: #FFFFFF; }
 

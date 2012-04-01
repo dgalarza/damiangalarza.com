@@ -10,28 +10,6 @@
 @import 'home';
 @import 'post';
 
-.btn {
-  border: none;
-  font-family: "minion-pro",sans-serif;
-  font-weight: normal;
-  font-size: 18px;
-  height: 38px;
-  line-height: 38px;
-  text-align: center;
-  cursor: pointer;
-  @include transition(box-shadow 0.25s ease-out 0s);
-  &:hover {
-    @include box-shadow(0 0 5px $gray);
-  }
-}
-
-.red-btn {
-  color: #FFFFFF;
-  $start: #ce3827;
-  $end: #b03022;
-  @include background(linear-gradient(top, $start, $end));
-}
-
 // Header
 #page > header {
   margin-bottom: 35px;
