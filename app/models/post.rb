@@ -26,6 +26,8 @@ class Post < ActiveRecord::Base
   before_save :generate_slug
   before_save :markdown_cache
 
+  validates :category, :presence => { :message => 'is required' }
+
   def generate_slug
     unless self.slug and not published?
       self.slug = self.title.downcase.gsub(' - ', '-').gsub(' ', '-').gsub('!', '').gsub('.', '-')
