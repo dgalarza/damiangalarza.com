@@ -24,6 +24,14 @@ class Admin::PostsController < Admin::AdminController
 
     @post.save
 
-    redirect_to :admin_posts
+    if save_and_continue?
+      redirect_to edit_admin_post_path(@post)
+    else
+      redirect_to :admin_posts
+    end
+  end
+
+  def save_and_continue?
+    params[:commit] === 'Save and Continue'
   end
 end
