@@ -30,6 +30,7 @@ class PostsController < ApplicationController
 
     if session[:invalid_comment]
       @comment = session[:invalid_comment]
+      session[:invalid_comment] = nil
     elsif current_user
       @comment = Comment.new(
         :email => current_user.email,
