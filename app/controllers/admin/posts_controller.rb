@@ -14,6 +14,8 @@ class Admin::PostsController < Admin::AdminController
   def create
     @post = current_user.posts.build params[:post]
     @post.save
+
+    redirect_to edit_admin_post_path(@post)
   end
 
   def update
