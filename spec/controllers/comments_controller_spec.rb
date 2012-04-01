@@ -12,4 +12,9 @@ describe CommentsController do
     response.should redirect_to( blog_permalink_path(:category => @post.category.name.downcase, :slug => @post.slug, :anchor => 'comments') )
   end
 
+  it "should store invalid comment in session for use in redirect" do
+    do_create
+    session.should include :invalid_comment
+  end
+
 end
