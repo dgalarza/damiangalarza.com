@@ -29,7 +29,7 @@ SitemapGenerator::Sitemap.create do
   
   add about_path
 
-  Post.find_each do |post|
+  Post.published.each do |post|
     add blog_permalink_path(post.category.name.gsub(' ', '-').downcase, post.slug), :lastmod => post.updated_at
   end
 end
