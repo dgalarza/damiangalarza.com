@@ -15,7 +15,9 @@
     = post.input :published
 
   = post.actions do
-    = post.action :submit
+    = post.action :submit, :button_html => { :class => 'btn red-btn' }
+    = post.action :submit, :label => 'Save and Continue', :button_html => { :class => 'btn red-btn' }
+    = post.action :cancel, :button_html => { :class => 'btn red-btn', :href => '/admin' }
   
 = content_for :scripts do
   %script{ :type => "text/javascript", :src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" }
