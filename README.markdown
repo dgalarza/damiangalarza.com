@@ -61,6 +61,7 @@ The following capistrano tasks are implemented for pushing or pulling a database
 
 ## TODO
 
+* Delete old backups within range from S3 backup container
 * Caching + Cache sweepers
 * Compile assets for asset pipeline locally and push to S3 instead of compiling on production server
 * Automate server setup
