@@ -11,7 +11,7 @@ DamiangalarzaCom::Application.routes.draw do
         resources :comments, :only => [:index, :edit, :create]
       end
 
-      resources :comments, :only => [:index, :edit, :create] do
+      resources :comments, :only => [:index, :edit, :create, :update] do
         put :spam
         put :unspam
       end
