@@ -31,4 +31,8 @@ module PostsHelper
     doc.inner_html
   end
 
+  def post_publish_date(post)
+    post.publish_date || post.created_at
+  end
+
 end

@@ -16,7 +16,7 @@
 
   %header
     .publish-meta
-      %time{ :datetime => nil, :pubdate => @post.publish_date }= format_date(@post.publish_date)
+      %time{ :datetime => nil, :pubdate => post_publish_date(@post) }= format_date post_publish_date(@post)
       %p.post-category
         &ndash;
         = link_to(@post.category.name, "/posts?category=#{@post.category.id}", :class => 'alt-anchor') if @post.category
