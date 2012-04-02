@@ -22,6 +22,11 @@ describe Post do
       post = FactoryGirl.create(:post, :title => 'My Site.com', :slug => nil)
       post.generate_slug.should == 'my-site-com'
     end
+
+    it "should set publish date if published" do
+      post = FactoryGirl.create(:post)
+      post.publish_date.should_not be nil
+    end
   end
 
 end

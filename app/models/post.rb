@@ -36,7 +36,7 @@ class Post < ActiveRecord::Base
 
   def set_publish_date
     unless publish_date
-      publish_date = Time.now if published
+      self.publish_date = Time.now if published?
     end
   end
 
