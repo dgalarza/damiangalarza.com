@@ -27,6 +27,11 @@ describe Post do
       post = FactoryGirl.create(:post)
       post.publish_date.should_not be nil
     end
+
+    it "should remove special characters" do
+      post = FactoryGirl.create(:post, :title => 'My @{Awesome} Site!?', :slug => nil)
+      post.generate_slug.should == 'my-awesome-site'
+    end
   end
 
 end
