@@ -10,6 +10,14 @@ class Admin::CommentsController < Admin::AdminController
     @comment = Comment.unscoped.find params[:id]
   end
 
+  def destroy
+    @comment = Comment.find params[:id]
+    @comment.delete
+    
+    flash[:notice] = 'Comment deleted'
+    redirect_to :admin_comments
+  end
+
   def spam
     @comment = Comment.unscoped.find params[:comment_id]
     @comment.mark_as_spam
@@ -20,9 +28,6 @@ class Admin::CommentsController < Admin::AdminController
     @comment = Comment.unscoped.find params[:comment_id]
     @comment.unmark_as_spam
     render :json => { :status => "Success" }
-  end
-
-  def find_comment
   end
 
 end
