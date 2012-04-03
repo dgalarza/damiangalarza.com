@@ -6,7 +6,6 @@ class Notification
     div = document.createElement 'div'
     div.className = ['notification', type].join(' ')
 
-    console.log content
     div.innerHTML = content
 
     div
@@ -17,9 +16,14 @@ class Notification
 
     notice = @notice
     timeout = ->
-      $(notice).css({
+      $(notice).css
         bottom: 0
-      })
+
+      hide_timeout = ->
+        $(notice).css
+          bottom: -50
+
+      setTimeout hide_timeout, 1500
 
     setTimeout(timeout, 250)
 
