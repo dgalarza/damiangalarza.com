@@ -28,4 +28,8 @@ module ApplicationHelper
     content_for(:title) { "#{page_title} | " }
   end
 
+  def display_admin?
+    current_user and current_user.admin?
+  end
+
 end

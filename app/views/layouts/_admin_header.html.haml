@@ -1,8 +1,9 @@
 %header#site-header
   .main-head.wrapper
-    %h1= link_to 'Damian Galarza', admin_dashboard_path
+    %h1= link_to 'Damian Galarza', root_path
 
   #nav-wrapper
     %ul.wrapper#admin-nav{ :role => 'nav' }
+      %li= link_to 'Dashboard', admin_dashboard_path, :id => 'dashboard-tab'
       %li= link_to 'Posts', admin_posts_path, :id => 'posts-tab'
       %li= link_to 'Comments', admin_comments_path, :id => 'comments-tab'

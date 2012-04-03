@@ -10,3 +10,4 @@
     = label_tag "#{comment.id}-approved_false", 'Spam', :class => 'radio-label'
 
   %td= link_to 'Edit', edit_admin_comment_path(comment), :class => 'edit-icon admin-action-icon'
+  %td= link_to 'Delete', admin_comment_path(comment), :method => :delete, :class => 'delete-trigger delete-icon admin-action-icon'

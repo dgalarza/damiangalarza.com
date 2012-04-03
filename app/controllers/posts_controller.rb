@@ -25,8 +25,8 @@ class PostsController < ApplicationController
 
     raise ActiveRecord::RecordNotFound unless @post
 
-    @comment_count = @post.comments.count
-    @comments = @post.comments.all
+    @comment_count = @post.comments.approved.count
+    @comments = @post.comments.approved.all
 
     if session[:invalid_comment]
       @comment = session[:invalid_comment]

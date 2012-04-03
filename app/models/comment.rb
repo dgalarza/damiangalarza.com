@@ -4,9 +4,10 @@ require 'email_validator'
 class Comment < ActiveRecord::Base
   include Rakismet::Model
 
-  default_scope :conditions => ["approved", true], :order => 'created_at ASC'
+  default_scope :order => 'created_at ASC'
 
   scope :admin_table_fields, select('comments.id, approved, username, comment')
+  scope :approved, where(:approved => true)
 
   belongs_to :post
   attr_protected :post_id

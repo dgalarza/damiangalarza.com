@@ -48,6 +48,7 @@
   @include border-radius(5px 5px 0 0);
 }
 
+.dashboard #dashboard-tab,
 .comments #comments-tab,
 .posts #posts-tab {
   border: 1px solid rgba(206, 57, 39, 0.35);
@@ -111,6 +112,9 @@ h2 + .admin-table {
   .id-col { width: 100px; }
   .category-col { width: 240px; }
   .status-col { width: 192px; }
+}
+
+.admin-table colgroup {
   .view-col { width: 37px; }
   .edit-col { width: 44px; }
   .delete-col { width: 65px; }
@@ -245,4 +249,24 @@ form .actions li {
   padding: 5px;
   margin-right: 10px;
   float: left;
+}
+
+// Notifications
+.notification {
+  padding: 10px 0;
+  color: #FFFFFF;
+  text-align: center;
+  position: fixed;
+  right: 0;
+  bottom: -50px;
+  left: 0;
+  background: $red;
+  font-style: italic;
+  @include transition(bottom 0.25s ease-out 0s);
+  @include box-shadow(0 -3px 3px 0 #FFFFFF);
+}
+
+.notification.success {
+  color: $gray;
+  @include background(linear-gradient(top, #a3c93c, #a3c93c));
 }
