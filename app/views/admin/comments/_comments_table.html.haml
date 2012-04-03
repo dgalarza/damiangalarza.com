@@ -19,33 +19,4 @@
     = render @comments
 
 - content_for :scripts do
-  :javascript
-    $(function() {
-
-      $.ajaxSetup({
-        beforeSend: function(xhr) {
-          xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
-         }
-      });
-
-      $('.comments-table').delegate('input[type=radio]', 'change', function() {
-        var method = this.value === 'false' ? 'spam' : 'unspam';
-        var comment_id = $(this).parents('tr').attr('data-comment-id');
-        $.ajax({
-          url: '/admin/comments/' + comment_id + '/' + method,
-          type: 'put'
-        });
-      });
-
-      $('.comments-table').delegate('.delete-trigger', 'click', function() {
-        var comment_id = $(this).parents('tr').attr('data-comment-id');
-        $.ajax({
-          url: '/admin/comments/' + comment_id,
-          type: 'delete',
-          success: function() {
-            
-          }
-        });
-      });
-
-    });
+  = javascript_include_tag 'admin/admin'
