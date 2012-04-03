@@ -63,6 +63,16 @@ module DamiangalarzaCom
     config.generators.stylesheets = false
     config.generators.javascripts = false
 
+    config.action_mailer.smtp_settings = {
+      :user_name => ENV['SENDGRID_USER'],
+      :password => ENV['SENDGRID_PW'],
+      :domain => "damiangalarza.com",
+      :address => "smtp.sendgrid.net",
+      :port => 587,
+      :authentication => :plain,
+      :enable_starttls_auto => true
+    }
+
     config.after_initialize do
         Sass::Plugin.options[:never_update] = true
     end
