@@ -1,4 +1,4 @@
-# require admin/notifications
+# require admin/admin_notification
 
 # Ensure all ajax requests send the CSRF token in the header
 $.ajaxSetup
@@ -24,7 +24,7 @@ delete_comment_delegate = ->
     url: '/admin/comments/' + comment_id
     type: 'delete'
     success: ->
-      new Notification 'success', 'Comment removed'
+      new AdminNotification 'success', 'Comment removed'
       $(context).parents('tr').fadeOut 'fast', ->
         $(this).remove()
 

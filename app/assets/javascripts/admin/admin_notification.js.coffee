@@ -1,7 +1,7 @@
 doc = document
 win = window
 
-class Notification
+class AdminNotification
   @build_notification: (type, content) ->
     div = document.createElement 'div'
     div.className = ['notification', type].join(' ')
@@ -27,4 +27,4 @@ class Notification
 
     setTimeout(timeout, 250)
 
-win.Notification = Notification
+win.AdminNotification = AdminNotification
