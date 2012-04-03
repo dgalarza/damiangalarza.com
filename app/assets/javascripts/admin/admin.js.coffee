@@ -1,4 +1,4 @@
-# require admin/admin_notification
+#= require admin/admin_notification
 
 # Ensure all ajax requests send the CSRF token in the header
 $.ajaxSetup
