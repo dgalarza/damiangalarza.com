@@ -11,7 +11,7 @@ class AdminNotification
     div
 
   constructor: (type, content) ->
-    @notice = Notification.build_notification type, content
+    @notice = AdminNotification.build_notification type, content
     $('#notification-center').append(@notice)
 
     notice = @notice
