@@ -48,6 +48,7 @@
   @include border-radius(5px 5px 0 0);
 }
 
+.dashboard #dashboard-tab,
 .comments #comments-tab,
 .posts #posts-tab {
   border: 1px solid rgba(206, 57, 39, 0.35);
