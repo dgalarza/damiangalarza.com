@@ -44,7 +44,10 @@ gem 'capistrano'
 gem 'capistrano-ext'
 gem 'rvm-capistrano'
 
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
+
+gem 'simplecov', :require => false, :group => :test
