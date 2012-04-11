@@ -36,13 +36,14 @@ end
 gem 'jquery-rails'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 group :development do
   gem 'capistrano'
   gem 'capistrano-ext'
   gem 'rvm-capistrano'
+  gem 'capistrano-unicorn'
 end
 
 
