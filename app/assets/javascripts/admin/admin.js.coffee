@@ -12,7 +12,7 @@ spam_delegate = ->
   method = if this.value == 'false' then 'spam' else 'unspam'
   comment_id = get_comment_id.apply this
   $.ajax
-    url: '/admin/comments/' + get_comment_id() + '/' + method
+    url: '/admin/comments/' + comment_id + '/' + method
     type: 'put'
 
   return false

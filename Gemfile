@@ -23,7 +23,6 @@ gem 'sitemap_generator'
 gem 'mysql2'
 gem 'newrelic_rpm', :group => :production
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -40,9 +39,12 @@ gem 'jquery-rails'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-gem 'capistrano'
-gem 'capistrano-ext'
-gem 'rvm-capistrano'
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'rvm-capistrano'
+  gem 'capistrano-unicorn'
+end
 
 group :development, :test do
   gem 'rspec-rails'
@@ -52,3 +54,5 @@ end
 group :test do
   gem 'email_spec'
 end
+
+gem 'simplecov', :require => false, :group => :test
