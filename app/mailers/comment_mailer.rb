@@ -3,6 +3,6 @@ class CommentMailer < ActionMailer::Base
 
   def comment_notification(comment)
     @comment = comment
-    mail(:to => 'damian@damiangalarza.com', :subject => 'Comment Received')
+    mail(:to => 'damian@damiangalarza.com', :subject => 'New Comment Received')
   end
 end
