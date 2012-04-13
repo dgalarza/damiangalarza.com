@@ -15,6 +15,8 @@ class Comment < ActiveRecord::Base
   before_create :format_markdown
   before_create :check_for_spam
 
+  after_create :send_comment_notification
+
 
   validates :email,    :presence => { :message => 'is required' }, :email => { :message => 'is not a valid email address' }
   validates :comment,  :presence => { :message => 'is required' }
@@ -57,6 +59,12 @@ class Comment < ActiveRecord::Base
 
   def email_hash
     Digest::MD5.hexdigest(self.email.downcase)
+  end
+
+  def send_comment_notification
+    if approved?
+      CommentMailer.comment_notification(self).deliver
+    end
   end
 
 end
