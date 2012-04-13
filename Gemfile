@@ -53,6 +53,7 @@ end
 
 group :test do
   gem 'email_spec'
+  gem 'capybara'
 end
 
 gem 'simplecov', :require => false, :group => :test
