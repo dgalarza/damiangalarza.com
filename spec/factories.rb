@@ -25,4 +25,12 @@ FactoryGirl.define do
     category
   end
 
+  factory :comment do
+    username 'John Smith'
+    email
+    post
+    comment 'lorem ipsum dolor'
+    approved true
+  end
+
 end

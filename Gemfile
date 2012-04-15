@@ -46,10 +46,14 @@ group :development do
   gem 'capistrano-unicorn'
 end
 
-
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'email_spec'
+  gem 'capybara'
 end
 
 gem 'simplecov', :require => false, :group => :test
