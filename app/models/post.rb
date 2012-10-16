@@ -4,16 +4,13 @@ class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :category
   has_many :comments
-  has_and_belongs_to_many :tags
+
+  acts_as_taggable
 
   scope :published, where(:published => true)
 
   scope :search, lambda { |query|
     where('title LIKE ? OR content LIKE ?', query, query)
-  }
-
-  scope :tagged, lambda { |tag|
-    joins('INNER JOIN posts_tags ON posts_tags.post_id = posts.id').where('posts_tags.tag_id' => tag)
   }
 
   scope :in_category, lambda { |category|

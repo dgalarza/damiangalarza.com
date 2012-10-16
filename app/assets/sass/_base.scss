@@ -41,11 +41,11 @@ code, pre {
   font-size: 14px;
 }
 
-input[type=text],
-input[type=password],
-input[type=url],
-input[type=email],
-textarea {
+.inputs .input > input[type=text],
+.inputs .input >input[type=password],
+.inputs .input >input[type=url],
+.inputs .input >input[type=email],
+.inputs .input >textarea {
   font-size: 14px;
   font-family: "minion-pro",sans-serif;
   color: $gray;

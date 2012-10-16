@@ -1,5 +1,6 @@
 @import 'base';
 @import 'reset200802';
+@import 'select2';
 @import 'sprites';
 
 @import 'uniform.default';
@@ -218,6 +219,10 @@ form .selector {
   span { width: 442px; }
 }
 
+form .select2-container.select2-container-multi {
+  width: 467px;
+}
+
 form textarea,
 form .string input,
 form select {
@@ -227,6 +232,18 @@ form select {
     border: 1px solid #ce3927;
     @include box-shadow(0 0 3px 0 #ce3927);
   }
+}
+
+form .select2-search-field input,
+form .select2-search-field input:focus {
+  border: none;
+  outline: none !important;
+  -webkit-appearance: none;
+  @include box-shadow(none);
+}
+
+form #post_tag_list_input .select2-search-choice {
+  margin-top: 8px;
 }
 
 form .boolean label {

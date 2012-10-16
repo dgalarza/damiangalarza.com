@@ -23,6 +23,8 @@ gem 'sitemap_generator'
 gem 'mysql2'
 gem 'newrelic_rpm', :group => :production
 
+gem 'acts-as-taggable-on'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
