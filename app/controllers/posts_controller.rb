@@ -6,7 +6,7 @@ class PostsController < ApplicationController
     if params[:search]
       @posts = @posts.search "%#{params[:search]}%"
     elsif params[:tag]
-      @posts = @posts.tagged params[:tag]
+      @posts = @posts.tagged_with(params[:tag])
     elsif params[:category]
       @posts = @posts.in_category params[:category]
     end
