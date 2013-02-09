@@ -4,7 +4,7 @@ describe "Comment Creation" do
 
   let(:post) { FactoryGirl.create(:post) }
 
-  it "allows user to comment on a blog post" do
+  pending "allows user to comment on a blog post" do
     visit blog_permalink_path(:category => post.category.name, :slug => post.slug)
 
     fill_in 'comment_username', :with => 'John Smith'
