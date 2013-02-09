@@ -8,6 +8,9 @@
 .DS_STORE
 /.bundle
 
+/chef/cookbooks
+/chef/tmp
+
 config/database.yml
 
 # Ignore the default SQLite database.
