@@ -58,7 +58,9 @@ module DamiangalarzaCom
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.assets.precompile += ['style.css', 'home.js', 'posts.js', 'about.js', 'admin.css', 'admin/posts_form.js', 'admin/admin.js']
+
+    config.assets.precompile += ['home.js', 'posts.js', 'about.js', 'admin.css']
+    #config.assets.precompile += ['style.css', 'home.js', 'posts.js', 'about.js', 'admin.css', 'admin/posts_form.js', 'admin/admin.js']
 
     config.generators.stylesheets = false
     config.generators.javascripts = false
@@ -72,10 +74,5 @@ module DamiangalarzaCom
       :authentication => :plain,
       :enable_starttls_auto => true
     }
-
-    config.after_initialize do
-        Sass::Plugin.options[:never_update] = true
-    end
-
   end
 end

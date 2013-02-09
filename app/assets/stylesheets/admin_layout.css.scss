@@ -1,19 +1,10 @@
-@import 'base';
-@import 'reset200802';
-@import 'select2';
-@import 'sprites';
-
-@import 'uniform.default';
-
-//@import 'formtastic';
-
 #site-header {
   padding-top: 25px;
   margin-bottom: 48px;
 }
 
 #site-header h1 a {
-  background: url(/images/dg.png) 0 0 no-repeat;
+  background: image-url('dg.png') 0 0 no-repeat;
   width: 126px;
   height: 146px;
   display: block;
