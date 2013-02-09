@@ -51,6 +51,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem "auto_tagger"
 end
 
 group :test do

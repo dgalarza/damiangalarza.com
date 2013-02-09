@@ -3,6 +3,7 @@ require "whenever/capistrano"
 load 'deploy/assets'
 
 set :stages, %w(production staging local)
+set :auto_tagger_stages, [:production]
 
 require 'capistrano/ext/multistage'
 
