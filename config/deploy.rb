@@ -43,11 +43,6 @@ namespace :deploy do
   task :symlink_db do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
   end
-
-  task :s3_asset_compile do
-    run_locally "bundle exec rake assets:precompile"
-  end
-
 end
 
 task :refresh_sitemaps do
