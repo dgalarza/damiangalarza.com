@@ -8,7 +8,7 @@ describe PostsController do
     end
   end
 
-  describe "Commenting" do
+  pending "Commenting" do
 
     before do
       controller.stub(:authorize!).and_return true
