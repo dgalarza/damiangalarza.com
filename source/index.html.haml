@@ -5,7 +5,7 @@
 
   %section#blog-feed
     %h2 Recent Posts
-    = render :partial => 'post', :collection => @posts
+    -#= render :partial => 'post', :collection => @posts
 
 #info-bar
   #projects-pane
@@ -18,7 +18,7 @@
       %h3 check out my profile on
       %p= link_to "Github", "http://github.com", :target => '_blank'
 
-  %section#twitter-feed
+  %section#twitter-feed{ style: 'display: none;' }
     %h2 Tweets
     #twitter-feed-content
     

@@ -1,0 +1,46 @@
+!!! 5
+%html{ :en => 'en' }
+  %head
+
+    %meta{ :charset => 'UTF-8' }
+    %meta{ :name => 'viewport', :content => 'width=1020px' }
+    %title 
+      = yield_content :title
+      Damian Galarza
+    
+    = stylesheet_link_tag "application"
+
+    :plain
+      <script type="text/javascript" src="http://use.typekit.com/hyh0moi.js"></script>
+      <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    -#= auto_discovery_link_tag(:rss, posts_url + '.rss')
+
+
+  %body{ class: page_classes }
+
+    #page
+      = partial 'layouts/header'
+
+      #page-wrapper.wrapper
+        %section.site-content
+          = yield
+
+      = partial 'layouts/footer'
+
+      = yield_content :scripts
+
+    :plain
+      <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-28839416-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      </script>

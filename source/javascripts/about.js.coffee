@@ -1,4 +1,4 @@
-#= require handlebars-1.0.0.beta.6.js
+#= require vendor/handlebars-1.0.0.beta.6.js
 
 class GithubFeed
 
