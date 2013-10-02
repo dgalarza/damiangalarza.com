@@ -1,0 +1,9 @@
+- page_articles.each do |article|
+  %article.post
+    .post-meta
+      %time{ :datetime => nil, :pubdate => article.date }= format_date(article.date)
+      -#%p.post-category= link_to(post.category.name, "/posts?category=#{post.category_id}", :class => 'alt-anchor') if post.category
+    
+    .post-content
+      %h3= link_to article.title, article.url
+      %p= article.summary
