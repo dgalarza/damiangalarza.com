@@ -1,61 +1,16 @@
-source 'https://rubygems.org'
+# If you have OpenSSL installed, we recommend updating
+# the following line to use "https"
+source 'http://rubygems.org'
 
-gem 'rails', '~> 3.2.2'
+gem "middleman", "~>3.1.5"
 
-gem 'rakismet'
-gem 'devise'
-gem 'cancan'
-gem 'haml'
-gem 'redcarpet'
-gem 'nokogiri'
-gem 'pygments.rb'
+# Live-reloading plugin
+gem "middleman-livereload", "~> 3.1.0"
 
-gem 'formtastic'
+# For faster file watcher updates on Windows:
+gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
-gem 'aws-sdk', :require => false
-gem 'whenever', :require => false
-
-gem 'sitemap_generator'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'mysql2'
-gem 'newrelic_rpm', :group => :production
-
-gem 'acts-as-taggable-on'
-
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'compass-rails'
+# Cross-templating language block fix for Ruby 1.8
+platforms :mri_18 do
+  gem "ruby18_source_location"
 end
-
-gem 'jquery-rails'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-group :development do
-  gem 'capistrano'
-  gem 'capistrano-ext'
-  gem 'rvm-capistrano'
-  gem 'capistrano-unicorn'
-end
-
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem "auto_tagger"
-end
-
-group :test do
-  gem 'email_spec'
-  gem 'capybara'
-end
-
-gem 'simplecov', :require => false, :group => :test
