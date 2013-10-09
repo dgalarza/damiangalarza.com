@@ -5,7 +5,12 @@
 
   %section#blog-feed
     %h2 Recent Posts
-    -#= render :partial => 'post', :collection => @posts
+    - blog.articles[0...5].each do |article|
+      %article
+        %time{ :datetime => article.date }
+          = format_post_date(article.date)
+        %h3
+          = link_to article.title, article.url
 
 #info-bar
   #projects-pane
