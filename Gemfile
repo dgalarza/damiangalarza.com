@@ -3,7 +3,7 @@
 source 'http://rubygems.org'
 
 gem "middleman", "~>3.1.5"
-gem "middleman-blog"
+gem "middleman-blog", github: 'dgalarza/middleman-blog', branch: 'custom-collections'
 gem 'nokogiri'
 
 # Live-reloading plugin
