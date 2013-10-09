@@ -1,6 +1,7 @@
 ---
 title: A look at Decorators and Presenters
 category: ruby-on-rails
+summary: A look at how decorators and presenters can give flexibility to your application.
 date: 2012/10/03 15:30:10
 ---
 
