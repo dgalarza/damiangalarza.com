@@ -99,14 +99,18 @@
   padding: 15px;
   background: #f5f5f5;
   background: rgba(211,211,211, 0.15);
-  margin: 20px 0;
-  overflow-x: auto;
   line-height: 1;
 }
 
-.code-block + h4 {
+code {
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+pre + h4 {
   margin-top: $post-content-spacing + 20px;
 }
+
 
 .highlighttable {
   width: 100%;

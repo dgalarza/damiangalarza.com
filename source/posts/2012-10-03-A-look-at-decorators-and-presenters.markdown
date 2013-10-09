@@ -3,6 +3,7 @@ title: A look at Decorators and Presenters
 category: ruby-on-rails
 summary: A look at how decorators and presenters can give flexibility to your application.
 date: 2012/10/03 15:30:10
+tags: rails3, decorators
 ---
 
 # Posts: Decorators and Presenters
@@ -14,6 +15,7 @@ Since starting on the project I and several others have often opened up the pres
 
 ```ruby
 class Presenter < BasicObject
+
   undef_method :==
 
   def initialize(component)
@@ -148,7 +150,7 @@ class NotificationPresenter < Presenter
     sender_avatar_link + notification_presentation                                                                                                                                                                                                                                                                                                                          
   end 
   
-  
+end
 ```
 
 QFive has notifications for many things like comments, likes, follows, reposts, etc. and we have a sinple page which lists out the various notifications you can receive. There needs to be a way to transform a universal 'Notification' object for viewing purposes to the user. We could have a view littered with if else blocks which would quickly become a nightmare to maintain. Or we could abstract this into a presenter.
@@ -172,15 +174,15 @@ end
 So we simply output the results of the notification presenter to the view. Taking a look at the present method, we simply generate an avatar link for the sender of the notification and then a call to notification_presentation which can then proxy based off the different types of notifications:
 
 ```ruby
-  def notification_presentation                                                                                                                                                                                                                                                                                                                                             
-    klass = 'bd'                                                                                                                                                                                                                                                                                                                                                            
-    method = @notification.notifiable_type.underscore.downcase + '_notification'                                                                                                                                                                                                                                                                                            
-    message = self.send(method.to_sym)                                                                                                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                                                                                                                                            
-    content_tag(:div, class: klass) do                                                                                                                                                                                                                                                                                                                                      
-      link_to(@notification.sender.name, @notification.sender) + ' ' + message.html_safe                                                                                                                                                                                                                                                                                    
-    end                                                                                                                                                                                                                                                                                                                                                                     
-  end  
+def notification_presentation                                                                                                                                                                                                                                                                                                                                             
+  klass = 'bd'                                                                                                                                                                                                                                                                                                                                                            
+  method = @notification.notifiable_type.underscore.downcase + '_notification'                                                                                                                                                                                                                                                                                            
+  message = self.send(method.to_sym)                                                                                                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                                                                                                          
+  content_tag(:div, class: klass) do                                                                                                                                                                                                                                                                                                                                      
+    link_to(@notification.sender.name, @notification.sender) + ' ' + message.html_safe                                                                                                                                                                                                                                                                                    
+  end                                                                                                                                                                                                                                                                                                                                                                     
+end  
 ```
 
 From here, we simply determine the kind of notification that is being presented (comment, follow, etc) and delegate to a method matching the convention `#{notifialbe_type.underscore.downcase}_notification` which for example in the scenario of a repost will call:
@@ -224,17 +226,17 @@ The view is no longer concerned with how to display a post within a news feed or
 For example, within NewsFeedPostDecorator:
 
 ```ruby
-  def title                                                                                                                                                                                                                                                                                                                                                                 
-    if model.is_a_repost?                                                                                                                                                                                                                                                                                                                                                   
-      repost_title                                                                                                                                                                                                                                                                                                                                                          
-    elsif model.team_post?                                                                                                                                                                                                                                                                                                                                                  
-      team_post_title                                                                                                                                                                                                                                                                                                                                                       
-    elsif followed_topic?                                                                                                                                                                                                                                                                                                                                                   
-      topic_post_title                                                                                                                                                                                                                                                                                                                                                      
-    else                                                                                                                                                                                                                                                                                                                                                                    
-      generic_title                                                                                                                                                                                                                                                                                                                                                         
-    end                                                                                                                                                                                                                                                                                                                                                                     
-  end 
+def title                                                                                                                                                                                                                                                                                                                                                                 
+  if model.is_a_repost?                                                                                                                                                                                                                                                                                                                                                   
+    repost_title                                                                                                                                                                                                                                                                                                                                                          
+  elsif model.team_post?                                                                                                                                                                                                                                                                                                                                                  
+    team_post_title                                                                                                                                                                                                                                                                                                                                                       
+  elsif followed_topic?                                                                                                                                                                                                                                                                                                                                                   
+    topic_post_title                                                                                                                                                                                                                                                                                                                                                      
+  else                                                                                                                                                                                                                                                                                                                                                                    
+    generic_title                                                                                                                                                                                                                                                                                                                                                         
+  end                                                                                                                                                                                                                                                                                                                                                                     
+end 
 ``` 
 
 And then in PostDecorator:

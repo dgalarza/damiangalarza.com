@@ -7,10 +7,6 @@
       %li= link_to 'Twitter', 'http://www.twitter.com/dgalarza', :class => 'social-twitter', :target => '_blank'
       %li= link_to 'Github', 'http://www.github.com/dgalarza', :class => 'social-github', :target => '_blank'
 
-    %form#site-search{ :action => '/posts', :method => 'GET' }
-      %input{ :type => 'text', :placeholder => 'Search', :name => 'search' }
-      %input#search-submit{ :type => 'submit', :value => '' }
-
   %nav#site-nav.wrapper
     %ul{ :role => 'wrapper' }
       %li= link_to 'Blog', '/posts', :id => 'blog'

@@ -32,36 +32,6 @@
 
   =post_markdown(@post.cached_markdown)
 
-  %section#post-comments{ 'data-comment-count' => @comment_count }
-    - if @comments.length > 0
-      %h4 
-        Comments
-        = "(#{@comment_count})"
-    #comment-content
-      = render :partial => 'posts/post_comment', :collection => @comments
-
-    - if @comments.length < @comment_count
-      = link_to 'Load More Comments', 'javascript:void(0);', :class => 'btn red-btn', :id => 'comment-load-trigger'
-
-    %a{ :name => 'comments' }
-    -#%h4 Write a Comment
-    -#= form_for [@post, @comment] do |comment|
-
-      -#= comment.text_field :username, :placeholder => "Name"
-      -#.error-message= "Name #{@comment.errors['username'][0]}" unless @comment.errors['username'].empty?
-
-      -#= comment.text_field :email, :placeholder    => "Email"
-      -#.error-message= "Email #{@comment.errors['email'][0]}" unless @comment.errors['email'].empty?
-
-      -#= comment.url_field :website, :placeholder  => "Website"
-
-      -#= comment.text_area  :comment, :placeholder  => "Comment"
-      -#.error-message= "Message #{@comment.errors['comment'][0]}" unless @comment.errors['comment'].empty?
-
-      -#%p.hint Markdown enabled
-
-      -#= comment.submit 'Submit', :class => 'btn red-btn'
-
 - content_for :scripts do
   :plain
     <div id="fb-root"></div>
