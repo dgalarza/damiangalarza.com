@@ -1,1 +1,3 @@
-
+%section#post-archives
+  - page_articles.each do |article|
+    = partial "post", locals: { article: article }
