@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/dgalarza/middleman-blog.git
-  revision: 3d5005b7a44745bc25346095da9fecd6a3f81e4a
+  revision: 00c05a0e05d9e521a8cf2e1102f2a41d81f49c34
   branch: custom-collections
   specs:
     middleman-blog (3.3.0)
@@ -73,7 +73,7 @@ GEM
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
     mini_portile (0.5.1)
-    multi_json (1.8.0)
+    multi_json (1.8.1)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     rack (1.5.2)
