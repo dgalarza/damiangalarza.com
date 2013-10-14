@@ -27,7 +27,7 @@
         - current_article.tags.each_with_index do |tag, i|
           -if i > 0
             |
-          = link_to tag, "#{tag}"
+          = link_to tag, tag_path(tag)
 
     = find_and_preserve do
       = yield
