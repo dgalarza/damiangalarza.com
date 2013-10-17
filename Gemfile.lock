@@ -1,7 +1,6 @@
 GIT
-  remote: git://github.com/dgalarza/middleman-blog.git
-  revision: 57e4ef3dc617fd222f2955d680847b664437cf9f
-  branch: custom-collections
+  remote: git://github.com/middleman/middleman-blog.git
+  revision: 31ba2db691cdb7e0d5b3950e51e6b82724299075
   specs:
     middleman-blog (3.3.0)
       middleman-core (~> 3.0)

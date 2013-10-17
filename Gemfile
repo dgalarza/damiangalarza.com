@@ -3,7 +3,7 @@
 source 'http://rubygems.org'
 
 gem "middleman", "~>3.1.5"
-gem "middleman-blog", github: 'dgalarza/middleman-blog', branch: 'custom-collections'
+gem "middleman-blog", github: 'middleman/middleman-blog'
 gem 'nokogiri'
 gem 'redcarpet'
 
