@@ -1,9 +1,0 @@
-%article.post
-
-  .post-meta
-    %time{ :datetime => nil, :pubdate => post.publish_date }= format_date(post.publish_date)
-    %p.post-category= link_to(post.category.name, "/posts?category=#{post.category_id}", :class => 'alt-anchor') if post.category
-  
-  .post-content
-    %h3= link_to post.title, post_permalink_path(post)
-    %p= post_markdown(post.excerpt)
