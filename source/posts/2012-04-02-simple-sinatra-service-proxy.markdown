@@ -1,9 +1,10 @@
 ---
 title: Simple Sinatra Service Proxy
-category: Ruby on Rails
+category: Ruby
 summary: 
-date: 
-tags: 
+date: 2012-04-02
+tags: sinatra, ruby
+published: false
 ---
 
 Recently I came across the situation where I would need to communicate with a third party API on the front

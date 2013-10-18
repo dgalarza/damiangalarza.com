@@ -2,8 +2,9 @@
 title: NewRelic RPM with ActionController::Metal
 category: Ruby on Rails
 summary: Get NewRelic RPM request instrumentation while using ActionController::Metal
-date: 
-tags: 
+date: 2012-09-05
+tags: ruby, new-relic
+published: false
 ---
 
 As part of our work with the [QFive](http://www.qfive.com) API for internal consumption we've built it out using Rails' ActionController::Metal.
