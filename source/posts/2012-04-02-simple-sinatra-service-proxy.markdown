@@ -1,7 +1,7 @@
 ---
 title: Simple Sinatra Service Proxy
 category: Ruby
-summary: 
+summary: Use Sinatra to rapidly build a proxy for a service when you can't make cross-origin AJAX requests in development.
 date: 2012-04-02
 tags: sinatra, ruby
 ---
