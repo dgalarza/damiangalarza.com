@@ -11,7 +11,7 @@ tags: rails3, decorators
 As part of an effort to clean up some of the complexity behind the views with posts on QFive a major refactoring was done on our current 'presenters' implementation.  
 
 
-Since starting on the project I and several others have often opened up the presenters with the distinct: 'wtf is happening in here'. The next step usually was a look at the base Presenter class which usually helped but would leave us with a sinking feeling about how they are built.
+Since starting on the project I and several others have often opened up the presenters with the distinct feeling of being lost. The next step usually was a look at the base Presenter class which usually helped but would leave us with a sinking feeling with what was going on.
 
 ```ruby
 class Presenter < BasicObject
@@ -39,7 +39,7 @@ class Presenter < BasicObject
 end
 ```
 
-A quick look at the base presenter reveals a few things. First, it inherits from BasicObject rather than the typical Object class. Next, it goes a step further to undefine the == method for comparison purposes. Seeing this it appears as a slight case of over engineering. Either way now with the project coming to life and knowing much more about the use cases we can revist this and clean up.
+A quick look at the base presenter reveals a few things. First, it inherits from BasicObject rather than the typical Object class. Next, it goes a step further to undefine the == method for comparison purposes. Seeing this it appears as a slight case of over engineering. Either way now with the project coming to life and knowing much more about the use cases we can revisit this and clean up.
 
 ## Decorators masked as Presenters
 
