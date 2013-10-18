@@ -1,4 +1,5 @@
 - wrap_layout :layout do
+  - content_for(:title, "#{current_article.title} | ")
   %article#post
     .article-share-tools
       .share-tool
