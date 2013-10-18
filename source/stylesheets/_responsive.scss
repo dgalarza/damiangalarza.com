@@ -1,0 +1,89 @@
+@media screen and (max-width: $small-screen) {
+  #page header .main-head {
+    padding: 56px 0 39px;
+    h1 {
+      float: none;
+    }
+  }
+
+  .hide-phone {
+    display: none;
+  }
+  
+  .wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  #main-content {
+    padding: 0;
+    width: 100%;
+  }
+
+  #site-nav ul {
+    margin-left: 20px;
+  }
+
+  #blog-feed {
+    width: 100%;
+    float: none;
+  }
+
+  .index .site-content h2 {
+    width: 100%;
+  }
+
+  #page-wrapper > section {
+    margin: 0 20px;
+  }
+
+  #bio {
+    padding-right: 0;
+  }
+
+  #bio .sub-section h3 {
+    width: 100%;
+  }
+
+  #featured-projects .project-description {
+    width: auto;
+  }
+
+  #post > p {
+    width: auto;
+  }
+
+  #post ul,
+  #post ol {
+    width: auto;
+  }
+
+  #post-archives .post-meta {
+    margin: 0 0 10px;
+    width: auto;
+    float: none;
+    text-align: left;
+  }
+
+  #post-archives .post-content {
+    width: auto;
+    float: none;
+  }
+
+  footer ul {
+    padding-top: 19px;
+    margin-left: 20px;
+
+    li.first {
+      border-right: 1px solid #505050;
+    }
+
+    li {
+      border: none;
+    }
+
+    li.last {
+      margin-top: 5px;
+    }
+  }
+}
