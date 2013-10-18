@@ -39,7 +39,7 @@ class Presenter < BasicObject
 end
 ```
 
-A quick look at the base presenter reveals a few things. First, it inherits from BasicObject rather than the typical Object class. Next, it goes a step further to undefine the == method for comparison purposes. Seeing this it appears as a slight case of over engineering. Either way now with the project coming to life and knowing much more about the use cases we can revisit this and clean up.
+A quick look at the base presenter reveals a few things. First, it inherits from BasicObject rather than the typical Object class. Next, it goes a step further to undefine the == method for comparison purposes. We could probably simplify the implementation. Either way now with the project coming to life and knowing much more about the use cases we can revisit this and clean up.
 
 ## Decorators masked as Presenters
 
