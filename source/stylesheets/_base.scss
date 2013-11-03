@@ -26,12 +26,13 @@ aside, section, article, time, nav {
 }
 
 h1,h2,h3,h4,h5, h6 {
-  font-weight: normal;
-  font-family: "minion-pro",sans-serif;
+  font-weight: 300;
+  font-family: "freight-text-pro", serif;
 }
 
 body, html {
-  font-family: "freight-sans-pro",sans-serif;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 300;
   background: #fefefe;
   color: #505050;
   width: 100%;
@@ -40,7 +41,7 @@ body, html {
 }
 
 code, pre {
-  font-family: 'inconsolata';
+  font-family: "source-code-pro";
 }
 
 code {
@@ -53,7 +54,7 @@ code {
 .inputs .input >input[type=email],
 .inputs .input >textarea {
   font-size: 14px;
-  font-family: "minion-pro",sans-serif;
+  font-family: "freight-text-pro", serif;
   color: $gray;
   resize: none;
   outline: none;
@@ -73,7 +74,7 @@ input[type=text] {
 .btn {
   display: block;
   border: none;
-  font-family: "minion-pro",sans-serif;
+  font-family: "freight-text-pro", serif;
   font-weight: normal;
   font-size: 18px;
   height: 38px;
