@@ -47,12 +47,7 @@ helpers do
   end
 end
 
-activate :s3_sync do |s3_sync|
-  s3_sync.bucket                     = ENV['AWS_S3_BUCKET']
-  s3_sync.aws_access_key_id          = ENV['AWS_ACCESS_KEY']
-  s3_sync.aws_secret_access_key      = ENV['AWS_SECRET_ACCESS_KEY']
-  s3_sync.delete                     = false # We delete stray files by default.
-  s3_sync.after_build                = false
-  s3_sync.prefer_gzip                = true
-  s3_sync.reduced_redundancy_storage = false
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.remote = 'deploy'
 end
