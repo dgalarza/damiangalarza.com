@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
 
-gem 'dotenv'
 gem 'middleman', '~>3.1.5'
 gem 'middleman-blog', github: 'middleman/middleman-blog'
 gem 'middleman-deploy', '~> 0.2'
