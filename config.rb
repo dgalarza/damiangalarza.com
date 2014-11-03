@@ -1,13 +1,13 @@
 activate :blog do |blog|
   blog.layout = "article"
   blog.prefix = "posts/"
-  blog.taglink = "tags/:tag.html"
+  blog.taglink = "tags/{tag}.html"
   blog.tag_template = "tags.html"
-  blog.permalink = ":category/:title.html"
+  blog.permalink = "{category}/{title}.html"
   blog.default_extension = ".markdown"
   blog.custom_collections = {
     category: {
-      link: 'categories/:category.html',
+      link: 'categories/{category}.html',
       template: 'categories.html'
     }
   }
@@ -19,7 +19,14 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
-set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true
+set(
+  :markdown,
+  autolink: true,
+  fenced_code_blocks: true,
+  gh_blockcode: true,
+  tables: true
+)
+
 set :markdown_engine, :redcarpet
 
 configure :build do
