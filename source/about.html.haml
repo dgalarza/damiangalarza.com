@@ -46,14 +46,10 @@
 
 #info-bar.hide-phone
   %h2 My Projects on GitHub
-  %ul#github-feed-content
-
-  %script{ :type => 'text/x-handlebars-template', :id => 'github-project-template' } 
-    :plain
-      <li class="github-project">
-        <h3><a class="alt-anchor" href="{{html_url}}" target="_blank">{{name}}</a></h3>
-        <p><em>Language:</em> {{language}}</p>
-      </li>
-
-- content_for :scripts do
-  = javascript_include_tag 'about'
+  %ul#github-feed-content{ "ng-controller" => "GithubProjectsCtrl" }
+    %li.github-project{ "ng-repeat" => "project in projects" }
+      %h3
+        %a.alt-anchor{ href: "{{project.html_url}}", target: "_blank"} {{project.name}}
+      %p
+        %em Language:
+        {{project.language}}

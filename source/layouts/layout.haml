@@ -1,5 +1,5 @@
 !!! 5
-%html{ :en => 'en' }
+%html{ :en => 'en', "ng-app" => "dgalarza" }
   %head
 
     %meta{ :charset => 'UTF-8' }
@@ -7,7 +7,7 @@
     %title 
       = yield_content :title
       Damian Galarza
-    
+
     = stylesheet_link_tag "application"
     <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css">
 
@@ -31,6 +31,8 @@
       = partial 'layouts/footer'
 
       %script{ :type => "text/javascript", :src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" }
+
+      = javascript_include_tag "application"
       = yield_content :scripts
 
     :plain

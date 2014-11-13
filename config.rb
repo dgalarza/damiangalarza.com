@@ -13,6 +13,8 @@ activate :blog do |blog|
   }
 end
 
+sprockets.append_path File.join root, 'bower_components'
+
 activate :directory_indexes
 
 set :css_dir, 'stylesheets'

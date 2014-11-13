@@ -19,7 +19,7 @@ class GithubFeed
     for project in feed.data
       do (project) ->
         html_fragment = html_fragment + context.template(project)
-        
+
     document.getElementById('github-feed-content').innerHTML = html_fragment
 
   fetch_feed: ->

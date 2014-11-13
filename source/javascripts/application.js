@@ -10,5 +10,9 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require vendor/jquery-1.10.2.min.js
-//= require about
+//= require angular/angular
+//= require_self
+//= require_tree ./controllers
+//= require_tree ./services
+
+angular.module("dgalarza", [])
