@@ -35,6 +35,8 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :asset_hash, ignore: [%r{^posts}]
+
+  set :js_compressor, Uglifier.new(mangle: false)
 end
 
 helpers do
