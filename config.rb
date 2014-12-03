@@ -1,3 +1,5 @@
+require "uglifier"
+
 activate :blog do |blog|
   blog.layout = "article"
   blog.prefix = "posts/"
