@@ -1,18 +1,19 @@
 = wrap_layout :layout do
   - content_for(:title, "#{current_article.title} | ")
-  %article#post
-    .article-share-tools.hide-phone
-      .share-tool
-        .share-option#facebook-article-share
-        .share-container
-          .fb-like{ 'data-href' => current_article.url, 'data-send' => false, 'data-layout' => 'button_count', 'data-width' => 90, 'data-show-faces' => false }
+  .article-share-tools.hide-phone
+    .share-tool
+      .share-option#facebook-article-share
+      .share-container
+        .fb-like{ 'data-href' => current_article.url, 'data-send' => false, 'data-layout' => 'button_count', 'data-width' => 90, 'data-show-faces' => false }
 
-      .share-tool
-        .share-option#twitter-article-share
-        .share-container
-          :plain
-            <a href="https://twitter.com/share" class="twitter-share-button" data-via="dgalarza">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    .share-tool
+      .share-option#twitter-article-share
+      .share-container
+        :plain
+          <a href="https://twitter.com/share" class="twitter-share-button" data-via="dgalarza">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  %article#post
 
     %header
       .publish-meta
@@ -32,3 +33,10 @@
 
     = find_and_preserve do
       = yield
+
+  - content_for :scripts do
+    :plain
+      <script src="https://carnivalapp.io/sites/337/init.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", Carnival.init);
+      </script>
