@@ -19,7 +19,7 @@
         %time{ :datetime => nil, :pubdate => current_article.date }= format_date current_article.date
         %p.post-category
           &ndash;
-          = link_to current_article.data.category.titleize, category_path(current_article.data.category), class: 'alt-anchor'
+          = link_to current_article.data.category, category_path(current_article.data.category), class: 'alt-anchor'
 
       %h2= link_to current_article.title, current_article.url
       -if current_article.data.subtitle

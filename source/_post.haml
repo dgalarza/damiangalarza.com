@@ -1,7 +1,7 @@
 %article.post
   .post-meta
     %time{ :datetime => nil, :pubdate => article.date }= format_date(article.date)
-    %p.hide-phone.post-category= link_to article.data.category.titleize, category_path(article.data.category), class: 'alt-anchor'
+    %p.hide-phone.post-category= link_to article.data.category, category_path(article.data.category), class: 'alt-anchor'
 
   .post-content
     %h3= link_to article.title, article.url
