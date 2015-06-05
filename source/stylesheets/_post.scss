@@ -1,6 +1,7 @@
 #post {
-  overflow: hidden;
   line-height: 1.4;
+  left: 0;
+  transition: left 0.25s;
 }
 
 #post-sidebar {
@@ -77,7 +78,6 @@
 
 #post > p {
   line-height: 27px;
-  width: 890px;
   margin-bottom: $post-content-spacing - 5;
 }
 
@@ -305,20 +305,20 @@ pre + h4 {
   margin-top: 20px;
 }
 
-#post ul,
-#post ol {
+#post > ul,
+#post > ol {
   width: 870px;
   margin-left: 20px;
 }
 
-#post ul li {
+#post > ul li {
   list-style: disc;
 }
 
-#post ul li + li {
+#post > ul li + li {
   margin-top: 20px;
 }
 
-#post ol li {
+#post > ol li {
   list-style: decimal;
 }
