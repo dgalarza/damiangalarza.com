@@ -6,6 +6,10 @@
 @import 'compass/css3/transition';
 @import 'compass/css3/images';
 
+@import 'bourbon/settings/px-to-em';
+@import 'bourbon/functions/strip-units';
+@import 'bourbon/functions/px-to-em';
+
 $red: #ce3927;
 $gray: #505050;
 
@@ -37,7 +41,7 @@ body, html {
   color: #505050;
   width: 100%;
   height: 100%;
-  font-size: 18px;
+  font-size: em(18px);
 }
 
 code, pre {
