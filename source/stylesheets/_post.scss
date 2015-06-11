@@ -315,6 +315,10 @@ pre + h4 {
   list-style: disc;
 }
 
+#post ul li + li {
+  margin-top: 20px;
+}
+
 #post ol li {
   list-style: decimal;
 }
