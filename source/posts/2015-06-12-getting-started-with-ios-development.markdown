@@ -2,7 +2,7 @@
 title: Getting Started with iOS Development
 category: iOS
 summary: I've recently started learning iOS and Swift and I wanted to share my experiences so far.
-date: 2015-06-05
+date: 2015-06-12
 tags: swift
 ---
 
