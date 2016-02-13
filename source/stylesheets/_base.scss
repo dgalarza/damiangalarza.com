@@ -16,8 +16,6 @@ $gray: #505050;
 $page-width: 1000px;
 $page-padding: 20px;
 
-$wrapper-width: $page-width - ($page-padding * 2);
-
 $futura_name: 'futurastd_book-webfont';
 
 // Borrow from foundation's Responsive mixins
@@ -117,7 +115,7 @@ input[type=text] {
 }
 
 .wrapper {
-  width:  $wrapper-width;
+  width:  $page-width - ($page-padding * 2);
   padding: 0 $page-padding;
   margin: 0 auto;
 }
