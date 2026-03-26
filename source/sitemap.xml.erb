@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <% sitemap.resources.select { |page| page.path =~ /\.html$/ && !page.path.include?('layouts/') }.each do |page| %>
+  <url>
+    <loc>https://www.damiangalarza.com/<%= page.path.sub(/index\.html$/, '') %></loc>
+    <% if page.data.date %>
+    <lastmod><%= page.data.date.strftime('%Y-%m-%d') %></lastmod>
+    <% end %>
+  </url>
+  <% end %>
+</urlset>
